@@ -1,0 +1,18 @@
+VAR
+	gSim : Sim_typ;
+	gIO : IO_typ;
+	gVis : Vis_typ;
+	gMain : Main_typ;
+	gAlarmAddData : TC_AlarmX_AlarmExtraData_typ;
+	gES : gES_typ;
+	JSONStrings : ARRAY[0..MAX_TC_SEQ_BUFFER_IDX] OF STRING[MAX_TC_SEQ_JSON_STRING_LEN];
+	gDriver : Driver_typ;
+END_VAR
+
+VAR RETAIN
+	gRemOK : BOOL;
+	gPar : Par_typ;
+	gRem : Rem_typ;
+END_VAR
+
+

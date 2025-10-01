@@ -1,0 +1,6 @@
+
+ACTION Seq_MASTER_IDLE:
+
+	//Do Nothing
+
+END_ACTION

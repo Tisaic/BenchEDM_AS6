@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="Header" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="EventBinding_Header_Notification_Click_0">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_0" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_0">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_0">
+      <Source xsi:type="session.Event" refId="Notification_Click_0" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gVis.Alarms.Active.Reset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_1">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_1">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_1">
+      <Source xsi:type="session.Event" refId="Notification_Click_1" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.Navigate" pageId="Page_Alarms" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_2">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_2">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_2">
+      <Source xsi:type="session.Event" refId="Notification_Click_2" event="ValueChanged" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.Navigate" pageId="Page_Settings" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.FlyOut.Action" contentRefId="Footer" widgetRefId="Footer_FlyOut_Modified">
+                <Method xsi:type="widgets.brease.FlyOut.Action.Open" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_3">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_3" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_3">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_3">
+      <Source xsi:type="session.Event" refId="Notification_Click_3" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.Navigate" pageId="Page_Diagnostics" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_4">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_4" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_4">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_4">
+      <Source xsi:type="session.Event" refId="Notification_Click_4" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_4">
+            <Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_5">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_5" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_5">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_5">
+      <Source xsi:type="session.Event" refId="Notification_Click_5" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_5">
+            <Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_6">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_6" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_6">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_6">
+      <Source xsi:type="session.Event" refId="Notification_Click_6" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_6">
+            <Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_7">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_7">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_7">
+      <Source xsi:type="session.Event" refId="Notification_Click_7" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_7">
+            <Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_8">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_8" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_8">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_8">
+      <Source xsi:type="session.Event" refId="Notification_Click_8" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_8">
+            <Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_9">
+      <Source xsi:type="widgets.brease.PushButton.Event" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_9" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_9">
+            <Method xsi:type="session.VariableAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_Header_Notification_Click_Session_9">
+      <Source xsi:type="session.Event" refId="Notification_Click_9" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="session.VariableAction" refId="Notification_Click_9">
+            <Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

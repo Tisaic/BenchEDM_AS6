@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Global variables">Global.var</Object>
+    <Object Type="File" Description="Global variables">Const.var</Object>
+    <Object Type="File" Description="Global data types">Enums.typ</Object>
+    <Object Type="File" Description="Global data types">Par.typ</Object>
+    <Object Type="File" Description="Global data types">Rem.typ</Object>
+    <Object Type="File" Description="Global data types">Services.typ</Object>
+    <Object Type="File" Description="Global data types">Process.typ</Object>
+    <Object Type="File" Description="Global data types">IO.typ</Object>
+    <Object Type="File" Description="Global data types">Vis.typ</Object>
+    <Object Type="File" Description="Global data types">Sim.typ</Object>
+    <Object Type="File" Description="Global data types">Main.typ</Object>
+    <Object Type="File" Description="Global data types">Driver.typ</Object>
+    <Object Type="File" Description="AutoGen">gES.typ</Object>
+  </Objects>
+</Package>

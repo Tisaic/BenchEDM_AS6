@@ -1,0 +1,4 @@
+VAR
+	Idx_FileList : INT;
+	Idx_AlarmList : INT;
+END_VAR

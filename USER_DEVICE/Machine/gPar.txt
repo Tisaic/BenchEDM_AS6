@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA>
+	<Element Name="gPar" Type="PvParameter">
+		<Group ID="gPar">
+			<Group ID="IO">
+				<Property ID="Simulate" DataType="BOOL" Value="false" />
+				<Group ID="Safety">
+					<Group ID="TC_IO_DI_HMI_STOP">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_ESTOP">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+				</Group>
+			</Group>
+			<Group ID="System">
+				<Group ID="Debugger">
+					<Property ID="HoldProcessInInit" DataType="BOOL" Value="false" />
+				</Group>
+				<Property ID="UnitCode" DataType="STRING" Value="" />
+				<Property ID="LanguageCode" DataType="STRING" Value="en" />
+				<Property ID="Serial" DataType="STRING" Value="" />
+			</Group>
+			<Group ID="Process">
+				<Group ID="Master">
+					<Group ID="Eval">
+						<Group ID="[0]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[1]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[2]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[3]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[4]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[5]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[6]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[7]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[8]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[9]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[10]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[11]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[12]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[13]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[14]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[15]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[16]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[17]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[18]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[19]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[20]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[21]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[22]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[23]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[24]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[25]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[26]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[27]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[28]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[29]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[30]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[31]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[32]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[33]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[34]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[35]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[36]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[37]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[38]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[39]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[40]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[41]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[42]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[43]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[44]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[45]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[46]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[47]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[48]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[49]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+					</Group>
+				</Group>
+				<Group ID="Monitor">
+					<Group ID="Mon">
+						<Group ID="[0]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[1]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[2]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[3]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[4]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[5]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[6]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[7]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[8]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[9]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[10]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[11]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="10" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="5" />
+						</Group>
+						<Group ID="[12]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[13]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[14]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[15]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[16]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[17]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[18]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[19]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[20]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[21]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[22]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[23]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[24]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[25]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[26]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[27]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[28]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[29]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[30]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[31]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[32]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[33]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[34]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[35]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[36]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[37]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[38]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[39]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[40]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[41]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[42]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[43]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[44]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[45]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[46]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[47]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[48]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+						<Group ID="[49]">
+							<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+							<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+						</Group>
+					</Group>
+				</Group>
+			</Group>
+			<Group ID="Services">
+				<Group ID="Cert">
+					<Property ID="CountryCode" DataType="STRING" Value="" />
+					<Property ID="StateProvince" DataType="STRING" Value="" />
+					<Property ID="Locality" DataType="STRING" Value="" />
+					<Property ID="Organization" DataType="STRING" Value="" />
+					<Property ID="OrganizationUnit" DataType="STRING" Value="" />
+					<Property ID="ContactEmail" DataType="STRING" Value="" />
+					<Property ID="CommonName" DataType="STRING" Value="" />
+					<Property ID="IP" DataType="STRING" Value="" />
+				</Group>
+				<Group ID="Email">
+					<Property ID="Port" DataType="UINT" Value="0" />
+					<Property ID="Timeout" DataType="UDINT" Value="0" />
+					<Property ID="Host" DataType="STRING" Value="" />
+					<Property ID="User" DataType="STRING" Value="" />
+					<Property ID="Password" DataType="STRING" Value="" />
+					<Property ID="Sender" DataType="STRING" Value="" />
+					<Property ID="Receiver" DataType="STRING" Value="" />
+				</Group>
+			</Group>
+		</Group>
+	</Element>
+</DATA>

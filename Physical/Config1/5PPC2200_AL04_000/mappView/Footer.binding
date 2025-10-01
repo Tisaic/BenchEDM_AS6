@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="Footer" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_User_Password_Password" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_User_LoginButton" attribute="password" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_User_TextInput_User" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_User_LoginButton" attribute="userName" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Footer.Revision" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_TextOutput_Config" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Settings.Save.Modified" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_Modified" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Settings.Save.Save" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_Modified_PushButton_Save" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Settings.Save.Cancel" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_Modified_PushButton_Discard" attribute="value" />
+		</Binding>
+		
+		<Binding mode="oneWay">
+			<Source xsi:type="session" refId="::SYSTEM:clientInfo.userId" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_User" attribute="text" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUaComplexObject" refId="::BuildVer:BuildVersion" />
+			<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_FlyOut_Version_BuildVersionAdvanced" attribute="value" />
+		</Binding>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Footer.Start" attribute="value" />
+<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_PushButton_Play" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Footer.Pause" attribute="value" />
+<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_PushButton_Pause" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Footer.Stop" attribute="value" />
+<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_PushButton_Stop" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Footer.currentTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="Footer" widgetRefId="Footer_DateTimeOutput" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

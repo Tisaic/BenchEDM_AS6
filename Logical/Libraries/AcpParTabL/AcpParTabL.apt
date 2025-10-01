@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<AcoposParameterTable>
+  <Root Name="Parameters">
+    <Parameter Name="ENCOD2_LINE_CHK_IGNORE" ID="728" Value="2" Description="Encoder2: Ignore check" />
+  </Root>
+</AcoposParameterTable>

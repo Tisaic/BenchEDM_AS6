@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="Alarm.MonitorSeverity">
+      <tuv xml:lang="es">
+        <seg>{=$IAT/Alarm.{#::AsGlobalPV:gAlarmAddData.AddData[0]}}</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>{=$IAT/Alarm.{#::AsGlobalPV:gAlarmAddData.AddData[0]}}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>{=$IAT/Alarm.{#::AsGlobalPV:gAlarmAddData.AddData[0]}}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>{=$IAT/Alarm.{#::AsGlobalPV:gAlarmAddData.AddData[0]}}</seg>
+      </tuv>
+      <tuv xml:lang="ru">
+        <seg>{=$IAT/Alarm.{#::AsGlobalPV:gAlarmAddData.AddData[0]}}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_SYSTEM_PAR_NOT_READY">
+      <tuv xml:lang="es">
+        <seg>Parámetros No Cargados</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Paramètres Non Chargés</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Parameter Nicht Geladen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Parameters Not Loaded</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_SYSTEM_HMI_STOP">
+      <tuv xml:lang="es">
+        <seg>PARADA HMI Presionada</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>ARRÊT IHM Appuyé</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>HMI-STOPP Gedrückt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>HMI STOP Pressed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_SAFETY_ESTOP">
+      <tuv xml:lang="es">
+        <seg>EPARADA Presionada</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>EARRÊT Appuyé</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>ESTOPP Gedrückt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ESTOP Pressed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_REM_LOST_PAR">
+      <tuv xml:lang="es">
+        <seg>Memoria residual perdida. Se cargarán archivos de respaldo. Reemplace la batería de la PC de inmediato.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Mémoire résiduelle perdue. Les fichiers de sauvegarde seront chargés. Remplacez immédiatement la batterie du PC.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Restspeicher verloren. Sicherungsdateien werden geladen. Ersetzen Sie sofort die PC-Batterie.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ParFile: Remnant Memory Lost. Backup Files Will Be Loaded. Replace PC Battery Immediately.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_LOAD_BAD_PAR">
+      <tuv xml:lang="es">
+        <seg>¡Error al Cargar Archivo de Respaldo! ¡Se han cargado los valores predeterminados de fábrica!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Échec du Chargement du Fichier de Sauvegarde. Les Paramètres d'Usine Ont Été Chargés !</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Fehler beim Laden der Sicherungsdatei. Werkseinstellungen wurden geladen!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ParFile: Backup File Failed To Load. Factory Defaults Have Been Loaded!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_LOAD_GOOD_PAR">
+      <tuv xml:lang="es">
+        <seg>Archivo de respaldo cargado correctamente. Posible pérdida de datos.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Fichier de sauvegarde chargé avec succès. Perte de données possible.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Sicherungsdatei erfolgreich geladen. Möglicher Datenverlust.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ParFile: Backup File Loaded Successfully. Possible Data Loss.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_GEN_ERR_PAR">
+      <tuv xml:lang="es">
+        <seg>Error general en la receta. Verifique el registrador.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Erreur Générale de Recette. Vérifiez le Journal.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Allgemeiner Rezeptfehler. Überprüfen Sie den Logger.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ParFile: General Recipe Error. Check Logger.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_REM_LOST_REM">
+      <tuv xml:lang="es">
+        <seg>Memoria residual perdida. Se cargarán archivos de respaldo. Reemplace la batería de la PC de inmediato.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Mémoire résiduelle perdue. Les fichiers de sauvegarde seront chargés. Remplacez immédiatement la batterie du PC.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Restspeicher verloren. Sicherungsdateien werden geladen. Ersetzen Sie sofort die PC-Batterie.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>RemFile: Remnant Memory Lost. Backup Files Will Be Loaded. Replace PC Battery Immediately.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_LOAD_BAD_REM">
+      <tuv xml:lang="es">
+        <seg>¡Error al Cargar Archivo de Respaldo! ¡Se han cargado los valores predeterminados de fábrica!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Échec du Chargement du Fichier de Sauvegarde. Les Paramètres d'Usine Ont Été Chargés !</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Fehler beim Laden der Sicherungsdatei. Werkseinstellungen wurden geladen!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>RemFile: Backup File Failed To Load. Factory Defaults Have Been Loaded!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_LOAD_GOOD_REM">
+      <tuv xml:lang="es">
+        <seg>Archivo de respaldo cargado correctamente. Posible pérdida de datos.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Fichier de sauvegarde chargé avec succès. Perte de données possible.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Sicherungsdatei erfolgreich geladen. Möglicher Datenverlust.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>RemFile: Backup File Loaded Successfully. Possible Data Loss.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm.MON_RECIPE_GEN_ERR_REM">
+      <tuv xml:lang="es">
+        <seg>Error general en la receta. Verifique el registrador.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Erreur Générale de Recette. Vérifiez le Journal.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Allgemeiner Rezeptfehler. Überprüfen Sie den Logger.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>RemFile: General Recipe Error. Check Logger.</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

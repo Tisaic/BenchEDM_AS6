@@ -1,0 +1,22 @@
+VAR
+	MpAxisBasic_R_Y : MpAxisBasic;
+	MpAxisBasicPar_R_Y : MpAxisBasicParType;
+	MpAxisBasic_R_X : MpAxisBasic;
+	MpAxisBasicPar_R_X : MpAxisBasicParType;
+	MpAxisBasic_R_V : MpAxisBasic;
+	MpAxisBasicPar_R_V : MpAxisBasicParType;
+	MpAxisBasic_R_T : MpAxisBasic;
+	MpAxisBasicPar_R_T : MpAxisBasicParType;
+	MC_BR_TorqueControl_R_T : MC_BR_TorqueControl;
+	EnableTorqueControl : BOOL;
+	RTEnable : BOOL;
+	RTActual : DINT;
+	RTSetpoint : DINT;
+	RTHome : DINT;
+	RTDelayCount : DINT;
+	AMP : REAL;
+	START : BOOL;
+	X : REAL;
+	INCR : REAL;
+	LAST : DINT;
+END_VAR

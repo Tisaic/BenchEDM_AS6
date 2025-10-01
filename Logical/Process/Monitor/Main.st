@@ -1,0 +1,17 @@
+
+PROGRAM _INIT
+
+END_PROGRAM
+
+PROGRAM _CYCLIC
+	
+	Monitor_INIT;
+	Monitor_USER;
+	Monitor_SYS;
+	 
+END_PROGRAM
+
+PROGRAM _EXIT
+	 
+END_PROGRAM
+

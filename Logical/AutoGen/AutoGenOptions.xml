@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Options>
+	<Enable>true</Enable>
+	<ENUM_STRING>true</ENUM_STRING>
+	<Monitor>true</Monitor>
+</Options>

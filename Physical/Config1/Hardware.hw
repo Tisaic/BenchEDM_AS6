@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio WorkingVersion="6.1" FileVersion="4.9"?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="5ACCIF01.FPLS-000" Type="5ACCIF01.FPLS-000" Version="2.9.0.0">
+    <Connection Connector="SL" TargetModule="5PPC2200_AL04_000" TargetConnector="SL1" />
+  </Module>
+  <Module Name="5AP1120.101E-000" Type="5AP1120.101E-000" Version="2.1.0.0" />
+  <Module Name="5PPC2200_AL04_000" Type="5PPC2200.AL04-000" Version="2.0.7.0">
+    <Connection Connector="SY" TargetModule="5AP1120.101E-000" TargetConnector="SY1" />
+    <Connector Name="IF3">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="192.168.0.2" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Parameter ID="ActivateSnmp" Value="2" />
+    </Connector>
+    <Connector Name="IF4">
+      <Parameter ID="AssignedOperatingSystem" Value="GPOS" />
+    </Connector>
+    <Connector Name="IF7">
+      <Parameter ID="OperatingSystem" Value="ARemb" />
+      <Parameter ID="ActivateDevice" Value="1" />
+    </Connector>
+    <Connector Name="IF5">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF6">
+      <Parameter ID="AssignedOperatingSystem" Value="GPOS" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="Config1" />
+    <Parameter ID="UserPartitionSize" Value="256" />
+    <Parameter ID="Simulation" Value="1" />
+    <Parameter ID="UserRamDevice" Value="PCI.1.PPC21xx.SRAM" />
+    <Parameter ID="UserRamSize" Value="14000" />
+    <Parameter ID="RemMemDevice" Value="PCI.1.PPC21xx.SRAM" />
+    <Parameter ID="RemMemSize" Value="10000" />
+    <Parameter ID="RemanentGlobalPvSize" Value="10000" />
+    <Parameter ID="VolatileGlobalPvSize" Value="6553500" />
+    <Parameter ID="ClearNvMemoryAfterShutdownFlushError" Value="0" />
+    <Parameter ID="CyclicFlushRemMemSelector" Value="1" />
+    <Parameter ID="CyclicFlushRemMemCycleTime" Value="300" />
+    <Parameter ID="EnableUsbRemoteInstall" Value="1" />
+    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
+    <Parameter ID="TimerDevice" Value="5ACCIF01.FPLS-000.IF1" />
+    <Parameter ID="TaskClassIdleTime" Value="10000" />
+    <Parameter ID="Cyclic1Duration" Value="2000" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic1Output" Value="1" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="USER_DEVICE" />
+    <Parameter ID="FileDevicePath1" Value="F:\" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="USER_DEVICE_SIM" />
+    <Parameter ID="FileDevicePath2" Value="..\..\..\..\USER_DEVICE\" />
+    <Parameter ID="ActivateFtpServer" Value="1" />
+    <Parameter ID="FTPProtocol" Value="1" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="brcpu" />
+    <Parameter ID="FtpUserPassword1" Value="Ga9FbfaYwFdrzzlreMI/KhLrdRli8oqxPKsqgG5NU/A=" />
+    <Parameter ID="FtpUserSalt1" Value="BqJHaXjm" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="FTPdevice1" Value="ALL" />
+    <Parameter ID="ActivateWebServer" Value="1" />
+    <Parameter ID="WebServerProtocol" Value="1" />
+    <Parameter ID="ActivateSdm" Value="1" />
+    <Parameter ID="ActivateHypervisor" Value="1" />
+    <Parameter ID="ARembDramSizeInMb" Value="1024" />
+  </Module>
+  <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" Version="2.5.1.0" NodeNumber="3">
+    <Connection Connector="PLK1" TargetModule="8EIxxxMxT1x.xxxx-1" TargetConnector="PLK2">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisRV0_0" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="10" />
+    <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.05" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.2" />
+    <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[1]/ChannelFeatures" Value="Feature_AcpParTable" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisRT0_0" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="500" />
+    <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.01" />
+    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.003" />
+    <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.003" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.05" />
+    <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[2]/ChannelFeatures" Value="Feature_AcpParTable" />
+  </Module>
+  <Module Name="8EAC0151.003-1" Type="8EAC0151.003-1" Version="2.2.1.0">
+    <Connection Connector="SS" TargetModule="8EIxxxMxT1x.xxxx-1" TargetConnector="SS1" />
+    <Connection Connector="EC1" TargetModule="MotorSynchronous_any_a" TargetConnector="EC" />
+    <Connection Connector="EC2" TargetModule="MotorSynchronous_any" TargetConnector="EC" />
+    <Parameter ID="InterfaceType" Location="Encoder/EncoderX41x" Value="IncrementalEAC151" />
+    <Parameter ID="ReferencePulseDetection" Location="Encoder/EncoderX41x/InterfaceType/PowerSupply" Value="512" />
+    <Parameter ID="LineCount" Location="Encoder/EncoderX41x/InterfaceType/PowerSupply" Value="5000" />
+    <Parameter ID="InterfaceType" Location="Encoder/EncoderX42x" Value="IncrementalEAC151" />
+    <Parameter ID="ReferencePulseDetection" Location="Encoder/EncoderX42x/InterfaceType/PowerSupply" Value="512" />
+    <Parameter ID="LineCount" Location="Encoder/EncoderX42x/InterfaceType/PowerSupply" Value="5000" />
+  </Module>
+  <Module Name="8EIxxxMxT1x.xxxx-1" Type="8EIxxxMxT1x.xxxx-1" Version="2.4.0.0" NodeNumber="2">
+    <Connection Connector="PLK1" TargetModule="X20BC1083" TargetConnector="PLK2">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="PLK2" TargetModule="80VD100PD.C000-01" TargetConnector="PLK1">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="MT2" TargetModule="MotorSynchronous_any" TargetConnector="MT" />
+    <Parameter ID="PDMConfig" Value="DoubleAxis" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisRX0_0" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="20" />
+    <Parameter ID="MotorAndPositionEncoder" Location="DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="EncoderX41x" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="500" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.5" />
+    <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1" />
+    <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[1]/ChannelFeatures" Value="Feature_AcpParTable" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisRY0_0" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="20" />
+    <Parameter ID="MotorAndPositionEncoder" Location="DriveConfiguration/Channel[2]/RealAxis/EncoderLink" Value="EncoderX42x" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="500" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.5" />
+    <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="1" />
+    <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[2]/ChannelFeatures" Value="Feature_AcpParTable" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[3]/RealAxis" Value="" />
+  </Module>
+  <Module Name="BaxEDM_BX18_V0_1" Type="FBD.Hilscher.ECATGenSlaveDTM.BaxEDM BX18 V0.1" Version="0.1" OrderNumber="BaxEDM BX18 V0.1">
+    <Connection Connector="ECAT1" TargetModule="X20IF10G1_1" TargetConnector="IF1" />
+    <Parameter ID="DtmId" Value="fe48db39-c3c8-443f-8386-b71586607ac4" />
+    <Group ID="ChannelBlocks_a5e0ba90-679e-49de-b483-23402d97fefe" Description="Control_Data   [OUT, 8 Byte(s)]" />
+    <Group ID="ChannelBlocks_99e39d5a-a812-4e33-a7f5-c0cea25d5ebd" Description="Status_Data   [IN, 6 Byte(s)]" />
+  </Module>
+  <Module Name="MotorSynchronous_any" Type="MotorSynchronous_any" Version="2.2.1.0">
+    <Connection Connector="EC" TargetModule="8EAC0151.003-1" TargetConnector="EC2" />
+    <Connection Connector="MT" TargetModule="8EIxxxMxT1x.xxxx-1" TargetConnector="MT2" />
+    <Parameter ID="MOTOR_POLEPAIRS" Location="M1/MotorParameters" Value="1" />
+    <Parameter ID="MOTOR_SPEED_RATED" Location="M1/MotorParameters" Value="3300" />
+    <Parameter ID="MOTOR_SPEED_MAX" Location="M1/MotorParameters" Value="9300" />
+    <Parameter ID="MOTOR_VOLTAGE_RATED" Location="M1/MotorParameters" Value="300" />
+    <Parameter ID="MOTOR_CURR_RATED" Location="M1/MotorParameters" Value="2" />
+    <Parameter ID="MOTOR_CURR_STALL" Location="M1/MotorParameters" Value="2" />
+    <Parameter ID="MOTOR_CURR_MAX" Location="M1/MotorParameters" Value="8" />
+    <Parameter ID="MOTOR_TORQ_RATED" Location="M1/MotorParameters" Value="0.66" />
+    <Parameter ID="MOTOR_TORQ_STALL" Location="M1/MotorParameters" Value="2.55" />
+    <Parameter ID="MOTOR_TORQ_MAX" Location="M1/MotorParameters" Value="2.65" />
+    <Parameter ID="MOTOR_VOLTAGE_CONST" Location="M1/MotorParameters" Value="10.53" />
+    <Parameter ID="MOTOR_TORQ_CONST" Location="M1/MotorParameters" Value="0.302" />
+    <Parameter ID="MOTOR_STATOR_RESISTANCE" Location="M1/MotorParameters" Value="1.3" />
+    <Parameter ID="MOTOR_STATOR_INDUCTANCE" Location="M1/MotorParameters" Value="3.8" />
+    <Parameter ID="MOTOR_INERTIA" Location="M1/MotorParameters" Value="0.172" />
+    <Parameter ID="Angle" Location="M1/MotorParameters/EncoderMounting" Value="Undefined" />
+    <Parameter ID="AutomaticIdentification" Location="M1/MotorParameters/EncoderMounting/Angle" Value="Saturation" />
+    <Parameter ID="TemperatureSensor" Location="M1/MotorParameters" Value="NotUsed" />
+    <Parameter ID="TemperatureModel" Location="M1/MotorParameters" Value="NotUsed" />
+  </Module>
+  <Module Name="MotorSynchronous_any_a" Type="MotorSynchronous_any" Version="2.2.1.0">
+    <Connection Connector="EC" TargetModule="8EAC0151.003-1" TargetConnector="EC1" />
+    <Connection Connector="MT" TargetModule="8EIxxxMxT1x.xxxx-1" TargetConnector="MT1" />
+    <Parameter ID="MOTOR_POLEPAIRS" Location="M1/MotorParameters" Value="1" />
+    <Parameter ID="MOTOR_SPEED_RATED" Location="M1/MotorParameters" Value="3300" />
+    <Parameter ID="MOTOR_SPEED_MAX" Location="M1/MotorParameters" Value="9300" />
+    <Parameter ID="MOTOR_VOLTAGE_RATED" Location="M1/MotorParameters" Value="300" />
+    <Parameter ID="MOTOR_CURR_RATED" Location="M1/MotorParameters" Value="2" />
+    <Parameter ID="MOTOR_CURR_STALL" Location="M1/MotorParameters" Value="2" />
+    <Parameter ID="MOTOR_CURR_MAX" Location="M1/MotorParameters" Value="8" />
+    <Parameter ID="MOTOR_TORQ_RATED" Location="M1/MotorParameters" Value="0.66" />
+    <Parameter ID="MOTOR_TORQ_STALL" Location="M1/MotorParameters" Value="2.55" />
+    <Parameter ID="MOTOR_TORQ_MAX" Location="M1/MotorParameters" Value="2.65" />
+    <Parameter ID="MOTOR_VOLTAGE_CONST" Location="M1/MotorParameters" Value="10.53" />
+    <Parameter ID="MOTOR_TORQ_CONST" Location="M1/MotorParameters" Value="0.302" />
+    <Parameter ID="MOTOR_STATOR_RESISTANCE" Location="M1/MotorParameters" Value="1.3" />
+    <Parameter ID="MOTOR_STATOR_INDUCTANCE" Location="M1/MotorParameters" Value="3.8" />
+    <Parameter ID="MOTOR_INERTIA" Location="M1/MotorParameters" Value="0.172" />
+    <Parameter ID="Angle" Location="M1/MotorParameters/EncoderMounting" Value="Undefined" />
+    <Parameter ID="AutomaticIdentification" Location="M1/MotorParameters/EncoderMounting/Angle" Value="Saturation" />
+    <Parameter ID="TemperatureSensor" Location="M1/MotorParameters" Value="NotUsed" />
+    <Parameter ID="TemperatureModel" Location="M1/MotorParameters" Value="NotUsed" />
+  </Module>
+  <Module Name="X20BB82" Type="X20BB82" Version="1.2.0.0" />
+  <Module Name="X20BC1083" Type="X20BC1083" Version="2.16.1.0" NodeNumber="1">
+    <Connection Connector="PLK1" TargetModule="5ACCIF01.FPLS-000" TargetConnector="IF1">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="PLK2" TargetModule="8EIxxxMxT1x.xxxx-1" TargetConnector="PLK1">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="SL" TargetModule="X20BB82" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+  </Module>
+  <Module Name="X20BM11" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BB82" TargetConnector="IF1" />
+  </Module>
+  <Module Name="X20IF10G1_1" Type="X20IF10G1-1" Version="1.0.2.0">
+    <Connection Connector="SS" TargetModule="X20BB82" TargetConnector="SS1" />
+    <Connector Name="IF1">
+      <Parameter ID="DtmRef" Value="FBDIF.Hilscher.ECATMasterDTM.NETX 100 RE/ECM" />
+      <Parameter ID="DtmId" Value="fcb0a7a6-72c5-4f96-baa4-4e95cb9906ca" />
+    </Connector>
+    <Parameter ID="ConfigFile" Value="X20IF10G1_1.dtm" />
+    <Parameter ID="ConfigModule" Value="asnxdb1" />
+    <Parameter ID="CycleTime" Value="2000" />
+  </Module>
+  <Module Name="X20PS9400" Type="X20PS9400" Version="1.8.1.0">
+    <Connection Connector="SS1" TargetModule="X20TB12_b" TargetConnector="SS" />
+    <Connection Connector="PS" TargetModule="X20BB82" TargetConnector="PS1" />
+    <Parameter ID="Supervision" Value="off" />
+  </Module>
+  <Module Name="X20RT8001" Type="X20RT8001" Version="1.7.2.0">
+    <Connection Connector="SS1" TargetModule="X20TB12_a" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="ReActionTask" Value="StepDir" />
+    <Parameter ID="ReActionTaskDisabled" Value="FALSE" />
+    <Parameter ID="TypePar1" Value="DINT" />
+    <Parameter ID="TypePar2" Value="DINT" />
+    <Parameter ID="TypePar3" Value="DINT" />
+    <Parameter ID="TypeRes1" Value="DINT" />
+  </Module>
+  <Module Name="X20TB12_a" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12_b" Type="X20TB12" Version="1.0.0.0" />
+</Hardware>

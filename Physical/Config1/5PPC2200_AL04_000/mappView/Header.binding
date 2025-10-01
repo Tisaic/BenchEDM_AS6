@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="Header" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[0]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_0" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[1]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_1" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[2]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_2" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[3]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_3" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[4]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_4" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[5]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_5" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[6]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_6" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[7]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_7" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[8]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_8" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Header.Notifications.Visible[9]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Header" widgetRefId="Header_FlexBox_Notifications_FlexBoxItem_PushButton_Notification_9" attribute="visible" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Build_USER.st</Object>
+    <Object Type="File">Build_GEN.st</Object>
+    <Object Type="Package">Sequences</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,26 @@
+VAR
+	rtiDout_Direction : rtiDout;
+	rtiDout_Step : rtiDout;
+	rtiComp_0 : rtiComp;
+	rtiPar_Set : rtiPar;
+	rtiPar_Home : rtiPar;
+	rtiRes_Act : rtiRes;
+	rtiVarRead_0 : rtiVarRead;
+	rtiVarWrite_0 : rtiVarWrite;
+	rtiSub_0 : rtiSub;
+	rtiComp_1 : rtiComp;
+	rtiAdd_0 : rtiAdd;
+	rtiAnd_0 : rtiAnd;
+	rtiMux_1 : rtiMux;
+	rtiMux_0 : rtiMux;
+	rtiVarRead_1 : rtiVarRead;
+	rtiVarWrite_1 : rtiVarWrite;
+	rtiAdd_1 : rtiAdd;
+	rtiMul_0 : rtiMul;
+	rtiTP_0 : rtiTP;
+	rtiDelay_0 : rtiDelay;
+	rtiXor_0 : rtiXor;
+	rtiNot_0 : rtiNot;
+	rtiComp_2 : rtiComp;
+	rtiSRff_0 : rtiSRff;
+END_VAR

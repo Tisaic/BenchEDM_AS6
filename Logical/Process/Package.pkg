@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">Sim</Object>
+    <Object Type="Program" Language="IEC">InputMan</Object>
+    <Object Type="Program" Language="IEC">Monitor</Object>
+    <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">Seq_MASTER</Object>
+    <Object Type="Program" Language="IEC">OutputMan</Object>
+  </Objects>
+</Package>

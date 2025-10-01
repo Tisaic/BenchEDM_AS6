@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VariablesSet id="Svar_Notification" xmlns="http://www.br-automation.com/iat2015/session/engineering/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Variables>
+    <Variable name="Notification_Click_0" xsi:type="BOOL" value="false" />  
+    <Variable name="Notification_Click_1" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_2" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_3" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_4" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_5" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_6" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_7" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_8" xsi:type="BOOL" value="false" />    
+    <Variable name="Notification_Click_9" xsi:type="BOOL" value="false" />     
+  </Variables>
+</VariablesSet>

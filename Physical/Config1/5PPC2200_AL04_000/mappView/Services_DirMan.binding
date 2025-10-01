@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="Services_DirMan" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileList.Num" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User_TableItem_Number" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileList.Path" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User_TableItem_Path" attribute="stringValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileList.DateString" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User_TableItem_Modified" attribute="stringValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileList.IsDir" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User_TableItem_Dir" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileList.Size" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User_TableItem_Bytes" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileListUSB.IsDir" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB_TableItem_Dir" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileListUSB.Num" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB_TableItem_Number" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileListUSB.Size" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB_TableItem_Bytes" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileListUSB.Path" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB_TableItem_Path" attribute="stringValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.FileListUSB.DateString" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB_TableItem_Modified" attribute="stringValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.CmdActive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Cancel" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.CmdActive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Confirm" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Refresh" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Refresh" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Cancel" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Cancel" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Confirm" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Confirm" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.SelectedIndexUSB" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB" attribute="selectedRow" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.SelectedIndexUser" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User" attribute="selectedRow" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.CmdInactive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB" attribute="enable" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Busy" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Label_Refreshing" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Enable_Command" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Command" attribute="enable" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Cmd.Action" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_DropDownBox_CommandSelect" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Cmd.ParString" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_TextInput_ParString" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.Command" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_PushButton_Command" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.TableConfig_User" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_User" attribute="tableConfiguration" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVis.Services.DirMan.TableConfig_USB" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Services_DirMan" widgetRefId="Services_DirMan_Table_USB" attribute="tableConfiguration" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

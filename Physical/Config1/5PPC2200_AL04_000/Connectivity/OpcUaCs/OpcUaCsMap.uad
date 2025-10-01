@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="6.0"?>
+<OpcUaSource FileVersion="10">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="5394515" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="revolutions per second" Symbol="rev/s" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <Module Name="&lt;Default&gt;">
+    <GlobalVariables Name="Global Variables">
+      <Variable Name="gAlarmAddData" RecursiveEnable="2">
+        <Variable Name="AddData" RecursiveEnable="2" />
+      </Variable>
+      <Variable Name="gIO" RecursiveEnable="2" />
+      <Variable Name="gVis" RecursiveEnable="2">
+        <Variable Name="Alarms">
+          <Variable Name="Active">
+            <Variable Name="UIConnect">
+              <Variable Name="AlarmList">
+                <Variable Name="Code" RecursiveEnable="2" />
+                <Variable Name="Message" RecursiveEnable="2" />
+                <Variable Name="AdditionalInformation1" RecursiveEnable="2" />
+                <Variable Name="AdditionalInformation2" RecursiveEnable="2" />
+                <Variable Name="InstanceID" RecursiveEnable="2" />
+                <Variable Name="Scope" RecursiveEnable="2" />
+                <Variable Name="Name" RecursiveEnable="2" />
+                <Variable Name="StateActive" RecursiveEnable="2" />
+                <Variable Name="StateAcknowledged" RecursiveEnable="2" />
+                <Variable Name="StateConfirmed" RecursiveEnable="2" />
+                <Variable Name="Timestamp" RecursiveEnable="2" />
+              </Variable>
+              <Variable Name="Details">
+                <Variable Name="Backtrace">
+                  <Variable Name="RecordID" RecursiveEnable="2" />
+                  <Variable Name="LogbookName" RecursiveEnable="2" />
+                  <Variable Name="EventID" RecursiveEnable="2" />
+                  <Variable Name="Description" RecursiveEnable="2" />
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="History">
+            <Variable Name="UIConnect">
+              <Variable Name="AlarmList">
+                <Variable Name="Severity" RecursiveEnable="2" />
+                <Variable Name="Code" RecursiveEnable="2" />
+                <Variable Name="Message" RecursiveEnable="2" />
+                <Variable Name="AdditionalInformation1" RecursiveEnable="2" />
+                <Variable Name="AdditionalInformation2" RecursiveEnable="2" />
+                <Variable Name="Scope" RecursiveEnable="2" />
+                <Variable Name="Name" RecursiveEnable="2" />
+                <Variable Name="OldState" RecursiveEnable="2" />
+                <Variable Name="NewState" RecursiveEnable="2" />
+                <Variable Name="Timestamp" RecursiveEnable="2" />
+              </Variable>
+            </Variable>
+            <Variable Name="State" RecursiveEnable="2" />
+          </Variable>
+        </Variable>
+        <Variable Name="Header">
+          <Variable Name="Notifications">
+            <Variable Name="Visible" RecursiveEnable="2" />
+          </Variable>
+        </Variable>
+      </Variable>
+      <Variable Name="gSim" RecursiveEnable="2" />
+    </GlobalVariables>
+    <Task Name="BuildVer">
+      <Variable Name="BuildVersion" RecursiveEnable="2" />
+    </Task>
+  </Module>
+</OpcUaSource>

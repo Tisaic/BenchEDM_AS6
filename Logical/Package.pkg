@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="1.0.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" TransferedForTargetSourceCompare="true">AutoGen</Object>
+    <Object Type="Package" TransferedForTargetSourceCompare="true">BuildVersion</Object>
+    <Object Type="Package">Global</Object>
+    <Object Type="Package" Description="Global libraries">Libraries</Object>
+    <Object Type="Package">mappView</Object>
+    <Object Type="Package">Process</Object>
+    <Object Type="Program" Language="IEC">Services</Object>
+    <Object Type="Program" Language="IEC">Vis</Object>
+    <Object Type="Package">AlarmTexts</Object>
+    <Object Type="Program" Language="ReAction" TransferedForTargetSourceCompare="true">StepDir</Object>
+    <Object Type="Program" Language="ReAction" TransferedForTargetSourceCompare="true">StepDir1</Object>
+    <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">Dev</Object>
+  </Objects>
+</Package>

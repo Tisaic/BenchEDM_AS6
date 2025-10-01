@@ -1,0 +1,4 @@
+VAR
+	i : DINT;
+	j : DINT;
+END_VAR

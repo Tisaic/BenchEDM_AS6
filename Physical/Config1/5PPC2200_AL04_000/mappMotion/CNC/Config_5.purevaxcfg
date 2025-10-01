@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="PureVAxCfg_VT_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisVT_0" />
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_VV_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisVV_0" />
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_RZ0_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisRZ0_0" />
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_VZ_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisVZ_0" />
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_VY_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisVY_0" />
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_VX_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisVX_0" />
+    </Group>
+  </Element>
+</Configuration>

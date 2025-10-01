@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library SubType="IEC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Exported functions and function blocks">TC_Seq.fun</File>
+    <File>TC_Seq_Handler.st</File>
+    <File>TC_Seq_EnumStringSearch.st</File>
+    <File>TC_Seq_JsonToElem.st</File>
+    <File>TC_Seq_Add.st</File>
+    <File>TC_Seq_AddFront.st</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="TC_General" />
+    <Dependency ObjectName="AsBrStr" />
+    <Dependency ObjectName="brsystem" />
+    <Dependency ObjectName="TC_JSON" />
+  </Dependencies>
+</Library>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="mappViewControl" PackageType="mappViewControl" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Config.mappviewcfg</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">vis_0.vis</Object>
+    <Object Type="File">Header.eventbinding</Object>
+    <Object Type="File">Header.binding</Object>
+    <Object Type="File">Diagnostics.eventbinding</Object>
+    <Object Type="File">Diagnostics.binding</Object>
+    <Object Type="File">Settings.eventbinding</Object>
+    <Object Type="File">Settings.binding</Object>
+    <Object Type="File">Services.eventbinding</Object>
+    <Object Type="File">Services.binding</Object>
+    <Object Type="File">Alarms.eventbinding</Object>
+    <Object Type="File">Alarms.binding</Object>
+    <Object Type="File">Footer.eventbinding</Object>
+    <Object Type="File">Footer.binding</Object>
+    <Object Type="File">Navigation.binding</Object>
+    <Object Type="File">Main.binding</Object>
+    <Object Type="File">Process.binding</Object>
+    <Object Type="File">Settings_IO.binding</Object>
+    <Object Type="File">Settings_Timers.binding</Object>
+    <Object Type="File">Settings_System.binding</Object>
+    <Object Type="File">Alarms_History.binding</Object>
+    <Object Type="File">Alarms_Active.binding</Object>
+    <Object Type="File">Services_DirMan.binding</Object>
+  </Objects>
+</Package>

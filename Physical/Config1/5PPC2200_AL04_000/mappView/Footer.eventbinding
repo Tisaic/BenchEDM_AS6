@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="Footer" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="EventBinding_DateTimeSync">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler>
+        <Action>
+          <ReadTarget xsi:type="widgets.brease.DateTimeOutput.ReadAction" contentRefId="Footer" widgetRefId="Footer_DateTimeOutput">
+            <Method xsi:type="widgets.brease.DateTimeOutput.Action.GetValue" />
+          </ReadTarget>
+          <Result>
+            <ResultHandler>
+              <Action>
+                <Target xsi:type="widgets.brease.DateTimeInput.Action" contentRefId="Footer" widgetRefId="Footer_DateTimeInput">
+                  <Method xsi:type="widgets.brease.DateTimeInput.Action.SetValue" value="=result" />
+                </Target>
+              </Action>
+            </ResultHandler>
+          </Result>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_DateTimeSyncClick">
+      <Source xsi:type="widgets.brease.DateTimeInput.Event" contentRefId="Footer" widgetRefId="Footer_DateTimeInput" event="Click" />
+      <EventHandler>
+        <Action>
+          <ReadTarget xsi:type="widgets.brease.DateTimeOutput.ReadAction" contentRefId="Footer" widgetRefId="Footer_DateTimeOutput">
+            <Method xsi:type="widgets.brease.DateTimeOutput.Action.GetValue" />
+          </ReadTarget>
+          <Result>
+            <ResultHandler>
+              <Action>
+                <Target xsi:type="widgets.brease.DateTimeInput.Action" contentRefId="Footer" widgetRefId="Footer_DateTimeInput">
+                  <Method xsi:type="widgets.brease.DateTimeInput.Action.SetValue" value="=result" />
+                </Target>
+              </Action>
+            </ResultHandler>
+          </Result>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_DateTimeSet">
+      <Source xsi:type="widgets.brease.DateTimeInput.Event" contentRefId="Footer" widgetRefId="Footer_DateTimeInput" event="ValueChanged" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gVis.Footer.newTime">
+                <Method xsi:type="opcUa.NodeAction.SetValueDateTime" value="=value" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gVis.Footer.SetTime">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_TimeInvalid">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gVis.Footer.TimeNotValid" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.ShowMessageBox" type="OK" message="$IAT/Footer_Invalid_Time_Message" header="$IAT/Footer_Invalid_Time" icon="Error" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

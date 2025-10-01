@@ -1,0 +1,5 @@
+VAR
+	ParDefaults : Par_typ;
+	ParCmp : Par_typ;
+	i : DINT;
+END_VAR
