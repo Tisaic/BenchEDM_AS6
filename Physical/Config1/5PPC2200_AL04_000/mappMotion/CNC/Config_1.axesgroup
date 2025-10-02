@@ -18,16 +18,6 @@
             <Property ID="AxisRef" Value="gAxisVZ_0" />
           </Group>
         </Group>
-        <Group ID="SlaveAxes">
-          <Group ID="SlaveAxis[1]">
-            <Property ID="Name" Value="QT" />
-            <Property ID="AxisRef" Value="gAxisVT_0" />
-          </Group>
-          <Group ID="SlaveAxis[2]">
-            <Property ID="Name" Value="QV" />
-            <Property ID="AxisRef" Value="gAxisVV_0" />
-          </Group>
-        </Group>
       </Group>
       <Group ID="MechanicalSystem">
         <Property ID="MechSysRef" Value="MechSys" />

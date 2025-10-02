@@ -69,105 +69,58 @@ ACTION OMD_CS:
 			gDriver.CS[i].DefaultPar.CyclicTorqueFeedForwardSource								:= 0;								//SD
 			gDriver.CS[i].DefaultPar.CyclicVelocitySource										:= 0;								//SD				
 
-			gDriver.CS[i].DefaultPar.Mon[W_CS_NOERROR].Enable									:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_NOERROR].Sev										:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_NOERROR].Cmp										:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_NOERROR].DbOn										:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_NOERROR].DbOff									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDABORTED].Enable							:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDABORTED].Sev								:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDABORTED].Cmp								:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDABORTED].DbOn								:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDABORTED].DbOff								:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDBUSY].Enable								:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDBUSY].Sev									:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDBUSY].Cmp									:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDBUSY].DbOn									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_COMMANDBUSY].DbOff								:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_UPDATEDONE].Enable								:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_UPDATEDONE].Sev									:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_UPDATEDONE].Cmp									:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_UPDATEDONE].DbOn									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_UPDATEDONE].DbOff									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICPOSITIONACTIVE].Enable					:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICPOSITIONACTIVE].Sev						:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICPOSITIONACTIVE].Cmp						:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICPOSITIONACTIVE].DbOn					:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICPOSITIONACTIVE].DbOff					:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICVELOCITYACTIVE].Enable					:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICVELOCITYACTIVE].Sev						:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICVELOCITYACTIVE].Cmp						:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICVELOCITYACTIVE].DbOn					:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_MOVECYCLICVELOCITYACTIVE].DbOff					:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUECONTROLACTIVE].Enable						:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUECONTROLACTIVE].Sev							:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUECONTROLACTIVE].Cmp							:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUECONTROLACTIVE].DbOn							:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUECONTROLACTIVE].DbOff						:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUEFEEDFORWARDACTIVE].Enable					:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUEFEEDFORWARDACTIVE].Sev						:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUEFEEDFORWARDACTIVE].Cmp						:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUEFEEDFORWARDACTIVE].DbOn						:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TORQUEFEEDFORWARDACTIVE].DbOff					:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCAXISLIMITACTIVE].Enable							:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCAXISLIMITACTIVE].Sev							:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCAXISLIMITACTIVE].Cmp							:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCAXISLIMITACTIVE].DbOn							:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCAXISLIMITACTIVE].DbOff							:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCDATAINITIALIZED].Enable							:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCDATAINITIALIZED].Sev							:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCDATAINITIALIZED].Cmp							:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCDATAINITIALIZED].DbOn							:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCDATAINITIALIZED].DbOff							:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCINTORQUE].Enable								:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCINTORQUE].Sev									:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCINTORQUE].Cmp									:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCINTORQUE].DbOn									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCINTORQUE].DbOff									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCREADY].Enable									:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCREADY].Sev										:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCREADY].Cmp										:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCREADY].DbOn										:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_TCREADY].DbOff									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_AXISREADY].Enable									:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[W_CS_AXISREADY].Sev									:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_AXISREADY].Cmp									:= 1;								//SD
-			gDriver.CS[i].DefaultPar.Mon[W_CS_AXISREADY].DbOn									:= 0.0;								//RR
-			gDriver.CS[i].DefaultPar.Mon[W_CS_AXISREADY].DbOff									:= 0.0;								//RR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_ERROR].Enable										:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_ERROR].Sev										:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_ERROR].Time										:= 0.0;								//LR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE].Enable				:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE].Sev					:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE].Time					:= 0.0;								//LR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE].Enable				:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE].Sev					:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE].Time					:= 0.0;								//LR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUECONTROLACTIVE].Enable					:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUECONTROLACTIVE].Sev						:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUECONTROLACTIVE].Time						:= 0.0;								//LR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE].Enable				:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE].Sev					:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE].Time					:= 0.0;								//LR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_TCAXISLIMITACTIVE].Enable							:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_TCAXISLIMITACTIVE].Sev							:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_TCAXISLIMITACTIVE].Time							:= 0.0;								//LR
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTCINTORQUE].Enable								:= FALSE;							//BO
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTCINTORQUE].Sev								:= 4;								//SD
+			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTCINTORQUE].Time								:= 0.0;	
+
+			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gDriver.CS[i].DefaultPar),SIZEOF(gDriver.CS[i].Par));
 		END_IF;
 
 		brsmemset(ADR(gDriver.CS[i].Sev),0,SIZEOF(gDriver.CS[i].Sev));
 		brsmemset(ADR(gDriver.CS[i].Status),0,SIZEOF(gDriver.CS[i].Status));
-		FOR j := 0 TO MAX_DRIVER_CS_WAIT_IDX DO
+		FOR j := 0 TO MAX_DRIVER_CS_MON_IDX DO
 			IF gDriver.CS[i].Par.Mon[j].Enable THEN
-				IF gDriver.CS[i].Wait[j] <> gDriver.CS[i].Par.Mon[j].Cmp THEN
-					gDriver.CS[i].CTON_DbOff[j](IN := FALSE);
-					gDriver.CS[i].CTON_DbOn[j](IN := TRUE, PT := REAL_TO_TIME(gDriver.CS[i].Par.Mon[j].DbOn*1000.0));
-					IF gDriver.CS[i].CTON_DbOn[j].Q THEN
+				IF gDriver.CS[i].Mon[j] THEN
+					gDriver.CS[i].CTON_Mon[j](IN := TRUE, PT := LREAL_TO_TIME(gDriver.CS[i].Par.Mon[j].Time*1000.0));
+					IF gDriver.CS[i].CTON_Mon[j].Q THEN
 						gDriver.CS[i].Sev[j] := gDriver.CS[i].Par.Mon[j].Sev;
 						IF gDriver.CS[i].Status.Severity < gDriver.CS[i].Sev[j] THEN
 							gDriver.CS[i].Status.Severity := gDriver.CS[i].Sev[j];
 						END_IF;
 					END_IF;
 				ELSE
-					gDriver.CS[i].CTON_DbOn[j](IN := FALSE);
-					gDriver.CS[i].CTON_DbOff[j](IN := TRUE, PT := REAL_TO_TIME(gDriver.CS[i].Par.Mon[j].DbOff*1000.0));
-					IF gDriver.CS[i].CTON_DbOff[j].Q THEN
-						gDriver.CS[i].Sev[j] := 0;
-					END_IF;
+					gDriver.CS[i].CTON_Mon[j](IN := FALSE);
+					gDriver.CS[i].Sev[j] := 0;
 				END_IF;
 			ELSE
-				gDriver.CS[i].CTON_DbOn[j](IN := FALSE);
-				gDriver.CS[i].CTON_DbOff[j](IN := FALSE);
+				gDriver.CS[i].CTON_Mon[j](IN := FALSE);
 				gDriver.CS[i].Sev[j] := 0;
 			END_IF;
 		END_FOR;
 		IF gDriver.CS[i].Cmd[C_CS_RESET] THEN
 			gDriver.CS[i].Cmd[C_CS_RESET] := FALSE;
 			brsmemset(ADR(gDriver.CS[i].Cmd),0,SIZEOF(gDriver.CS[i].Cmd));
-			brsmemset(ADR(gDriver.CS[i].Par),0,SIZEOF(gDriver.CS[i].Par));
 			brsmemset(ADR(gDriver.CS[i].Sev),0,SIZEOF(gDriver.CS[i].Sev));
 			brsmemset(ADR(gDriver.CS[i].Status),0,SIZEOF(gDriver.CS[i].Status));
+			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gDriver.CS[i].DefaultPar),SIZEOF(gDriver.CS[i].Par));
 		END_IF;
 		IF gDriver.CS[i].Cmd[C_CS_CLEARCMD] THEN
 			gDriver.CS[i].Cmd[C_CS_CLEARCMD] := FALSE;
@@ -231,6 +184,14 @@ ACTION OMD_CS:
 		gDriver.CS[i].Wait[W_CS_TCINTORQUE]								:= BOOL_TO_DINT(gDriver.CS[i].MpAxisCyclicSet_0.Info.TorqueControl.InTorque);
 		gDriver.CS[i].Wait[W_CS_TCREADY]								:= BOOL_TO_DINT(gDriver.CS[i].MpAxisCyclicSet_0.Info.TorqueControl.Ready);
 		gDriver.CS[i].Wait[W_CS_AXISREADY]								:= BOOL_TO_DINT(gDriver.CS[i].MpAxisCyclicSet_0.Info.AxisReady);
+
+		gDriver.CS[i].Mon[M_CS_ERROR]									:= gDriver.CS[i].MpAxisCyclicSet_0.Error;
+		gDriver.CS[i].Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE]				:= NOT gDriver.CS[i].MpAxisCyclicSet_0.MoveCyclicPositionActive;
+		gDriver.CS[i].Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE]				:= NOT gDriver.CS[i].MpAxisCyclicSet_0.MoveCyclicVelocityActive;
+		gDriver.CS[i].Mon[M_CS_NOTTORQUECONTROLACTIVE]					:= NOT gDriver.CS[i].MpAxisCyclicSet_0.TorqueControlActive;
+		gDriver.CS[i].Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE]				:= NOT gDriver.CS[i].MpAxisCyclicSet_0.TorqueFeedForwardActive;
+		gDriver.CS[i].Mon[M_CS_TCAXISLIMITACTIVE]						:= gDriver.CS[i].MpAxisCyclicSet_0.Info.TorqueControl.AxisLimitActive;
+		gDriver.CS[i].Mon[M_CS_NOTTCINTORQUE]							:= NOT gDriver.CS[i].MpAxisCyclicSet_0.Info.TorqueControl.InTorque;
 	END_FOR;
 
 //	MpAxisMoveCyclicVelocityModeEnum : 

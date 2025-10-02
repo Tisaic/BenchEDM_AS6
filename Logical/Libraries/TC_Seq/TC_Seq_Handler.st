@@ -50,6 +50,8 @@ FUNCTION_BLOCK TC_Seq_Handler
 						TC_SEQ_TYPE_WAIT:
 							Out.Status.Processing			:= TRUE;
 							Internal.State					:= TC_SEQ_HANDLER_WAIT;
+						TC_SEQ_TYPE_MON:
+							Out.Status.Processing			:= TRUE;
 						TC_SEQ_TYPE_DELAY:
 							Out.Status.Processing			:= TRUE;
 							IF Internal.CurrentBuffer.Time > 0.0 THEN

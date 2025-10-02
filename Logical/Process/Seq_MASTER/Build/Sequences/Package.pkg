@@ -15,5 +15,6 @@
     <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Z.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_T.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_V.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_CNC.st</Object>
   </Objects>
 </Package>

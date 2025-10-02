@@ -72,135 +72,43 @@ ACTION OMD_AB:
 			gDriver.AB[i].DefaultPar.AB.Stop.StopAtPosition.Position							:= 0.0;								//LR
 			gDriver.AB[i].DefaultPar.AB.Velocity												:= 5.0;								//RR	
 					
-			gDriver.AB[i].DefaultPar.Mon[W_AB_NOERROR].Enable									:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_NOERROR].Sev										:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_NOERROR].Cmp										:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_NOERROR].DbOn										:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_NOERROR].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMUNICATIONREADY].Enable						:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMUNICATIONREADY].Sev							:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMUNICATIONREADY].Cmp							:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMUNICATIONREADY].DbOn							:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMUNICATIONREADY].DbOff							:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_READYTOPOWERON].Enable							:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_READYTOPOWERON].Sev								:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_READYTOPOWERON].Cmp								:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_READYTOPOWERON].DbOn								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_READYTOPOWERON].DbOff								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_POWERON].Enable									:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_POWERON].Sev										:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_POWERON].Cmp										:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_POWERON].DbOn										:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_POWERON].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_ISHOMED].Enable									:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_ISHOMED].Sev										:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_ISHOMED].Cmp										:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_ISHOMED].DbOn										:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_ISHOMED].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_LIMITLOADACTIVE].Enable							:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_LIMITLOADACTIVE].Sev								:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_LIMITLOADACTIVE].Cmp								:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_LIMITLOADACTIVE].DbOn								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_LIMITLOADACTIVE].DbOff							:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEDONE].Enable									:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEDONE].Sev										:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEDONE].Cmp										:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEDONE].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEDONE].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_UPDATEDONE].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_UPDATEDONE].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_UPDATEDONE].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_UPDATEDONE].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_UPDATEDONE].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_AUTOTUNEDONE].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_AUTOTUNEDONE].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_AUTOTUNEDONE].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_AUTOTUNEDONE].DbOn								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_AUTOTUNEDONE].DbOff								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_BRAKERELEASED].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_BRAKERELEASED].Sev								:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_BRAKERELEASED].Cmp								:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_BRAKERELEASED].DbOn								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_BRAKERELEASED].DbOff								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDABORTED].Enable							:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDABORTED].Sev								:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDABORTED].Cmp								:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDABORTED].DbOn								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDABORTED].DbOff								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDBUSY].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDBUSY].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDBUSY].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDBUSY].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_COMMANDBUSY].DbOff								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INPOSITION].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INPOSITION].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INPOSITION].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INPOSITION].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INPOSITION].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INVELOCITY].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INVELOCITY].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INVELOCITY].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INVELOCITY].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_INVELOCITY].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEACTIVE].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEACTIVE].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEACTIVE].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEACTIVE].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_MOVEACTIVE].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_STOPPED].Enable									:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_STOPPED].Sev										:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_STOPPED].Cmp										:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_STOPPED].DbOn										:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_STOPPED].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGGING].Enable									:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGGING].Sev										:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGGING].Cmp										:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGGING].DbOn										:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGGING].DbOff									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGLIMITREACHED].Enable							:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGLIMITREACHED].Sev								:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGLIMITREACHED].Cmp								:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGLIMITREACHED].DbOn								:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_JOGLIMITREACHED].DbOff							:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_SIMULATION].Enable								:= FALSE;							//BO
-			gDriver.AB[i].DefaultPar.Mon[W_AB_SIMULATION].Sev									:= 4;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_SIMULATION].Cmp									:= 1;								//SD
-			gDriver.AB[i].DefaultPar.Mon[W_AB_SIMULATION].DbOn									:= 0.0;								//RR
-			gDriver.AB[i].DefaultPar.Mon[W_AB_SIMULATION].DbOff									:= 0.0;								//RR
+			gDriver.AB[i].DefaultPar.Mon[M_AB_ERROR].Enable										:= FALSE;							//BO
+			gDriver.AB[i].DefaultPar.Mon[M_AB_ERROR].Sev										:= 4;								//SD
+			gDriver.AB[i].DefaultPar.Mon[M_AB_ERROR].Time										:= 0.0;								//LR
+			gDriver.AB[i].DefaultPar.Mon[M_AB_NOTPOWERON].Enable								:= FALSE;							//BO
+			gDriver.AB[i].DefaultPar.Mon[M_AB_NOTPOWERON].Sev									:= 4;								//SD
+			gDriver.AB[i].DefaultPar.Mon[M_AB_NOTPOWERON].Time									:= 0.0;								//LR
+			
+			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gDriver.AB[i].DefaultPar),SIZEOF(gDriver.AB[i].Par));
 		END_IF;
 
 		brsmemset(ADR(gDriver.AB[i].Sev),0,SIZEOF(gDriver.AB[i].Sev));
 		brsmemset(ADR(gDriver.AB[i].Status),0,SIZEOF(gDriver.AB[i].Status));
-		FOR j := 0 TO MAX_DRIVER_AB_WAIT_IDX DO
+		FOR j := 0 TO MAX_DRIVER_AB_MON_IDX DO
 			IF gDriver.AB[i].Par.Mon[j].Enable THEN
-				IF gDriver.AB[i].Wait[j] <> gDriver.AB[i].Par.Mon[j].Cmp THEN
-					gDriver.AB[i].CTON_DbOff[j](IN := FALSE);
-					gDriver.AB[i].CTON_DbOn[j](IN := TRUE, PT := REAL_TO_TIME(gDriver.AB[i].Par.Mon[j].DbOn*1000.0));
-					IF gDriver.AB[i].CTON_DbOn[j].Q THEN
+				IF gDriver.AB[i].Mon[j] THEN
+					gDriver.AB[i].CTON_Mon[j](IN := TRUE, PT := LREAL_TO_TIME(gDriver.AB[i].Par.Mon[j].Time*1000.0));
+					IF gDriver.AB[i].CTON_Mon[j].Q THEN
 						gDriver.AB[i].Sev[j] := gDriver.AB[i].Par.Mon[j].Sev;
 						IF gDriver.AB[i].Status.Severity < gDriver.AB[i].Sev[j] THEN
 							gDriver.AB[i].Status.Severity := gDriver.AB[i].Sev[j];
 						END_IF;
 					END_IF;
 				ELSE
-					gDriver.AB[i].CTON_DbOn[j](IN := FALSE);
-					gDriver.AB[i].CTON_DbOff[j](IN := TRUE, PT := REAL_TO_TIME(gDriver.AB[i].Par.Mon[j].DbOff*1000.0));
-					IF gDriver.AB[i].CTON_DbOff[j].Q THEN
-						gDriver.AB[i].Sev[j] := 0;
-					END_IF;
+					gDriver.AB[i].CTON_Mon[j](IN := FALSE);
+					gDriver.AB[i].Sev[j] := 0;
 				END_IF;
 			ELSE
-				gDriver.AB[i].CTON_DbOn[j](IN := FALSE);
-				gDriver.AB[i].CTON_DbOff[j](IN := FALSE);
+				gDriver.AB[i].CTON_Mon[j](IN := FALSE);
 				gDriver.AB[i].Sev[j] := 0;
 			END_IF;
 		END_FOR;
 		IF gDriver.AB[i].Cmd[C_AB_RESET] THEN
 			gDriver.AB[i].Cmd[C_AB_RESET] := FALSE;
 			brsmemset(ADR(gDriver.AB[i].Cmd),0,SIZEOF(gDriver.AB[i].Cmd));
-			brsmemset(ADR(gDriver.AB[i].Par),0,SIZEOF(gDriver.AB[i].Par));
 			brsmemset(ADR(gDriver.AB[i].Sev),0,SIZEOF(gDriver.AB[i].Sev));
 			brsmemset(ADR(gDriver.AB[i].Status),0,SIZEOF(gDriver.AB[i].Status));
+			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gDriver.AB[i].DefaultPar),SIZEOF(gDriver.AB[i].Par));
 		END_IF;
 		IF gDriver.AB[i].Cmd[C_AB_CLEARCMD] THEN
 			gDriver.AB[i].Cmd[C_AB_CLEARCMD] := FALSE;
@@ -263,6 +171,9 @@ ACTION OMD_AB:
 		gDriver.AB[i].Wait[W_AB_JOGGING]				:= BOOL_TO_DINT(gDriver.AB[i].MpAxisBasic_0.Info.Jogging);
 		gDriver.AB[i].Wait[W_AB_JOGLIMITREACHED]		:= BOOL_TO_DINT(gDriver.AB[i].MpAxisBasic_0.Info.JogLimitReached);
 		gDriver.AB[i].Wait[W_AB_SIMULATION]				:= BOOL_TO_DINT(gDriver.AB[i].MpAxisBasic_0.Info.Simulation);
+
+		gDriver.AB[i].Mon[M_AB_ERROR]					:= gDriver.AB[i].MpAxisBasic_0.Error;
+		gDriver.AB[i].Mon[M_AB_NOTPOWERON]				:= NOT gDriver.AB[i].MpAxisBasic_0.PowerOn;
 	END_FOR;
 
 //	McDirectionEnum :

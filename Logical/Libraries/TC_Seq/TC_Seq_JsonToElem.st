@@ -39,6 +39,8 @@ FUNCTION TC_Seq_JsonToElem
 					Internal.Element.Type 	:= TC_SEQ_TYPE_WAIT;
 				ELSIF Internal.JSONPairs[Internal.i].Value = 'C' THEN
 					Internal.Element.Type 	:= TC_SEQ_TYPE_CMD;
+				ELSIF Internal.JSONPairs[Internal.i].Value = 'M' THEN
+					Internal.Element.Type 	:= TC_SEQ_TYPE_MON;
 				ELSE
 					TC_Seq_JsonToElem.2 	:= TRUE;
 					RETURN;
@@ -53,6 +55,8 @@ FUNCTION TC_Seq_JsonToElem
 				Internal.Element.Time 		:= STRING_TO_LREAL(Internal.JSONPairs[Internal.i].Value);
 			ELSIF Internal.JSONPairs[Internal.i].Name = 'enable' THEN
 				Internal.Enable 	:= STRING_TO_BOOL(Internal.JSONPairs[Internal.i].Value);
+			ELSIF Internal.JSONPairs[Internal.i].Name = 'sev' THEN
+				Internal.Sev 		:= STRING_TO_DINT(Internal.JSONPairs[Internal.i].Value);
 			END_IF;
 		END_IF;
 	END_FOR;
@@ -116,7 +120,66 @@ FUNCTION TC_Seq_JsonToElem
 			brsmemset(pElement,0,SIZEOF(Internal.Element));	
 			RETURN;
 		END_IF;
-	ELSE
+	ELSIF Internal.Element.Type = TC_SEQ_TYPE_MON THEN
+		TC_brsstrcat(ADR(Internal.EnumNameString_Ident),ADR('M_'),SIZEOF(Internal.EnumNameString_Ident));
+		TC_brsstrcat(ADR(Internal.EnumNameString_Ident),ADR(Internal.Driver),SIZEOF(Internal.EnumNameString_Ident));
+		TC_brsstrcat(ADR(Internal.EnumNameString_Ident),ADR('_ENUM'),SIZEOF(Internal.EnumNameString_Ident));
+		TC_brsstrcat(ADR(Internal.EnumValueString_Ident),ADR('M_'),SIZEOF(Internal.EnumValueString_Ident));
+		TC_brsstrcat(ADR(Internal.EnumValueString_Ident),ADR(Internal.Driver),SIZEOF(Internal.EnumValueString_Ident));
+		TC_brsstrcat(ADR(Internal.EnumValueString_Ident),ADR('_'),SIZEOF(Internal.EnumValueString_Ident));
+		TC_brsstrcat(ADR(Internal.EnumValueString_Ident),ADR(Internal.Ident),SIZEOF(Internal.EnumValueString_Ident));
+		Internal.IdentIdx := TC_Seq_EnumStringSearch(Internal.EnumNameString_Ident,Internal.EnumValueString_Ident);
+		IF Internal.IdentIdx < 0 THEN
+			TC_Seq_JsonToElem.7 := TRUE;
+			brsmemset(pElement,0,SIZEOF(Internal.Element));
+			RETURN;
+		END_IF;
+		brsmemset(ADR(Internal.PvName),0,SIZEOF(Internal.PvName));
+		TC_brsstrcat(ADR(Internal.PvName),ADR('gDriver.'),SIZEOF(Internal.PvName));
+		TC_brsstrcat(ADR(Internal.PvName),ADR(Internal.Driver),SIZEOF(Internal.PvName));
+		TC_brsstrcat(ADR(Internal.PvName),ADR('['),SIZEOF(Internal.PvName));
+		Internal.InstIdxString := DINT_TO_STRING(Internal.InstIdx);
+		TC_brsstrcat(ADR(Internal.PvName),ADR(Internal.InstIdxString),SIZEOF(Internal.PvName));
+		TC_brsstrcat(ADR(Internal.PvName),ADR('].Par.Mon['),SIZEOF(Internal.PvName));
+		Internal.IdentIdxString := DINT_TO_STRING(Internal.IdentIdx);
+		TC_brsstrcat(ADR(Internal.PvName),ADR(Internal.IdentIdxString),SIZEOF(Internal.PvName));
+		TC_brsstrcat(ADR(Internal.PvName),ADR(']'),SIZEOF(Internal.PvName));
+		brsmemset(ADR(Internal.PvNameSub),0,SIZEOF(Internal.PvNameSub));
+		TC_brsstrcat(ADR(Internal.PvNameSub),ADR(Internal.PvName),SIZEOF(Internal.PvNameSub));
+		TC_brsstrcat(ADR(Internal.PvNameSub),ADR('.Enable'),SIZEOF(Internal.PvNameSub));
+		Internal.Status := PV_xgetadr(ADR(Internal.PvNameSub),ADR(Internal.PvAddress),ADR(Internal.PvLen));
+		IF Internal.Status = 0 AND Internal.PvLen = 1 THEN
+			brsmemcpy(Internal.PvAddress,ADR(Internal.Enable),SIZEOF(Internal.Enable));
+		ELSE
+			TC_Seq_JsonToElem.8 		:= TRUE;
+			brsmemset(pElement,0,SIZEOF(Internal.Element));	
+			RETURN;
+		END_IF;
+		brsmemset(ADR(Internal.PvNameSub),0,SIZEOF(Internal.PvNameSub));
+		TC_brsstrcat(ADR(Internal.PvNameSub),ADR(Internal.PvName),SIZEOF(Internal.PvNameSub));
+		TC_brsstrcat(ADR(Internal.PvNameSub),ADR('.Sev'),SIZEOF(Internal.PvNameSub));
+		Internal.Status := PV_xgetadr(ADR(Internal.PvNameSub),ADR(Internal.PvAddress),ADR(Internal.PvLen));
+		IF Internal.Status = 0 AND Internal.PvLen = 4 THEN
+			brsmemcpy(Internal.PvAddress,ADR(Internal.Sev),SIZEOF(Internal.Sev));
+		ELSE
+			TC_Seq_JsonToElem.9 		:= TRUE;
+			brsmemset(pElement,0,SIZEOF(Internal.Element));	
+			RETURN;
+		END_IF;
+		brsmemset(ADR(Internal.PvNameSub),0,SIZEOF(Internal.PvNameSub));
+		TC_brsstrcat(ADR(Internal.PvNameSub),ADR(Internal.PvName),SIZEOF(Internal.PvNameSub));
+		TC_brsstrcat(ADR(Internal.PvNameSub),ADR('.Time'),SIZEOF(Internal.PvNameSub));
+		Internal.Status := PV_xgetadr(ADR(Internal.PvNameSub),ADR(Internal.PvAddress),ADR(Internal.PvLen));
+		IF Internal.Status = 0 AND Internal.PvLen = 8 THEN
+			brsmemcpy(Internal.PvAddress,ADR(Internal.Element.Time),SIZEOF(Internal.Element.Time));
+		ELSE
+			TC_Seq_JsonToElem.10 		:= TRUE;
+			brsmemset(pElement,0,SIZEOF(Internal.Element));	
+			RETURN;
+		END_IF;
+		brsmemcpy(ADR(Internal.Element.Json),pJsonString,SIZEOF(Internal.Element.Json));
+		brsmemcpy(pElement,ADR(Internal.Element),SIZEOF(Internal.Element));
+	ELSIF Internal.Element.Type = TC_SEQ_TYPE_CMD THEN
 		TC_brsstrcat(ADR(Internal.EnumNameString_Ident),ADR('C_'),SIZEOF(Internal.EnumNameString_Ident));
 		TC_brsstrcat(ADR(Internal.EnumNameString_Ident),ADR(Internal.Driver),SIZEOF(Internal.EnumNameString_Ident));
 		TC_brsstrcat(ADR(Internal.EnumNameString_Ident),ADR('_ENUM'),SIZEOF(Internal.EnumNameString_Ident));
@@ -126,7 +189,7 @@ FUNCTION TC_Seq_JsonToElem
 		TC_brsstrcat(ADR(Internal.EnumValueString_Ident),ADR(Internal.Ident),SIZEOF(Internal.EnumValueString_Ident));
 		Internal.IdentIdx := TC_Seq_EnumStringSearch(Internal.EnumNameString_Ident,Internal.EnumValueString_Ident);
 		IF Internal.IdentIdx < 0 THEN
-			TC_Seq_JsonToElem.7 := TRUE;
+			TC_Seq_JsonToElem.11 := TRUE;
 			brsmemset(pElement,0,SIZEOF(Internal.Element));	
 			RETURN;
 		END_IF;
@@ -146,7 +209,7 @@ FUNCTION TC_Seq_JsonToElem
 		IF Internal.Status = 0 AND Internal.PvLen = 1 THEN
 			Internal.CmdPvAddress := Internal.PvAddress;
 		ELSE
-			TC_Seq_JsonToElem.8 		:= TRUE;
+			TC_Seq_JsonToElem.12 		:= TRUE;
 			brsmemset(pElement,0,SIZEOF(Internal.Element));	
 			RETURN;
 		END_IF;
@@ -155,7 +218,7 @@ FUNCTION TC_Seq_JsonToElem
 		brsmemset(ADR(Internal.JSONPairs),0,SIZEOF(Internal.JSONPairs));	
 		Internal.TC_JSON_Parse_0(Enable := TRUE, pBuffer := ADR(Internal.Par), pPairs := ADR(Internal.JSONPairs), NoQuotes := TRUE);
 		IF Internal.TC_JSON_Parse_0.Error THEN
-			TC_Seq_JsonToElem.9 := TRUE;
+			TC_Seq_JsonToElem.13 := TRUE;
 			brsmemset(pElement,0,SIZEOF(Internal.Element));	
 			RETURN;
 		END_IF;
@@ -176,7 +239,7 @@ FUNCTION TC_Seq_JsonToElem
 				Internal.ParElement[Internal.idx].Name := Internal.PvName;
 				Internal.Status := PV_ninfo(ADR(Internal.PvName),ADR(Internal.Datatype),ADR(Internal.DataLen),ADR(Internal.Dimension));
 				IF Internal.Status <> 0 THEN
-					TC_Seq_JsonToElem.10 := TRUE;
+					TC_Seq_JsonToElem.14 := TRUE;
 					brsmemset(pElement,0,SIZEOF(Internal.Element));	
 					RETURN;
 				END_IF;
@@ -230,7 +293,7 @@ FUNCTION TC_Seq_JsonToElem
 					Internal.ParElement[Internal.idx].GenVar.VarENUM 			:= STRING_TO_DINT(Internal.ParValue);//TODO: Use gES? How to get the enum name to value...
 					Internal.ParElement[Internal.idx].GenVar.VarENUM_STRING	:= Internal.ParValue;
 				ELSE
-					TC_Seq_JsonToElem.11 := TRUE;
+					TC_Seq_JsonToElem.15 := TRUE;
 					brsmemset(pElement,0,SIZEOF(Internal.Element));	
 					RETURN;
 				END_IF;
@@ -244,7 +307,7 @@ FUNCTION TC_Seq_JsonToElem
 			ELSE
 				Internal.Status := PV_xgetadr(ADR(Internal.ParElement[Internal.i].Name),ADR(Internal.PvAddress),ADR(Internal.PvLen));
 				IF Internal.Status <> 0 THEN
-					TC_Seq_JsonToElem.12 		:= TRUE;
+					TC_Seq_JsonToElem.16 		:= TRUE;
 					brsmemset(pElement,0,SIZEOF(Internal.Element));	
 					RETURN;
 				END_IF;
@@ -275,7 +338,7 @@ FUNCTION TC_Seq_JsonToElem
 						brsmemcpy(Internal.PvAddress,ADR(Internal.ParElement[Internal.i].GenVar.VarENUM),SIZEOF(Internal.ParElement[Internal.i].GenVar.VarENUM));
 					TC_SEQ_PAR_SELECT_STRING:
 						IF Internal.PvLen <= brsstrlen(ADR(Internal.ParElement[Internal.i].GenVar.VarSTRING)) THEN
-							TC_Seq_JsonToElem.13 		:= TRUE;
+							TC_Seq_JsonToElem.17 		:= TRUE;
 							brsmemset(pElement,0,SIZEOF(Internal.Element));	
 							RETURN;
 						END_IF;
@@ -283,7 +346,7 @@ FUNCTION TC_Seq_JsonToElem
 						brsmemcpy(Internal.PvAddress,ADR(Internal.ParElement[Internal.i].GenVar.VarSTRING),brsstrlen(ADR(Internal.ParElement[Internal.i].GenVar.VarSTRING)));
 					TC_SEQ_PAR_SELECT_STRINGADR:
 						IF Internal.PvLen <= brsstrlen(Internal.ParElement[Internal.i].GenVar.VarSTRING_ADR) THEN
-							TC_Seq_JsonToElem.14 		:= TRUE;
+							TC_Seq_JsonToElem.18 		:= TRUE;
 							brsmemset(pElement,0,SIZEOF(Internal.Element));	
 							RETURN;
 						END_IF;

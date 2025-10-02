@@ -60,6 +60,7 @@ TYPE
 		InstIdx : DINT;
 		DriverRoot : STRING[255];
 		PvName : STRING[255];
+		PvNameSub : STRING[255];
 		PvLen : UDINT;
 		DataLen : UDINT;
 		ParValue : STRING[MAX_JSON_PARSE_VALUE_LEN];
@@ -75,6 +76,7 @@ TYPE
 		Driver : STRING[32];
 		Ident : STRING[32];
 		Inst : STRING[32];
+		Sev : DINT;
 		Enable : BOOL;
 		ParDone : BOOL;
 		Par : STRING[MAX_TC_SEQ_PAR_STRING_LEN];
@@ -143,6 +145,7 @@ TYPE
 		TC_SEQ_TYPE_NONE,
 		TC_SEQ_TYPE_CMD,
 		TC_SEQ_TYPE_WAIT,
+		TC_SEQ_TYPE_MON,
 		TC_SEQ_TYPE_DELAY,
 		TC_SEQ_TYPE_BREAK
 		);
