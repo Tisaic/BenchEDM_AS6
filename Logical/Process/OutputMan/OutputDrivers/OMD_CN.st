@@ -29,13 +29,6 @@ ACTION OMD_CN:
 			gDriver.CN[i].DefaultPar.OverrideSource														:= 0;								//SD
 			gDriver.CN[i].DefaultPar.RapidOverrideSource												:= 0;								//SD				
 		
-			gDriver.CN[i].DefaultPar.Mon[M_CN_ERROR].Enable												:= FALSE;							//BO
-			gDriver.CN[i].DefaultPar.Mon[M_CN_ERROR].Sev												:= 4;								//SD
-			gDriver.CN[i].DefaultPar.Mon[M_CN_ERROR].Time												:= 0.0;								//LR
-			gDriver.CN[i].DefaultPar.Mon[M_CN_NOTPOWERON].Enable										:= FALSE;							//BO
-			gDriver.CN[i].DefaultPar.Mon[M_CN_NOTPOWERON].Sev											:= 4;								//SD
-			gDriver.CN[i].DefaultPar.Mon[M_CN_NOTPOWERON].Time											:= 0.0;								//LR
-
 			brsmemcpy(ADR(gDriver.CN[i].Par),ADR(gDriver.CN[i].DefaultPar),SIZEOF(gDriver.CN[i].Par));
 		END_IF;
 
@@ -135,6 +128,7 @@ ACTION OMD_CN:
 
 		gDriver.CN[i].Mon[M_CN_ERROR]									:= gDriver.CN[i].MpCncFlex_0.Error;
 		gDriver.CN[i].Mon[M_CN_NOTPOWERON]								:= NOT gDriver.CN[i].MpCncFlex_0.PowerOn;
+		gDriver.CN[i].Mon[M_CN_NOTMOVEACTIVE]							:= NOT gDriver.CN[i].MpCncFlex_0.MoveActive;
 	END_FOR;
 
 //	McPrgAxesReposTypeEnum :

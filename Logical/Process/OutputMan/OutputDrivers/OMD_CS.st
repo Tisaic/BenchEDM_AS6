@@ -69,28 +69,6 @@ ACTION OMD_CS:
 			gDriver.CS[i].DefaultPar.CyclicTorqueFeedForwardSource								:= 0;								//SD
 			gDriver.CS[i].DefaultPar.CyclicVelocitySource										:= 0;								//SD				
 
-			gDriver.CS[i].DefaultPar.Mon[M_CS_ERROR].Enable										:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_ERROR].Sev										:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_ERROR].Time										:= 0.0;								//LR
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE].Enable				:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE].Sev					:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICPOSITIONACTIVE].Time					:= 0.0;								//LR
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE].Enable				:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE].Sev					:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTMOVECYCLICVELOCITYACTIVE].Time					:= 0.0;								//LR
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUECONTROLACTIVE].Enable					:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUECONTROLACTIVE].Sev						:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUECONTROLACTIVE].Time						:= 0.0;								//LR
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE].Enable				:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE].Sev					:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTORQUEFEEDFORWARDACTIVE].Time					:= 0.0;								//LR
-			gDriver.CS[i].DefaultPar.Mon[M_CS_TCAXISLIMITACTIVE].Enable							:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_TCAXISLIMITACTIVE].Sev							:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_TCAXISLIMITACTIVE].Time							:= 0.0;								//LR
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTCINTORQUE].Enable								:= FALSE;							//BO
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTCINTORQUE].Sev								:= 4;								//SD
-			gDriver.CS[i].DefaultPar.Mon[M_CS_NOTTCINTORQUE].Time								:= 0.0;	
-
 			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gDriver.CS[i].DefaultPar),SIZEOF(gDriver.CS[i].Par));
 		END_IF;
 
