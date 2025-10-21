@@ -1,0 +1,10 @@
+VAR_CONFIG
+	Cyclic#1.gIO.BX18.Outputs_control AT %QW."BX18_Arc_Generator_V1_0".Outputs_control;
+	Cyclic#1.gIO.BX18.Outputs_onTime AT %QW."BX18_Arc_Generator_V1_0".Outputs_onTime;
+	Cyclic#1.gIO.BX18.Outputs_offTime AT %QW."BX18_Arc_Generator_V1_0".Outputs_offTime;
+	Cyclic#1.gIO.BX18.Outputs_current AT %QW."BX18_Arc_Generator_V1_0".Outputs_current;
+	Cyclic#1.gIO.BX18.Inputs_status AT %IW."BX18_Arc_Generator_V1_0".Inputs_status;
+	Cyclic#1.gIO.BX18.Inputs_EDMservofeedback AT %IW."BX18_Arc_Generator_V1_0".Inputs_EDMservofeedback;
+	Cyclic#1.gIO.BX18.Inputs_power AT %IW."BX18_Arc_Generator_V1_0".Inputs_power;
+	Cyclic#1.gIO.BX18.ModuleOK AT %IX."BX18_Arc_Generator_V1_0".ModuleOk;
+END_VAR

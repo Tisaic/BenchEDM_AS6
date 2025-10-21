@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ExternalHardware>
-  <Modules>
-    <Module ModuleID="FBD.Hilscher.ECATGenSlaveDTM.BaxEDM BX18 V0.1" Version="0.1" OrderNumber="BaxEDM BX18 V0.1">
-      <SourceFile OriginalFile="BX18.xml" TranslationFile="2456T1ND.ext" />
-    </Module>
-  </Modules>
-</ExternalHardware>

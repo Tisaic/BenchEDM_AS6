@@ -1,10 +1,12 @@
 
 TYPE
 	Driver_typ : 	STRUCT 
-		FI : ARRAY[0..MAX_DRIVER_FI_IDX]OF Driver_FI_typ;
+		IN : ARRAY[0..MAX_DRIVER_IN_IDX]OF Driver_IN_typ;
 		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_typ;
 		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_typ;
 		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_typ;
+		FI : ARRAY[0..MAX_DRIVER_FI_IDX]OF Driver_FI_typ;
+		OU : ARRAY[0..MAX_DRIVER_OU_IDX]OF Driver_OU_typ;
 	END_STRUCT;
 	Driver_Par_Mon_typ : 	STRUCT 
 		Enable : BOOL;
@@ -122,5 +124,46 @@ TYPE
 		Position : ARRAY[0..14]OF LREAL;
 		PathVelocity : REAL;
 		Info : MpCncFlexInfoType;
+	END_STRUCT;
+	Driver_IN_typ : 	STRUCT 
+		Cmd : ARRAY[0..MAX_DRIVER_IN_CMD_IDX]OF BOOL;
+		Wait : ARRAY[0..MAX_DRIVER_IN_WAIT_IDX]OF DINT;
+		Mon : ARRAY[0..MAX_DRIVER_IN_MON_IDX]OF BOOL;
+		Sev : ARRAY[0..MAX_DRIVER_IN_MON_IDX]OF DINT;
+		CTON_Mon : ARRAY[0..MAX_DRIVER_IN_MON_IDX]OF CTON;
+		Par : Driver_IN_Par_typ;
+		DefaultPar : Driver_IN_Par_typ;
+		Status : Driver_IN_Status_typ;
+		FirstScanComplete : BOOL;
+		New_Member : USINT;
+		DI_Estop : TC_IO_DI;
+	END_STRUCT;
+	Driver_IN_Par_typ : 	STRUCT 
+		Mon : ARRAY[0..MAX_DRIVER_IN_MON_IDX]OF Driver_Par_Mon_typ;
+		ForceEnable : BOOL;
+		DI_Estop_Par : TC_IO_Digital_Par_typ;
+		DI_Estop_Forcing : TC_IO_Digital_Forcing_typ;
+		DI_Estop_Sim : TC_IO_Digital_Sim_typ;
+	END_STRUCT;
+	Driver_IN_Status_typ : 	STRUCT 
+		Severity : DINT;
+	END_STRUCT;
+	Driver_OU_typ : 	STRUCT 
+		Cmd : ARRAY[0..MAX_DRIVER_OU_CMD_IDX]OF BOOL;
+		Wait : ARRAY[0..MAX_DRIVER_OU_WAIT_IDX]OF DINT;
+		Mon : ARRAY[0..MAX_DRIVER_OU_MON_IDX]OF BOOL;
+		Sev : ARRAY[0..MAX_DRIVER_OU_MON_IDX]OF DINT;
+		CTON_Mon : ARRAY[0..MAX_DRIVER_OU_MON_IDX]OF CTON;
+		Par : Driver_OU_Par_typ;
+		DefaultPar : Driver_OU_Par_typ;
+		Status : Driver_OU_Status_typ;
+		FirstScanComplete : BOOL;
+	END_STRUCT;
+	Driver_OU_Par_typ : 	STRUCT 
+		Mon : ARRAY[0..MAX_DRIVER_OU_MON_IDX]OF Driver_Par_Mon_typ;
+		DO_Enable : TC_IO_Digital_Par_typ;
+	END_STRUCT;
+	Driver_OU_Status_typ : 	STRUCT 
+		Severity : DINT;
 	END_STRUCT;
 END_TYPE

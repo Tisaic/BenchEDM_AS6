@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBD.Hilscher.ECATGenSlaveDTM.BX18 Arc Generator V1.0" Version="1.0" OrderNumber="BX18 Arc Generator V1.0">
+      <SourceFile OriginalFile="BX18_V1_Export.xml" TranslationFile="3F5PCR6Q.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>

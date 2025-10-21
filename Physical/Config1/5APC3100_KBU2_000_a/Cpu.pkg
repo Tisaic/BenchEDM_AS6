@@ -20,12 +20,12 @@
     <Object Type="Package">ExternalHardware</Object>
     <Object Type="Package">DTM</Object>
   </Objects>
-  <Configuration ModuleId="5PPC2200.AL04-000">
+  <Configuration ModuleId="5APC3100.KBU2-000">
     <AutomationRuntime Version="6.3.4" />
     <Build GccVersion="11.3.0" PreBuildStep="PowerShell -ExecutionPolicy ByPass -File $(WIN32_AS_PROJECT_PATH)\Logical\AutoGen\AutoGenScript.ps1 &quot;$(WIN32_AS_PROJECT_PATH)&quot; &quot;$(AS_VERSION)&quot; &quot;$(AS_USER_NAME)&quot; &quot;$(AS_PROJECT_NAME)&quot; &quot;$(AS_CONFIGURATION)&quot; &quot;$(AS_BUILD_MODE)&quot;" />
     <DefaultTargetMemory Tasks="UserROM" />
     <TaskClasses DefaultIoTaskClass="Cyclic1" DefaultTaskClass="Cyclic1" />
-    <Transfer SavedOfflineInstallationFolder="" SavedPipDestinationFolder="" SavedRuntimeUtilityCenterPackagePath="" />
+    <Transfer AddToUserPart="False" AdditionalUserDir="" AllowDowngrade="False" AllowInitialTransfer="False" AllowPartitioning="False" ExecuteInitExitProgram="True" ForceInitialTransfer="False" IdentificationTypeValue="" IgnoreVersion="True" KeepNonVolatileMemory="True" PreserveVariableValues="False" ProjectConsistent="True" RebootDuringTransfer="False" SavedOfflineInstallationFolder="" SavedPipDestinationFolder="" SavedRuntimeUtilityCenterPackagePath="" TargetIdentificationType="Always" TryToBootInRunMode="False" UserFilesIgnoreDifference="True" />
     <Vc FirmwareVersion="6.0.0" />
     <OnlineConfiguration Name="X20CP0484" DeviceType="TCPIP" DeviceParameters="/IF=tcpip" ConnectionParameters="/COMT=2500 /AM=* /SDT=5 /IP=192.168.0.2 /PT=11169" Description="" />
   </Configuration>
