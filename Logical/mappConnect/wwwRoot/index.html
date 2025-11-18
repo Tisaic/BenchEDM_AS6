@@ -1,0 +1,120 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Control Interface</title>
+    
+    <!-- React -->
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    
+    <!-- Material-UI -->
+    <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.14.20/umd/material-ui.production.min.js"></script>
+    
+    <!-- Simple Keyboard -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    
+    <!-- Plotly -->
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.27.0/dist/plotly.min.js"></script>
+    
+    <!-- Lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        
+        /* Dark theme for Simple Keyboard */
+        .simple-keyboard {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+        .simple-keyboard .hg-button {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            border: 1px solid #3a3a3a;
+            height: 50px;
+            font-size: 18px;
+        }
+        
+        .simple-keyboard .hg-button:active {
+            background-color: #7f32da;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        // React hooks
+        const { useState, useEffect, useRef } = React;
+        
+        // Material-UI components
+        const {
+            ThemeProvider,
+            createTheme,
+            Box,
+            Container,
+            Paper,
+            Button,
+            TextField,
+            Typography,
+            // Add more components as needed
+        } = MaterialUI;
+        
+        // Create dark theme
+        const theme = createTheme({
+            palette: {
+                mode: 'dark',
+                primary: {
+                    main: '#7f32da',
+                },
+                background: {
+                    default: '#0a0a0a',
+                    paper: '#1a1a1a',
+                },
+            },
+        });
+        
+        // Main App Component
+        function App() {
+            const [value, setValue] = useState('');
+            
+            return (
+                <ThemeProvider theme={theme}>
+                    <Container>
+                        <Box sx={{ p: 4 }}>
+                            <Typography variant="h4" gutterBottom>
+                                Machine Control Interface
+                            </Typography>
+                            
+                            {/* Your interface components go here */}
+                            
+                        </Box>
+                    </Container>
+                </ThemeProvider>
+            );
+        }
+        
+        // Render app
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

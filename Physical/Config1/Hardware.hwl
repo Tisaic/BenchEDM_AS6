@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="10/17/2025 20:21:17" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="11/18/2025 16:02:33" />
   </TimeStamps>
   <Modules>
     <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" X="254" Y="1184" />
@@ -11,18 +11,52 @@
     <Module Name="MotorSynchronous_any" Type="MotorSynchronous_any" X="361" Y="1663" />
     <Module Name="MotorSynchronous_any_a" Type="MotorSynchronous_any" X="361" Y="1496" />
     <Module Name="X20BB82" Type="X20BB82" X="597" Y="1184" />
-    <Module Name="X20BM11" Type="X20BM11" X="685" Y="1184" />
-    <Module Name="X20RT8001" Type="X20RT8001" X="685" Y="1184" />
-    <Module Name="X20TB12_a" Type="X20TB12" X="685" Y="1211" />
+    <Module Name="X20BM11_a" Type="X20BM11" X="685" Y="1184" />
+    <Module Name="X20AT4222" Type="X20AT4222" X="685" Y="1184" />
+    <Module Name="X20TB12" Type="X20TB12" X="685" Y="1211" />
+    <Module Name="X20BM11_b" Type="X20BM11" X="698" Y="1184" />
+    <Module Name="X20AI4622" Type="X20AI4622" X="698" Y="1184" />
+    <Module Name="X20TB12_c" Type="X20TB12" X="698" Y="1211" />
+    <Module Name="X20BM11_c" Type="X20BM11" X="711" Y="1184" />
+    <Module Name="X20DI9371" Type="X20DI9371" X="711" Y="1184" />
+    <Module Name="X20TB12_d" Type="X20TB12" X="711" Y="1211" />
+    <Module Name="X20BM11_d" Type="X20BM11" X="724" Y="1184" />
+    <Module Name="X20CS1030" Type="X20CS1030" X="724" Y="1184" />
+    <Module Name="X20TB12_e" Type="X20TB12" X="724" Y="1211" />
+    <Module Name="X20BM11_e" Type="X20BM11" X="737" Y="1184" />
+    <Module Name="X20DO9322" Type="X20DO9322" X="737" Y="1184" />
+    <Module Name="X20TB12_f" Type="X20TB12" X="737" Y="1211" />
+    <Module Name="X20BM11_f" Type="X20BM11" X="750" Y="1184" />
+    <Module Name="X20DO6529" Type="X20DO6529" X="750" Y="1184" />
+    <Module Name="X20TB12_g" Type="X20TB12" X="750" Y="1211" />
+    <Module Name="X20BM11_g" Type="X20BM11" X="763" Y="1184" />
+    <Module Name="X20DO6529_a" Type="X20DO6529" X="763" Y="1184" />
+    <Module Name="X20TB12_h" Type="X20TB12" X="763" Y="1211" />
+    <Module Name="X20BM11" Type="X20BM11" X="776" Y="1184" />
+    <Module Name="X20RT8001" Type="X20RT8001" X="776" Y="1184" />
+    <Module Name="X20TB12_a" Type="X20TB12" X="776" Y="1211" />
     <Module Name="X20IF10G1_1" Type="X20IF10G1-1" X="622" Y="1184" />
     <Module Name="X20PS9400" Type="X20PS9400" X="672" Y="1184" />
     <Module Name="X20TB12_b" Type="X20TB12" X="672" Y="1211" />
     <Module Name="X20BC1083" Type="X20BC1083" X="647" Y="1184" />
-    <Module Name="BaxEDM_BX18_V0_1" Type="FBD.Hilscher.ECATGenSlaveDTM.BaxEDM BX18 V0.1" X="457" Y="1184" />
-    <Module Name="5APC3100_KBU2_000_a" Type="5APC3100.KBU2-000" X="116.999992" Y="1184" />
-    <Module Name="5ACCIF02.FPSC-000_a" Type="5ACCIF02.FPSC-000" X="122.799988" Y="1207" />
+    <Module Name="5APC3100_KBU2_000_a" Type="5APC3100.KBU2-000" X="160.135818" Y="1184" />
+    <Module Name="5ACCIF02.FPSC-000_a" Type="5ACCIF02.FPSC-000" X="165.935822" Y="1207" />
+    <Module Name="BX18_Arc_Generator_V1_0" Type="FBD.Hilscher.ECATGenSlaveDTM.BX18 Arc Generator V1.0" X="622" Y="1365.6" />
   </Modules>
   <Links>
+    <Link From="5ACCIF02.FPSC-000_a" To="X20BC1083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="206.935822" Y="1215" />
+      <Point X="206.935822" Y="1215" />
+      <Point X="219.935822" Y="1215" />
+      <Point X="225" Y="1215" />
+      <Point X="225" Y="1175" />
+      <Point X="415" Y="1175" />
+      <Point X="415" Y="1295" />
+      <Point X="652.75" Y="1295" />
+      <Point X="652.75" Y="1284" />
+      <Point X="652.75" Y="1259" />
+      <Point X="661" Y="1259" />
+    </Link>
     <Link From="80VD100PD.C000-01" To="8EIxxxMxT1x.xxxx-1" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
       <Point X="293" Y="1258.6" />
       <Point X="293" Y="1243.6" />
@@ -90,28 +124,17 @@
       <Point X="390.2" Y="1667.7" />
       <Point X="390.2" Y="1667.7" />
     </Link>
-    <Link From="BaxEDM_BX18_V0_1" To="X20IF10G1_1" FromPort="ECAT1" ToPort="IF1" IsRoutedByUser="False">
-      <Point X="476.2" Y="1223.6" />
-      <Point X="476.2" Y="1223.6" />
-      <Point X="476.2" Y="1235.6" />
-      <Point X="476.2" Y="1309" />
-      <Point X="636.2" Y="1309" />
-      <Point X="636.2" Y="1284.6" />
-      <Point X="636.2" Y="1275.6" />
-      <Point X="636.2" Y="1275.6" />
-    </Link>
-    <Link From="5ACCIF02.FPSC-000_a" To="X20BC1083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
-      <Point X="163.799988" Y="1215" />
-      <Point X="163.799988" Y="1215" />
-      <Point X="176.799988" Y="1215" />
-      <Point X="185" Y="1215" />
-      <Point X="185" Y="1175" />
-      <Point X="415" Y="1175" />
-      <Point X="415" Y="1295" />
-      <Point X="652.75" Y="1295" />
-      <Point X="652.75" Y="1284" />
-      <Point X="652.75" Y="1259" />
-      <Point X="661" Y="1259" />
+    <Link From="BX18_Arc_Generator_V1_0" To="X20IF10G1_1" FromPort="ECAT1" ToPort="IF1" IsRoutedByUser="False">
+      <Point X="641" Y="1404.6" />
+      <Point X="641" Y="1404.6" />
+      <Point X="641" Y="1416.6" />
+      <Point X="641" Y="1425" />
+      <Point X="615" Y="1425" />
+      <Point X="615" Y="1355" />
+      <Point X="636" Y="1355" />
+      <Point X="636" Y="1284" />
+      <Point X="636" Y="1275" />
+      <Point X="636" Y="1275" />
     </Link>
   </Links>
   <InfoElements />

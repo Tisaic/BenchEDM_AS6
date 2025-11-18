@@ -16,6 +16,148 @@
 						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
 					</Group>
 				</Group>
+				<Group ID="BX18">
+					<Group ID="TC_IO_DI_HMI_STOP">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_ESTOP">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_ReqSettingsInvalid">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_ReqStateInvalid">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_EDMOutputActive">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_EdgefindModeEnabled">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_EdgeFound">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_ISOPulseMode">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_ElectrodePositiveMode">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_PowerFault">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_LowVoltageFault">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_HighVoltageFault">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_EstopActive">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_OnTimeChanged">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_OffTimeChanged">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DI_CurrentChanged">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_AI_Feedback">
+						<Property ID="M" DataType="LREAL" Value="0" />
+						<Property ID="B" DataType="LREAL" Value="0" />
+						<Property ID="Filter" DataType="LREAL" Value="0" />
+						<Property ID="MaxValue" DataType="LREAL" Value="0" />
+						<Property ID="MinValue" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_AI_Power">
+						<Property ID="M" DataType="LREAL" Value="0" />
+						<Property ID="B" DataType="LREAL" Value="0" />
+						<Property ID="Filter" DataType="LREAL" Value="0" />
+						<Property ID="MaxValue" DataType="LREAL" Value="0" />
+						<Property ID="MinValue" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DO_Enable">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DO_ISOFreqMode">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DO_EdgeFindMode">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DO_ElectrodePositiveMode">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_DO_ChangeRequest">
+						<Property ID="InvertedIOMapping" DataType="BOOL" Value="false" />
+						<Property ID="FilterOnTime" DataType="LREAL" Value="0" />
+						<Property ID="FilterOffTime" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_AO_OnTime">
+						<Property ID="M" DataType="LREAL" Value="0" />
+						<Property ID="B" DataType="LREAL" Value="0" />
+						<Property ID="Filter" DataType="LREAL" Value="0" />
+						<Property ID="MaxValue" DataType="LREAL" Value="0" />
+						<Property ID="MinValue" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_AO_OffTime">
+						<Property ID="M" DataType="LREAL" Value="0" />
+						<Property ID="B" DataType="LREAL" Value="0" />
+						<Property ID="Filter" DataType="LREAL" Value="0" />
+						<Property ID="MaxValue" DataType="LREAL" Value="0" />
+						<Property ID="MinValue" DataType="LREAL" Value="0" />
+					</Group>
+					<Group ID="TC_IO_AO_Current">
+						<Property ID="M" DataType="LREAL" Value="0" />
+						<Property ID="B" DataType="LREAL" Value="0" />
+						<Property ID="Filter" DataType="LREAL" Value="0" />
+						<Property ID="MaxValue" DataType="LREAL" Value="0" />
+						<Property ID="MinValue" DataType="LREAL" Value="0" />
+					</Group>
+				</Group>
 			</Group>
 			<Group ID="System">
 				<Group ID="Debugger">

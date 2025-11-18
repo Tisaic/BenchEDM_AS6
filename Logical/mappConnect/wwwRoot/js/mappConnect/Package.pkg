@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Api.js</Object>
+    <Object Type="File">OpcUaApi.js</Object>
+    <Object Type="File">Session.js</Object>
+    <Object Type="File">Status.js</Object>
+    <Object Type="File">Subscription.js</Object>
+    <Object Type="File">Text.js</Object>
+  </Objects>
+</Package>

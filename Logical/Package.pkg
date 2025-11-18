@@ -14,5 +14,6 @@
     <Object Type="Program" Language="ReAction" TransferedForTargetSourceCompare="true">StepDir</Object>
     <Object Type="Program" Language="ReAction" TransferedForTargetSourceCompare="true">StepDir1</Object>
     <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">Dev</Object>
+    <Object Type="Package">mappConnect</Object>
   </Objects>
 </Package>
