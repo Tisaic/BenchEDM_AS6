@@ -9,8 +9,5 @@ ACTION Seq_INIT_CNC:
 	TC_Seq_Add(ADR(JSONStrings),ADR('{"driver":"CN","inst":"0","type":"C","ident":"POWER","enable":"TRUE"}'));
 	TC_Seq_Add(ADR(JSONStrings),ADR('{"driver":"CN","inst":"0","type":"W","ident":"POWERON","time":"5.0"}'));
 	TC_Seq_Add(ADR(JSONStrings),ADR('{"driver":"CN","inst":"0","type":"M","ident":"NOTPOWERON","enable":"TRUE","sev":"4","time":"0.0"}'));
-	TC_Seq_Add(ADR(JSONStrings),ADR('{"driver":"CN","inst":"0","type":"C","ident":"HOME","enable":"TRUE"}'));
-	TC_Seq_Add(ADR(JSONStrings),ADR('{"driver":"CN","inst":"0","type":"W","ident":"ISHOMED","time":"5.0"}'));
-	TC_Seq_Add(ADR(JSONStrings),ADR('{"driver":"CN","inst":"0","type":"C","ident":"HOME","enable":"FALSE"}'));
 
 END_ACTION

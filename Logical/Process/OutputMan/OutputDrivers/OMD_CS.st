@@ -1,35 +1,65 @@
 
 ACTION OMD_CS:
 
-	gDriver.CS[DRIVER_INST_CS_RX0_0].MpLinkADR 							:= ADR(gAxisRX0_0);
-	gDriver.CS[DRIVER_INST_CS_RX0_0].CyclicPositionSetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Position;
-	gDriver.CS[DRIVER_INST_CS_RX0_0].CyclicVelocitySetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Velocity;
-	gDriver.CS[DRIVER_INST_CS_RX0_0].CyclicTorqueSetpoint[0]			:= 0.0;
-	gDriver.CS[DRIVER_INST_CS_RX0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VX_0].MpLinkADR 								:= ADR(gAxisVX_0);
+	gDriver.CS[DRIVER_INST_CS_VX_0].CyclicPositionSetpoint[0]				:= gDriver.TR[0].Status.SetJoint[0];
+	gDriver.CS[DRIVER_INST_CS_VX_0].CyclicVelocitySetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VX_0].CyclicTorqueSetpoint[0]					:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VX_0].CyclicTorqueFeedForwardSetpoint[0]		:= 0.0;
+								
+	gDriver.CS[DRIVER_INST_CS_VY_0].MpLinkADR 								:= ADR(gAxisVY_0);
+	gDriver.CS[DRIVER_INST_CS_VY_0].CyclicPositionSetpoint[0]				:= gDriver.TR[0].Status.SetJoint[1];
+	gDriver.CS[DRIVER_INST_CS_VY_0].CyclicVelocitySetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VY_0].CyclicTorqueSetpoint[0]					:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VY_0].CyclicTorqueFeedForwardSetpoint[0]		:= 0.0;
+								
+	gDriver.CS[DRIVER_INST_CS_VZ_0].MpLinkADR 								:= ADR(gAxisVZ_0);
+	gDriver.CS[DRIVER_INST_CS_VZ_0].CyclicPositionSetpoint[0]				:= gDriver.TR[0].Status.SetJoint[2];
+	gDriver.CS[DRIVER_INST_CS_VZ_0].CyclicVelocitySetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VZ_0].CyclicTorqueSetpoint[0]					:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VZ_0].CyclicTorqueFeedForwardSetpoint[0]		:= 0.0;
+								
+	gDriver.CS[DRIVER_INST_CS_VT_0].MpLinkADR 								:= ADR(gAxisVT_0);
+	gDriver.CS[DRIVER_INST_CS_VT_0].CyclicPositionSetpoint[0]				:= gDriver.TR[0].Status.SetJoint[3];
+	gDriver.CS[DRIVER_INST_CS_VT_0].CyclicVelocitySetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VT_0].CyclicTorqueSetpoint[0]					:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VT_0].CyclicTorqueFeedForwardSetpoint[0]		:= 0.0;
+								
+	gDriver.CS[DRIVER_INST_CS_VV_0].MpLinkADR 								:= ADR(gAxisVV_0);
+	gDriver.CS[DRIVER_INST_CS_VV_0].CyclicPositionSetpoint[0]				:= gDriver.TR[0].Status.SetJoint[4];
+	gDriver.CS[DRIVER_INST_CS_VV_0].CyclicVelocitySetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VV_0].CyclicTorqueSetpoint[0]					:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_VV_0].CyclicTorqueFeedForwardSetpoint[0]		:= 0.0;
 
-	gDriver.CS[DRIVER_INST_CS_RY0_0].MpLinkADR 							:= ADR(gAxisRY0_0);
-	gDriver.CS[DRIVER_INST_CS_RY0_0].CyclicPositionSetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VY_0].MpAxisBasic_0.Position;
-	gDriver.CS[DRIVER_INST_CS_RY0_0].CyclicVelocitySetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VY_0].MpAxisBasic_0.Velocity;
-	gDriver.CS[DRIVER_INST_CS_RY0_0].CyclicTorqueSetpoint[0]			:= 0.0;
-	gDriver.CS[DRIVER_INST_CS_RY0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RX_0_0].MpLinkADR 							:= ADR(gAxisRX_0_0);
+	gDriver.CS[DRIVER_INST_CS_RX_0_0].CyclicPositionSetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Position;
+	gDriver.CS[DRIVER_INST_CS_RX_0_0].CyclicVelocitySetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Velocity;
+	gDriver.CS[DRIVER_INST_CS_RX_0_0].CyclicTorqueSetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RX_0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
 
-	gDriver.CS[DRIVER_INST_CS_RZ0_0].MpLinkADR 							:= ADR(gAxisRZ0_0);
-	gDriver.CS[DRIVER_INST_CS_RZ0_0].CyclicPositionSetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VZ_0].MpAxisBasic_0.Position;
-	gDriver.CS[DRIVER_INST_CS_RZ0_0].CyclicVelocitySetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VZ_0].MpAxisBasic_0.Velocity;
-	gDriver.CS[DRIVER_INST_CS_RZ0_0].CyclicTorqueSetpoint[0]			:= 0.0;
-	gDriver.CS[DRIVER_INST_CS_RZ0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RY_0_0].MpLinkADR 							:= ADR(gAxisRY_0_0);
+	gDriver.CS[DRIVER_INST_CS_RY_0_0].CyclicPositionSetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VY_0].MpAxisBasic_0.Position;
+	gDriver.CS[DRIVER_INST_CS_RY_0_0].CyclicVelocitySetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VY_0].MpAxisBasic_0.Velocity;
+	gDriver.CS[DRIVER_INST_CS_RY_0_0].CyclicTorqueSetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RY_0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
 
-	gDriver.CS[DRIVER_INST_CS_RT0_0].MpLinkADR 							:= ADR(gAxisRT0_0);
-	gDriver.CS[DRIVER_INST_CS_RT0_0].CyclicPositionSetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VT_0].MpAxisBasic_0.Position;
-	gDriver.CS[DRIVER_INST_CS_RT0_0].CyclicVelocitySetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VT_0].MpAxisBasic_0.Velocity;
-	gDriver.CS[DRIVER_INST_CS_RT0_0].CyclicTorqueSetpoint[0]			:= 0.0;
-	gDriver.CS[DRIVER_INST_CS_RT0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RZ_0_0].MpLinkADR 							:= ADR(gAxisRZ_0_0);
+	gDriver.CS[DRIVER_INST_CS_RZ_0_0].CyclicPositionSetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VZ_0].MpAxisBasic_0.Position;
+	gDriver.CS[DRIVER_INST_CS_RZ_0_0].CyclicVelocitySetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VZ_0].MpAxisBasic_0.Velocity;
+	gDriver.CS[DRIVER_INST_CS_RZ_0_0].CyclicTorqueSetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RZ_0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
 
-	gDriver.CS[DRIVER_INST_CS_RV0_0].MpLinkADR 							:= ADR(gAxisRV0_0);
-	gDriver.CS[DRIVER_INST_CS_RV0_0].CyclicPositionSetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VV_0].MpAxisBasic_0.Position;
-	gDriver.CS[DRIVER_INST_CS_RV0_0].CyclicVelocitySetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VV_0].MpAxisBasic_0.Velocity;
-	gDriver.CS[DRIVER_INST_CS_RV0_0].CyclicTorqueSetpoint[0]			:= 0.0;
-	gDriver.CS[DRIVER_INST_CS_RV0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RT_0_0].MpLinkADR 							:= ADR(gAxisRT_0_0);
+	gDriver.CS[DRIVER_INST_CS_RT_0_0].CyclicPositionSetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VT_0].MpAxisBasic_0.Position;
+	gDriver.CS[DRIVER_INST_CS_RT_0_0].CyclicVelocitySetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VT_0].MpAxisBasic_0.Velocity;
+	gDriver.CS[DRIVER_INST_CS_RT_0_0].CyclicTorqueSetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RT_0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
+
+	gDriver.CS[DRIVER_INST_CS_RV_0_0].MpLinkADR 							:= ADR(gAxisRV_0_0);
+	gDriver.CS[DRIVER_INST_CS_RV_0_0].CyclicPositionSetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VV_0].MpAxisBasic_0.Position;
+	gDriver.CS[DRIVER_INST_CS_RV_0_0].CyclicVelocitySetpoint[0]				:= gDriver.AB[DRIVER_INST_AB_VV_0].MpAxisBasic_0.Velocity;
+	gDriver.CS[DRIVER_INST_CS_RV_0_0].CyclicTorqueSetpoint[0]				:= 0.0;
+	gDriver.CS[DRIVER_INST_CS_RV_0_0].CyclicTorqueFeedForwardSetpoint[0]	:= 0.0;
 	
 	FOR i := 0 TO MAX_DRIVER_CS_IDX DO
 		IF NOT gDriver.CS[i].FirstScanComplete THEN
@@ -68,8 +98,10 @@ ACTION OMD_CS:
 			gDriver.CS[i].DefaultPar.CyclicTorqueSource											:= 0;								//SD
 			gDriver.CS[i].DefaultPar.CyclicTorqueFeedForwardSource								:= 0;								//SD
 			gDriver.CS[i].DefaultPar.CyclicVelocitySource										:= 0;								//SD				
-
 			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gDriver.CS[i].DefaultPar),SIZEOF(gDriver.CS[i].Par));
+		ELSIF NOT gDriver.CS[i].ParametersLoaded AND gMain.Services.Recipes.Out.ParametersReady THEN
+			gDriver.CS[i].ParametersLoaded := TRUE;
+			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gPar.Driver.CS[i]),SIZEOF(gDriver.CS[i].Par));
 		END_IF;
 
 		brsmemset(ADR(gDriver.CS[i].Sev),0,SIZEOF(gDriver.CS[i].Sev));
@@ -93,12 +125,12 @@ ACTION OMD_CS:
 				gDriver.CS[i].Sev[j] := 0;
 			END_IF;
 		END_FOR;
-		IF gDriver.CS[i].Cmd[C_CS_RESET] THEN
+		IF gDriver.CS[i].Cmd[C_CS_RESET] OR gDriver.ResetAll THEN
 			gDriver.CS[i].Cmd[C_CS_RESET] := FALSE;
+			brsmemset(ADR(gDriver.CS[i].Mon),0,SIZEOF(gDriver.CS[i].Mon));
 			brsmemset(ADR(gDriver.CS[i].Cmd),0,SIZEOF(gDriver.CS[i].Cmd));
 			brsmemset(ADR(gDriver.CS[i].Sev),0,SIZEOF(gDriver.CS[i].Sev));
 			brsmemset(ADR(gDriver.CS[i].Status),0,SIZEOF(gDriver.CS[i].Status));
-			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gDriver.CS[i].DefaultPar),SIZEOF(gDriver.CS[i].Par));
 		END_IF;
 		IF gDriver.CS[i].Cmd[C_CS_CLEARCMD] THEN
 			gDriver.CS[i].Cmd[C_CS_CLEARCMD] := FALSE;
@@ -122,7 +154,14 @@ ACTION OMD_CS:
 			gDriver.CS[i].Cmd[C_CS_DEFAULTPAR] := FALSE;
 			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gDriver.CS[i].DefaultPar),SIZEOF(gDriver.CS[i].Par));
 		END_IF;
-
+		IF gDriver.CS[i].Cmd[C_CS_SAVEPAR] THEN
+			gDriver.CS[i].Cmd[C_CS_SAVEPAR] := FALSE;
+			brsmemcpy(ADR(gPar.Driver.CS[i]),ADR(gDriver.CS[i].Par),SIZEOF(gDriver.CS[i].Par));
+		END_IF;
+		IF gDriver.CS[i].Cmd[C_CS_LOADPAR] THEN
+			gDriver.CS[i].Cmd[C_CS_LOADPAR] := FALSE;
+			brsmemcpy(ADR(gDriver.CS[i].Par),ADR(gPar.Driver.CS[i]),SIZEOF(gDriver.CS[i].Par));
+		END_IF;
 		gDriver.CS[i].MpAxisCyclicSet_0.ErrorReset						:= gDriver.CS[i].Cmd[C_CS_ERRORRESET] OR gMain.ErrorReset;
 		gDriver.CS[i].MpAxisCyclicSet_0.MoveCyclicPosition				:= gDriver.CS[i].Cmd[C_CS_MOVECYCLICPOSITION];
 		gDriver.CS[i].MpAxisCyclicSet_0.MoveCyclicVelocity				:= gDriver.CS[i].Cmd[C_CS_MOVECYCLICVELOCITY];

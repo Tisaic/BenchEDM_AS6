@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library SubType="IEC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Exported functions and function blocks">HA_Matrix.fun</File>
+    <File>HA_Matrix_Tran.st</File>
+    <File>HA_Matrix_Mult.st</File>
+    <File>HA_Matrix_Add.st</File>
+    <File>HA_Matrix_Sub.st</File>
+    <File>HA_Matrix_Fill.st</File>
+    <File>HA_Matrix_Inc.st</File>
+    <File>HA_Matrix_I.st</File>
+    <File>HA_Matrix_SwapR.st</File>
+    <File>HA_Matrix_SwapC.st</File>
+    <File>HA_Matrix_Det.st</File>
+    <File>HA_Matrix_Rref.st</File>
+    <File>HA_Matrix_Cholesky.st</File>
+    <File>HA_Matrix_CholSolve.st</File>
+    <File>HA_Matrix_RLS.st</File>
+    <File>HA_Matrix_XtX.st</File>
+    <File>HA_Matrix_XtY.st</File>
+    <File>HA_Matrix_AddRidge.st</File>
+    <File>HA_Matrix_RLS_Init.st</File>
+    <File>HA_Matrix_BuildLags.st</File>
+    <File>HA_Matrix_RollingUpdate.st</File>
+    <File>HA_Matrix_Predict.st</File>
+    <File>HA_Matrix_RMSE.st</File>
+    <File>HA_Matrix_Residuals.st</File>
+    <File>HA_Matrix_R2Score.st</File>
+    <File>HA_Matrix_Standardize.st</File>
+    <File>HA_Matrix_PolyExpand.st</File>
+    <File>HA_Matrix_Diff.st</File>
+    <File>HA_Matrix_AddBias.st</File>
+    <File>HA_Matrix_PredictMultiStep.st</File>
+    <File>HA_Matrix_Ridge_Fit.st</File>
+    <File>HA_Matrix_BuildLagsStride.st</File>
+    <File>HA_Matrix_InitStateBuffer.st</File>
+    <File>HA_Matrix_NGRC_BuildTrainingData.st</File>
+    <File>HA_Matrix_NGRC_Fit.st</File>
+    <File>HA_Matrix_NGRC_InitState.st</File>
+    <File>HA_Matrix_NGRC_Predict.st</File>
+    <File>HA_Matrix_NGRC_PredictMultiStep.st</File>
+    <File>FB_NGRC.st</File>
+    <File>FB_NGRC_Online.st</File>
+    <File>FB_NGRC_Simple.st</File>
+    <File>FB_NGRC_Continuous.st</File>
+    <File>FB_NGRC_Continuous_MultiVar.st</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="AsBrStr" />
+  </Dependencies>
+</Library>

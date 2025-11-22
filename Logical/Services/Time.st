@@ -99,7 +99,7 @@ ACTION Time:
 			gMain.Services.Time.In.Cmd.setTime												:= FALSE;
 			gMain.Services.Time.Out.IgnoreInfo.Cmd											:= 'Set Time';			
 			gMain.Services.Time.Out.IgnoreInfo.Reason										:= 'Not in Waiting for Command';
-			gMain.Services.Time.Out.ErrorInfo.State											:= gMain.Services.Email.Out.Status.CurrentState;
+			gMain.Services.Time.Out.ErrorInfo.State											:= gMain.Services.Time.Out.Status.CurrentState;
 			TC_AlarmX_Helper(gAlarmXCore,'TimeCmdIgnored',TC_ALARMX_ACTION_SET,'',TRUE);
 		END_IF;
 	END_IF;

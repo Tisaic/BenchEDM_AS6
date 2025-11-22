@@ -1,10 +1,13 @@
 
 TYPE
 	Driver_typ : 	STRUCT 
+		ResetAll : BOOL;
 		IN : ARRAY[0..MAX_DRIVER_IN_IDX]OF Driver_IN_typ;
 		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_typ;
 		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_typ;
 		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_typ;
+		TR : ARRAY[0..MAX_DRIVER_TR_IDX]OF Driver_TR_typ;
+		MR : ARRAY[0..MAX_DRIVER_MR_IDX]OF Driver_MR_typ;
 		FI : ARRAY[0..MAX_DRIVER_FI_IDX]OF Driver_FI_typ;
 		OU : ARRAY[0..MAX_DRIVER_OU_IDX]OF Driver_OU_typ;
 	END_STRUCT;
@@ -29,6 +32,7 @@ TYPE
 		CyclicTorqueFeedForwardSetpoint : ARRAY[0..MAX_DRIVER_CS_SOURCE_IDX]OF REAL;
 		CyclicVelocitySetpoint : ARRAY[0..MAX_DRIVER_CS_SOURCE_IDX]OF REAL;
 		FirstScanComplete : BOOL;
+		ParametersLoaded : BOOL;
 	END_STRUCT;
 	Driver_CS_Par_typ : 	STRUCT 
 		Mon : ARRAY[0..MAX_DRIVER_CS_MON_IDX]OF Driver_Par_Mon_typ;
@@ -53,6 +57,7 @@ TYPE
 		MpAxisBasic_0 : MpAxisBasic;
 		MpLinkADR : UDINT;
 		FirstScanComplete : BOOL;
+		ParametersLoaded : BOOL;
 	END_STRUCT;
 	Driver_AB_Par_typ : 	STRUCT 
 		Mon : ARRAY[0..MAX_DRIVER_AB_MON_IDX]OF Driver_Par_Mon_typ;
@@ -106,11 +111,13 @@ TYPE
 		DefaultPar : Driver_CN_Par_typ;
 		Status : Driver_CN_Status_typ;
 		MpCncFlex_0 : MpCncFlex;
+		MC_GroupReadActualPosition_15_0 : MC_GroupReadActualPosition_15;
 		MpLinkADR : UDINT;
 		OverrideSetpoint : ARRAY[0..MAX_DRIVER_CN_SOURCE_IDX]OF REAL;
 		RapidOverrideSetpoint : ARRAY[0..MAX_DRIVER_CN_SOURCE_IDX]OF REAL;
 		FeedrateOverrideSetpoint : ARRAY[0..MAX_DRIVER_CN_SOURCE_IDX]OF REAL;
 		FirstScanComplete : BOOL;
+		ParametersLoaded : BOOL;
 	END_STRUCT;
 	Driver_CN_Par_typ : 	STRUCT 
 		Mon : ARRAY[0..MAX_DRIVER_CN_MON_IDX]OF Driver_Par_Mon_typ;
@@ -118,10 +125,12 @@ TYPE
 		OverrideSource : DINT;
 		RapidOverrideSource : DINT;
 		FeedrateOverrideSource : DINT;
+		Kinematics : ARRAY[0..14]OF LREAL;
 	END_STRUCT;
 	Driver_CN_Status_typ : 	STRUCT 
 		Severity : DINT;
 		Position : ARRAY[0..14]OF LREAL;
+		Position_mcJACS : ARRAY[0..14]OF LREAL;
 		PathVelocity : REAL;
 		Info : MpCncFlexInfoType;
 	END_STRUCT;
@@ -164,6 +173,77 @@ TYPE
 		DO_Enable : TC_IO_Digital_Par_typ;
 	END_STRUCT;
 	Driver_OU_Status_typ : 	STRUCT 
+		Severity : DINT;
+	END_STRUCT;
+	Driver_TR_typ : 	STRUCT 
+		Cmd : ARRAY[0..MAX_DRIVER_TR_CMD_IDX]OF BOOL;
+		Wait : ARRAY[0..MAX_DRIVER_TR_WAIT_IDX]OF DINT;
+		Mon : ARRAY[0..MAX_DRIVER_TR_MON_IDX]OF BOOL;
+		Sev : ARRAY[0..MAX_DRIVER_TR_MON_IDX]OF DINT;
+		CTON_Mon : ARRAY[0..MAX_DRIVER_TR_MON_IDX]OF CTON;
+		DefaultPar : Driver_TR_Par_typ;
+		Par : Driver_TR_Par_typ;
+		Status : Driver_TR_Status_typ;
+		FirstScanComplete : BOOL;
+		ParametersLoaded : BOOL;
+	END_STRUCT;
+	Driver_TR_Par_typ : 	STRUCT 
+		Mon : ARRAY[0..MAX_DRIVER_TR_MON_IDX]OF Driver_Par_Mon_typ;
+		ControlMode : TR_CONTROL_MODE_ENUM;
+		WorldCoordMode : BOOL;
+		VelocityFactor : LREAL;
+		Filter : LREAL;
+		Gain : REAL;
+		IntegralTime : REAL;
+	END_STRUCT;
+	Driver_TR_Status_typ : 	STRUCT 
+		Active : BOOL;
+		Severity : DINT;
+		TotalLag : LREAL;
+		Lag : ARRAY[0..14]OF LREAL;
+		SetTCP : ARRAY[0..14]OF LREAL;
+		SetJoint : ARRAY[0..14]OF LREAL;
+		TcpMatrix : ARRAY[0..3,0..3]OF LREAL;
+		TcpSetpoint : ARRAY[0..14]OF LREAL;
+		TcpSetpointLastStable : ARRAY[0..14]OF LREAL;
+		InputCmd : ARRAY[0..14]OF LREAL;
+		LimitedCmd : ARRAY[0..14]OF LREAL;
+		VelCmd : ARRAY[0..14]OF LREAL;
+		VelCmd_World : ARRAY[0..14]OF LREAL;
+		Override : LREAL;
+		MTBasicsPID_0 : ARRAY[0..14]OF MTBasicsPID;
+	END_STRUCT;
+	Driver_MR_typ : 	STRUCT 
+		Cmd : ARRAY[0..MAX_DRIVER_MR_CMD_IDX]OF BOOL;
+		Wait : ARRAY[0..MAX_DRIVER_MR_WAIT_IDX]OF DINT;
+		Mon : ARRAY[0..MAX_DRIVER_MR_MON_IDX]OF BOOL;
+		Sev : ARRAY[0..MAX_DRIVER_MR_MON_IDX]OF DINT;
+		CTON_Mon : ARRAY[0..MAX_DRIVER_MR_MON_IDX]OF CTON;
+		DefaultPar : Driver_MR_Par_typ;
+		Par : Driver_MR_Par_typ;
+		Status : Driver_MR_Status_typ;
+		FirstScanComplete : BOOL;
+		ParametersLoaded : BOOL;
+		Ident : UDINT;
+		MBMOpen_0 : MBMOpen;
+		MBMaster_0 : MBMaster;
+		MBMCmd_0 : MBMCmd;
+		MBMClose_0 : MBMClose;
+	END_STRUCT;
+	Driver_MR_Par_typ : 	STRUCT 
+		Mon : ARRAY[0..MAX_DRIVER_TR_MON_IDX]OF Driver_Par_Mon_typ;
+		Device : STRING[255];
+		Mode : STRING[255];
+		DataObject : STRING[255];
+		IsAscii : BOOL;
+		Timeout : LREAL;
+		CmdNode : UDINT;
+		CmdFunctionCall : UDINT;
+		CmdOffset : UDINT;
+		CmdData : UINT;
+	END_STRUCT;
+	Driver_MR_Status_typ : 	STRUCT 
+		Active : BOOL;
 		Severity : DINT;
 	END_STRUCT;
 END_TYPE

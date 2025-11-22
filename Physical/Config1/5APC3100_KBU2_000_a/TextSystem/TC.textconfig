@@ -30,6 +30,8 @@
       <Property ID="TargetFile[15]" Value="mappView.Resources.Texts.Settings_IO.tmx" />
       <Property ID="TargetFile[16]" Value="mappView.Resources.Texts.Settings_System.tmx" />
       <Property ID="TargetFile[17]" Value="mappView.Resources.Texts.Diagnostics.tmx" />
+      <Property ID="TargetFile[18]" Value="AlarmTexts.Master.tmx" />
+      <Property ID="TargetFile[19]" Value="AlarmTexts.Time.tmx" />
     </Group>
   </Element>
 </Configuration>

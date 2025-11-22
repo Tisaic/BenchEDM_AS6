@@ -1,8 +1,8 @@
 
 ACTION OMD_FI:
 
-//	//TESTING
-//	//gDriver.CS[DRIVER_INST_CS_RX0_0].Par.CyclicPosition := gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Position;
+	//TESTING
+	//gDriver.CS[DRIVER_INST_CS_RX0_0].Par.CyclicPosition := gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Position;
 //	gDriver.CS[DRIVER_INST_CS_RX0_0].MpLinkADR 							:= ADR(gAxisRX0_0);
 //	gDriver.CS[DRIVER_INST_CS_RX0_0].CyclicPositionSetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Position;
 //	gDriver.CS[DRIVER_INST_CS_RX0_0].CyclicVelocitySetpoint[0]			:= gDriver.AB[DRIVER_INST_AB_VX_0].MpAxisBasic_0.Velocity;
@@ -74,40 +74,40 @@ ACTION OMD_FI:
 //		gDriver.CS[i].Wait[W_CS_TCREADY]								:= BOOL_TO_DINT(gDriver.CS[i].MpAxisCyclicSet_0.Info.TorqueControl.Ready);
 //		gDriver.CS[i].Wait[W_CS_AXISREADY]								:= BOOL_TO_DINT(gDriver.CS[i].MpAxisCyclicSet_0.Info.AxisReady);
 //	END_FOR;
-//
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.Acceleration							//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.AlternativeValueSource					//ENUM
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.Deceleration							//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.DisableJoltLimitation					//ENUM 
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.InterpolationMode						//ENUM 
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.Jerk									//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicPosition.Velocity								//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Acceleration							//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.AlternativeValueSource					//ENUM 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Deceleration							//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.DisableJoltLimitation					//ENUM 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.InterpolationMode						//ENUM 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Jerk									//RR 
-////	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Mode									//ENUM 
-////	gDriver.CS[i].Par.CS.TorqueControl.Acceleration									//RR 
-////	gDriver.CS[i].Par.CS.TorqueControl.CmdIndependentActivation						//BO 
-////	gDriver.CS[i].Par.CS.TorqueControl.Jerk											//RR 
-////	gDriver.CS[i].Par.CS.TorqueControl.MaximumVelocity								//RR 
-////	gDriver.CS[i].Par.CS.TorqueControl.MinimumVelocity								//RR 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.CorrectVelocityLimits				//BO 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.NoHomingCheck						//BO 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.StartAlternativeValueSource			//ENUM 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.TimeLimit							//RR 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.TorqueAlternativeValueSource			//ENUM 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.UseTimeLimit							//BO 
-////	gDriver.CS[i].Par.CS.TorqueControl.Options.UseVelocityLimits					//BO 
-////	gDriver.CS[i].Par.CS.TorqueControl.TorqueRamp									//RR 
-////	gDriver.CS[i].Par.CS.TorqueControl.TorqueResolution								//RR 
-////	gDriver.CS[i].Par.CS.TorqueFeedForward.InterpolationMode						//ENUM 
-////	gDriver.CS[i].Par.CS.TorqueFeedForward.Options.DisableMode						//ENUM 
-////	gDriver.CS[i].Par.CyclicPositionSource											//DINT 
-////	gDriver.CS[i].Par.CyclicTorqueSource											//DINT 
-////	gDriver.CS[i].Par.CyclicTorqueFeedForwardSource									//DINT 
-////	gDriver.CS[i].Par.CyclicVelocitySource											//DINT 
+
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.Acceleration							//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.AlternativeValueSource					//ENUM
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.Deceleration							//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.DisableJoltLimitation					//ENUM 
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.InterpolationMode						//ENUM 
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.Jerk									//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicPosition.Velocity								//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Acceleration							//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.AlternativeValueSource					//ENUM 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Deceleration							//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.DisableJoltLimitation					//ENUM 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.InterpolationMode						//ENUM 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Jerk									//RR 
+//	gDriver.CS[i].Par.CS.MoveCyclicVelocity.Mode									//ENUM 
+//	gDriver.CS[i].Par.CS.TorqueControl.Acceleration									//RR 
+//	gDriver.CS[i].Par.CS.TorqueControl.CmdIndependentActivation						//BO 
+//	gDriver.CS[i].Par.CS.TorqueControl.Jerk											//RR 
+//	gDriver.CS[i].Par.CS.TorqueControl.MaximumVelocity								//RR 
+//	gDriver.CS[i].Par.CS.TorqueControl.MinimumVelocity								//RR 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.CorrectVelocityLimits				//BO 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.NoHomingCheck						//BO 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.StartAlternativeValueSource			//ENUM 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.TimeLimit							//RR 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.TorqueAlternativeValueSource			//ENUM 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.UseTimeLimit							//BO 
+//	gDriver.CS[i].Par.CS.TorqueControl.Options.UseVelocityLimits					//BO 
+//	gDriver.CS[i].Par.CS.TorqueControl.TorqueRamp									//RR 
+//	gDriver.CS[i].Par.CS.TorqueControl.TorqueResolution								//RR 
+//	gDriver.CS[i].Par.CS.TorqueFeedForward.InterpolationMode						//ENUM 
+//	gDriver.CS[i].Par.CS.TorqueFeedForward.Options.DisableMode						//ENUM 
+//	gDriver.CS[i].Par.CyclicPositionSource											//DINT 
+//	gDriver.CS[i].Par.CyclicTorqueSource											//DINT 
+//	gDriver.CS[i].Par.CyclicTorqueFeedForwardSource									//DINT 
+//	gDriver.CS[i].Par.CyclicVelocitySource											//DINT 
 
 END_ACTION

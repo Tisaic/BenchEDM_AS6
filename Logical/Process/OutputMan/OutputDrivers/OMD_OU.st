@@ -65,11 +65,11 @@ ACTION OMD_OU:
 //
 //		gDriver.OU[i].Mon[M_OU_ERROR]					:= gDriver.OU[i].MpAxisBasic_0.Error;
 //	END_FOR;
-//
-////	McSwitchEnum :		
-////	(		
-////		mcSWITCH_OFF := 0,		 						(*State/Behavior selection switched off*)
-////		mcSWITCH_ON := 1			 					(*State/Behavior selection switched on*)
-////	);		
+
+//	McSwitchEnum :		
+//	(		
+//		mcSWITCH_OFF := 0,		 						(*State/Behavior selection switched off*)
+//		mcSWITCH_ON := 1			 					(*State/Behavior selection switched on*)
+//	);		
 
 END_ACTION

@@ -5,6 +5,8 @@ TYPE
 		AllConfiguredModulesOk : BOOL;
 		Safety : IO_Safety_typ;
 		BX18 : IO_BX18_typ;
+		VFD : ARRAY[0..MAX_VFD_IDX]OF IO_VFD_typ;
+		Stepper : IO_Stepper_typ;
 	END_STRUCT;
 	IO_Safety_typ : 	STRUCT 
 		TC_IO_DI_HMI_STOP : TC_IO_DI;
@@ -43,5 +45,30 @@ TYPE
 		Inputs_status : UINT;
 		Inputs_EDMservofeedback : UINT;
 		Inputs_power : UINT;
+	END_STRUCT;
+	IO_VFD_typ : 	STRUCT 
+		EventWrite : ARRAY[0..MAX_VFD_DATA_WRITE_IDX]OF BOOL;
+		DataWrite : ARRAY[0..MAX_VFD_DATA_WRITE_IDX]OF UINT;
+		DataWriteCmp : ARRAY[0..MAX_VFD_DATA_WRITE_IDX]OF UINT;
+		EventRead : ARRAY[0..MAX_VFD_DATA_READ_IDX]OF BOOL;
+		DataRead : ARRAY[0..MAX_VFD_DATA_READ_IDX]OF UINT;
+		CTON_AutoWrite : CTON;
+		RFRD : INT;
+		LFRD : INT;
+		LFT : UINT;
+		CMD : UINT;
+		ETA : UINT;
+	END_STRUCT;
+	IO_Stepper_typ : 	STRUCT 
+		ModuleOK : BOOL;
+		ENABLE : BOOL;
+		ENABLED : BOOL;
+		StepDelay : DINT := 2;
+		SetPosition : DINT;
+		ActualPosition : DINT;
+		Home : DINT;
+		SwitchOn : BOOL;
+		SwitchedOn : BOOL;
+		TC_IO_DI_HomeSwitch : TC_IO_DI;
 	END_STRUCT;
 END_TYPE

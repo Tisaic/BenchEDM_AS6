@@ -6,26 +6,11 @@ PROGRAM _INIT
 //	MC_BR_TorqueControl_R_T.Acceleration 		:= 1000000.0;
 //	MC_BR_TorqueControl_R_T.MaximumVelocity 	:= 100.0;
 //	MC_BR_TorqueControl_R_T.MinimumVelocity 	:= -100.0;
-//
-//	RTEnable;
-//	RTActual;
-//	RTSetpoint;
-//	RTHome;
-//	START;
-//	AMP;
-//	INCR;
-//	X;
-//	LAST;
 
 END_PROGRAM
 
 PROGRAM _CYCLIC
 
-//	IF START THEN
-//		X := X + INCR;
-//		RTSetpoint := REAL_TO_DINT(AMP * SIN(X));
-//		RTDelayCount := 0;
-//	END_IF;
 //
 //	MpAxisBasic_R_X(MpLink := ADR(gAxis_R_X), Enable := TRUE, ErrorReset := gMain.ErrorReset, Parameters := ADR(MpAxisBasicPar_R_X));
 //	IF MpAxisBasic_R_X.UpdateDone THEN

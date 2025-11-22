@@ -3,10 +3,12 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File" TransferedForTargetSourceCompare="true">OMD_IN.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">OMD_CN.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">OMD_TR.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">OMD_AB.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">OMD_CS.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">OMD_CN.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">OMD_FI.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">OMD_OU.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">OMD_MR.st</Object>
   </Objects>
 </Package>

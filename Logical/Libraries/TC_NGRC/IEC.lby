@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library SubType="IEC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Exported functions and function blocks">TC_NGRC.fun</File>
+    <File>TC_NGRC_CalcMem.st</File>
+    <File>TC_NGRC_RLS.st</File>
+    <File>TC_NGRC_RLS_Init.st</File>
+    <File>TC_NGRC_RollingUpdate.st</File>
+    <File>TC_NGRC_Predict.st</File>
+    <File>TC_NGRC_RMSE.st</File>
+    <File>TC_NGRC_PolyExpand.st</File>
+    <File>TC_NGRC_AddBias.st</File>
+    <File>TC_NGRC_BuildLagsStride.st</File>
+    <File>TC_NGRC_Continuous.st</File>
+    <File>TC_NGRC_Readme.md</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="AsBrStr" />
+  </Dependencies>
+</Library>

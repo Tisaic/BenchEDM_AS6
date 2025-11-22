@@ -21,11 +21,13 @@
     <Task Name="Vis" Source="Vis.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <DataObjects>
+    <DataObject Name="MbRTU" Source="Libraries.MbRTU.dob" Memory="UserROM" Language="Simple" />
     <DataObject Name="McAcpSys" Source="" Memory="UserROM" Language="Binary" />
+    <DataObject Name="datamod" Source="" Memory="UserROM" Language="Binary" />
   </DataObjects>
   <NcDataObjects>
-    <NcDataObject Name="McDriveLog" Source="" Memory="UserROM" Language="Binary" />
     <NcDataObject Name="AcpParTabL" Source="Libraries.AcpParTabL.dob" Memory="UserROM" Language="Apt" />
+    <NcDataObject Name="McDriveLog" Source="" Memory="UserROM" Language="Binary" />
   </NcDataObjects>
   <Binaries>
     <BinaryObject Name="udbdef" Source="" Memory="UserROM" Language="Binary" />
@@ -38,6 +40,8 @@
     <BinaryObject Name="McAcpSim" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="McAcpDrv" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="McMechSys" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="mvDatApi" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="McProfGen" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="BRRole" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="asfw" Source="" Memory="SystemROM" Language="Binary" />
@@ -60,6 +64,9 @@
     <BinaryObject Name="Hierarchy" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_6" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="asnxdb1" Source="" Memory="SystemROM" Language="Binary" />
+    <BinaryObject Name="Config_5" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AlarmCat" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <ReActionTechnologyObjects>
@@ -75,7 +82,6 @@
     <LibraryObject Name="TC_ItemX" Source="Libraries.TC_ItemX.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_Array" Source="Libraries.TC_Array.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_SysErr" Source="Libraries.TC_SysErr.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="TC_Seq" Source="Libraries.TC_Seq.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_Eval" Source="Libraries.TC_Eval.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_Mon" Source="Libraries.TC_Mon.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_Recipe" Source="Libraries.TC_Recipe.lby" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -117,9 +123,17 @@
     <LibraryObject Name="McProgInt" Source="Libraries.McProgInt.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="SfDomain" Source="Libraries.SfDomain.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpCnc" Source="Libraries.MpCnc.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="McPureVAx" Source="Libraries.McPureVAx.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="AsIORTI" Source="Libraries.AsIORTI.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="TC_Str" Source="Libraries.TC_Str.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="CoTrace" Source="Libraries.CoTrace.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="DRV_mbus" Source="Libraries.DRV_mbus.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="dvframe" Source="Libraries.dvframe.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="HA_Matrix" Source="Libraries.HA_Matrix.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="TC_NGRC" Source="Libraries.TC_NGRC.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="UaCoal" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="UaCoalPrv" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="DataObj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsEPL" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="SfDomDrv" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -130,10 +144,8 @@
     <LibraryObject Name="MpSfDomMgr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="SfDomVis" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsArProf" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="McPureVAx" Source="Libraries.McPureVAx.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="AsIORTI" Source="Libraries.AsIORTI.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="TC_Seq" Source="Libraries.TC_Seq.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_JSON" Source="Libraries.TC_JSON.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="TC_Str" Source="Libraries.TC_Str.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="CoTrace" Source="Libraries.CoTrace.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="AsBrMath" Source="Libraries.AsBrMath.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

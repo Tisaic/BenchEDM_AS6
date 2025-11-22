@@ -153,6 +153,15 @@ PROGRAM _CYCLIC
 	gIO.BX18.TC_IO_AI_Power.Sim.Active											:= gSim.Full OR gSim.IO;
 	gIO.BX18.TC_IO_AI_Power(Par := gPar.IO.BX18.TC_IO_AI_Power, VarType := TC_IO_ANALOG_TYPE_UINT);
 
+//Stepper Z
+
+	IF (gIO.Stepper.TC_IO_DI_HomeSwitch.Forcing.On AND gIO.Stepper.TC_IO_DI_HomeSwitch.Forcing.Off) OR NOT gIO.ForceEnable THEN
+		gIO.Stepper.TC_IO_DI_HomeSwitch.Forcing.On								:= FALSE;
+		gIO.Stepper.TC_IO_DI_HomeSwitch.Forcing.Off								:= FALSE;
+	END_IF;	
+	gIO.Stepper.TC_IO_DI_HomeSwitch.Sim.Active									:= gSim.Full OR gSim.IO;
+	gIO.Stepper.TC_IO_DI_HomeSwitch(Par := gPar.IO.Stepper.TC_IO_DI_HomeSwitch);
+
 END_PROGRAM
 
 PROGRAM _EXIT

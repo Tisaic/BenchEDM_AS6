@@ -6,11 +6,11 @@ ACTION OMD_AB:
 	gDriver.AB[DRIVER_INST_AB_VZ_0].MpLinkADR 													:= ADR(gAxisVZ_0);
 	gDriver.AB[DRIVER_INST_AB_VT_0].MpLinkADR 													:= ADR(gAxisVT_0);
 	gDriver.AB[DRIVER_INST_AB_VV_0].MpLinkADR 													:= ADR(gAxisVV_0);
-	gDriver.AB[DRIVER_INST_AB_RX0_0].MpLinkADR 													:= ADR(gAxisRX0_0);
-	gDriver.AB[DRIVER_INST_AB_RY0_0].MpLinkADR 													:= ADR(gAxisRY0_0);
-	gDriver.AB[DRIVER_INST_AB_RZ0_0].MpLinkADR 													:= ADR(gAxisRZ0_0);
-	gDriver.AB[DRIVER_INST_AB_RT0_0].MpLinkADR 													:= ADR(gAxisRT0_0);
-	gDriver.AB[DRIVER_INST_AB_RV0_0].MpLinkADR 													:= ADR(gAxisRV0_0);
+	gDriver.AB[DRIVER_INST_AB_RX_0_0].MpLinkADR 												:= ADR(gAxisRX_0_0);
+	gDriver.AB[DRIVER_INST_AB_RY_0_0].MpLinkADR 												:= ADR(gAxisRY_0_0);
+	gDriver.AB[DRIVER_INST_AB_RZ_0_0].MpLinkADR 												:= ADR(gAxisRZ_0_0);
+	gDriver.AB[DRIVER_INST_AB_RT_0_0].MpLinkADR 												:= ADR(gAxisRT_0_0);
+	gDriver.AB[DRIVER_INST_AB_RV_0_0].MpLinkADR 												:= ADR(gAxisRV_0_0);
 
 	FOR i := 0 TO MAX_DRIVER_AB_IDX DO
 		IF NOT gDriver.AB[i].FirstScanComplete THEN
@@ -71,8 +71,10 @@ ACTION OMD_AB:
 			gDriver.AB[i].DefaultPar.AB.Stop.StopAtPosition.Deceleration						:= 0.0;								//RR
 			gDriver.AB[i].DefaultPar.AB.Stop.StopAtPosition.Position							:= 0.0;								//LR
 			gDriver.AB[i].DefaultPar.AB.Velocity												:= 5.0;								//RR	
-			
 			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gDriver.AB[i].DefaultPar),SIZEOF(gDriver.AB[i].Par));
+		ELSIF NOT gDriver.AB[i].ParametersLoaded AND gMain.Services.Recipes.Out.ParametersReady THEN
+			gDriver.AB[i].ParametersLoaded := TRUE;
+			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gPar.Driver.AB[i]),SIZEOF(gDriver.AB[i].Par));
 		END_IF;
 
 		brsmemset(ADR(gDriver.AB[i].Sev),0,SIZEOF(gDriver.AB[i].Sev));
@@ -96,12 +98,12 @@ ACTION OMD_AB:
 				gDriver.AB[i].Sev[j] := 0;
 			END_IF;
 		END_FOR;
-		IF gDriver.AB[i].Cmd[C_AB_RESET] THEN
+		IF gDriver.AB[i].Cmd[C_AB_RESET] OR gDriver.ResetAll THEN
 			gDriver.AB[i].Cmd[C_AB_RESET] := FALSE;
+			brsmemset(ADR(gDriver.AB[i].Mon),0,SIZEOF(gDriver.AB[i].Mon));
 			brsmemset(ADR(gDriver.AB[i].Cmd),0,SIZEOF(gDriver.AB[i].Cmd));
 			brsmemset(ADR(gDriver.AB[i].Sev),0,SIZEOF(gDriver.AB[i].Sev));
 			brsmemset(ADR(gDriver.AB[i].Status),0,SIZEOF(gDriver.AB[i].Status));
-			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gDriver.AB[i].DefaultPar),SIZEOF(gDriver.AB[i].Par));
 		END_IF;
 		IF gDriver.AB[i].Cmd[C_AB_CLEARCMD] THEN
 			gDriver.AB[i].Cmd[C_AB_CLEARCMD] := FALSE;
@@ -125,6 +127,15 @@ ACTION OMD_AB:
 			gDriver.AB[i].Cmd[C_AB_DEFAULTPAR] := FALSE;
 			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gDriver.AB[i].DefaultPar),SIZEOF(gDriver.AB[i].Par));
 		END_IF;
+		IF gDriver.AB[i].Cmd[C_AB_SAVEPAR] THEN
+			gDriver.AB[i].Cmd[C_AB_SAVEPAR] := FALSE;
+			brsmemcpy(ADR(gPar.Driver.AB[i]),ADR(gDriver.AB[i].Par),SIZEOF(gDriver.AB[i].Par));
+		END_IF;
+		IF gDriver.AB[i].Cmd[C_AB_LOADPAR] THEN
+			gDriver.AB[i].Cmd[C_AB_LOADPAR] := FALSE;
+			brsmemcpy(ADR(gDriver.AB[i].Par),ADR(gPar.Driver.AB[i]),SIZEOF(gDriver.AB[i].Par));
+		END_IF;
+
 		gDriver.AB[i].MpAxisBasic_0.ErrorReset			:= gDriver.AB[i].Cmd[C_AB_ERRORRESET] OR gMain.ErrorReset;
 		gDriver.AB[i].MpAxisBasic_0.Home				:= gDriver.AB[i].Cmd[C_AB_HOME];
 		gDriver.AB[i].MpAxisBasic_0.Power				:= gDriver.AB[i].Cmd[C_AB_POWER];

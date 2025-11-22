@@ -9,8 +9,6 @@
     <File>Defaults.st</File>
     <File>Recipes.st</File>
     <File>DirMan.st</File>
-    <File>Email.st</File>
-    <File>Cert.st</File>
     <File>Time.st</File>
   </Files>
 </Program>

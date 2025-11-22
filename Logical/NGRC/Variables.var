@@ -1,0 +1,31 @@
+VAR
+	MTBasicsTransferFcn_0 : MTBasicsTransferFcn;
+	Omega : REAL := 4.0;
+	Zeta : REAL := 0.1;
+	Theta : ARRAY[0..MY_MAX_VARIABLES_IDX] OF MyApp_Theta_typ;
+	P : ARRAY[0..MY_MAX_VARIABLES_IDX] OF MyApp_P_typ;
+	History : ARRAY[0..MY_MAX_VARIABLES_IDX] OF MyApp_History_typ;
+	Features : MyApp_Features_typ;
+	SharedWorkspace : MyApp_SharedWorkspace_typ;
+	Initialized : BOOL := FALSE;
+	NumVariables : DINT;
+	LagOrder : DINT;
+	PolyOrder : DINT;
+	UseBias : BOOL;
+	Stride : DINT := 1;
+	EnableWorkspaceReuse : BOOL;
+	Output : TC_NGRC_CalcMem_Output_typ;
+	TC_NGRC_Continuous_0 : TC_NGRC_Continuous;
+END_VAR
+VAR CONSTANT
+	MY_MAX_VARIABLES_IDX : DINT := 1;
+	MY_MAX_THETA_IDX : DINT := 65;
+	MY_MAX_P_IDX : DINT := 4355;
+	MY_MAX_HISTORY_IDX : DINT := 4;
+	MY_MAX_FEATURES_IDX : DINT := 65;
+	MY_MAX_SHARED_WORKSPACE_IDX : DINT := 65;
+END_VAR
+VAR
+	FirstScanComplete : BOOL;
+	i : DINT;
+END_VAR

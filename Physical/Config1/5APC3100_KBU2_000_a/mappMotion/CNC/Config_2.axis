@@ -1,7 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
-  <Element ID="gAxisRT0_0" Type="axis">
+  <Element ID="gAxisRP_1_0" Type="axis">
+    <Selector ID="BaseType">
+      <Property ID="MeasurementUnit" Value="5059636" />
+      <Property ID="MeasurementResolution" Value="0.001" />
+      <Group ID="PeriodSettings">
+        <Property ID="Period" Value="1" />
+      </Group>
+    </Selector>
+    <Selector ID="MovementLimits">
+      <Selector ID="Velocity">
+        <Property ID="Velocity" Value="60" />
+      </Selector>
+      <Selector ID="Acceleration">
+        <Property ID="Acceleration" Value="600" />
+      </Selector>
+      <Selector ID="Deceleration">
+        <Property ID="Deceleration" Value="600" />
+      </Selector>
+    </Selector>
+    <Selector ID="Alarms" Value="MpAlarmX" />
+  </Element>
+  <Element ID="gAxisRP_0_0" Type="axis">
+    <Selector ID="BaseType">
+      <Property ID="MeasurementUnit" Value="5059636" />
+      <Property ID="MeasurementResolution" Value="0.001" />
+      <Group ID="PeriodSettings">
+        <Property ID="Period" Value="1" />
+      </Group>
+    </Selector>
+    <Selector ID="MovementLimits">
+      <Selector ID="Velocity">
+        <Property ID="Velocity" Value="60" />
+      </Selector>
+      <Selector ID="Acceleration">
+        <Property ID="Acceleration" Value="600" />
+      </Selector>
+      <Selector ID="Deceleration">
+        <Property ID="Deceleration" Value="600" />
+      </Selector>
+    </Selector>
+    <Selector ID="Alarms" Value="MpAlarmX" />
+  </Element>
+  <Element ID="gAxisRT_0_0" Type="axis">
     <Selector ID="BaseType">
       <Property ID="MeasurementResolution" Value="0.001" />
     </Selector>
@@ -18,7 +60,7 @@
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
-  <Element ID="gAxisRV0_0" Type="axis">
+  <Element ID="gAxisRV_0_0" Type="axis">
     <Selector ID="BaseType">
       <Property ID="MeasurementResolution" Value="0.001" />
     </Selector>
@@ -35,7 +77,7 @@
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
-  <Element ID="gAxisRX0_0" Type="axis">
+  <Element ID="gAxisRX_0_0" Type="axis">
     <Selector ID="BaseType" Value="LinearBounded">
       <Property ID="MeasurementResolution" Value="0.001" />
     </Selector>
@@ -56,7 +98,7 @@
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
-  <Element ID="gAxisRY0_0" Type="axis">
+  <Element ID="gAxisRY_0_0" Type="axis">
     <Selector ID="BaseType" Value="LinearBounded">
       <Property ID="MeasurementResolution" Value="0.001" />
     </Selector>
@@ -77,23 +119,23 @@
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
-  <Element ID="gAxisRZ0_0" Type="axis">
+  <Element ID="gAxisRZ_0_0" Type="axis">
     <Selector ID="BaseType" Value="LinearBounded">
       <Property ID="MeasurementResolution" Value="0.001" />
     </Selector>
     <Selector ID="MovementLimits">
       <Group ID="Position">
         <Property ID="LowerLimit" Value="0" />
-        <Property ID="UpperLimit" Value="300" />
+        <Property ID="UpperLimit" Value="265" />
       </Group>
       <Selector ID="Velocity">
-        <Property ID="Velocity" Value="100" />
+        <Property ID="Velocity" Value="120" />
       </Selector>
       <Selector ID="Acceleration">
-        <Property ID="Acceleration" Value="1000" />
+        <Property ID="Acceleration" Value="12000" />
       </Selector>
       <Selector ID="Deceleration">
-        <Property ID="Deceleration" Value="1000" />
+        <Property ID="Deceleration" Value="12000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
@@ -181,16 +223,16 @@
     <Selector ID="MovementLimits">
       <Group ID="Position">
         <Property ID="LowerLimit" Value="0" />
-        <Property ID="UpperLimit" Value="300" />
+        <Property ID="UpperLimit" Value="265" />
       </Group>
       <Selector ID="Velocity">
-        <Property ID="Velocity" Value="80" />
+        <Property ID="Velocity" Value="100" />
       </Selector>
       <Selector ID="Acceleration">
-        <Property ID="Acceleration" Value="800" />
+        <Property ID="Acceleration" Value="10000" />
       </Selector>
       <Selector ID="Deceleration">
-        <Property ID="Deceleration" Value="800" />
+        <Property ID="Deceleration" Value="10000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />

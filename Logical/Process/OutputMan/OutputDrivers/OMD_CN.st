@@ -28,8 +28,10 @@ ACTION OMD_CN:
 			gDriver.CN[i].DefaultPar.FeedrateOverrideSource												:= 0;								//SD
 			gDriver.CN[i].DefaultPar.OverrideSource														:= 0;								//SD
 			gDriver.CN[i].DefaultPar.RapidOverrideSource												:= 0;								//SD				
-		
 			brsmemcpy(ADR(gDriver.CN[i].Par),ADR(gDriver.CN[i].DefaultPar),SIZEOF(gDriver.CN[i].Par));
+		ELSIF NOT gDriver.CN[i].ParametersLoaded AND gMain.Services.Recipes.Out.ParametersReady THEN
+			gDriver.CN[i].ParametersLoaded := TRUE;
+			brsmemcpy(ADR(gDriver.CN[i].Par),ADR(gPar.Driver.CN[i]),SIZEOF(gDriver.CN[i].Par));
 		END_IF;
 
 		brsmemset(ADR(gDriver.CN[i].Sev),0,SIZEOF(gDriver.CN[i].Sev));
@@ -53,12 +55,12 @@ ACTION OMD_CN:
 				gDriver.CN[i].Sev[j] := 0;
 			END_IF;
 		END_FOR;
-		IF gDriver.CN[i].Cmd[C_CN_RESET] THEN
+		IF gDriver.CN[i].Cmd[C_CN_RESET] OR gDriver.ResetAll THEN
 			gDriver.CN[i].Cmd[C_CN_RESET] := FALSE;
+			brsmemset(ADR(gDriver.CN[i].Mon),0,SIZEOF(gDriver.CN[i].Mon));
 			brsmemset(ADR(gDriver.CN[i].Cmd),0,SIZEOF(gDriver.CN[i].Cmd));
 			brsmemset(ADR(gDriver.CN[i].Sev),0,SIZEOF(gDriver.CN[i].Sev));
 			brsmemset(ADR(gDriver.CN[i].Status),0,SIZEOF(gDriver.CN[i].Status));
-			brsmemcpy(ADR(gDriver.CN[i].Par),ADR(gDriver.CN[i].DefaultPar),SIZEOF(gDriver.CN[i].Par));
 		END_IF;
 		IF gDriver.CN[i].Cmd[C_CN_CLEARCMD] THEN
 			gDriver.CN[i].Cmd[C_CN_CLEARCMD] := FALSE;
@@ -81,6 +83,14 @@ ACTION OMD_CN:
 		IF gDriver.CN[i].Cmd[C_CN_DEFAULTPAR] THEN
 			gDriver.CN[i].Cmd[C_CN_DEFAULTPAR] := FALSE;
 			brsmemcpy(ADR(gDriver.CN[i].Par),ADR(gDriver.CN[i].DefaultPar),SIZEOF(gDriver.CN[i].Par));
+		END_IF;
+		IF gDriver.CN[i].Cmd[C_CN_SAVEPAR] THEN
+			gDriver.CN[i].Cmd[C_CN_SAVEPAR] := FALSE;
+			brsmemcpy(ADR(gPar.Driver.CN[i]),ADR(gDriver.CN[i].Par),SIZEOF(gDriver.CN[i].Par));
+		END_IF;
+		IF gDriver.CN[i].Cmd[C_CN_LOADPAR] THEN
+			gDriver.CN[i].Cmd[C_CN_LOADPAR] := FALSE;
+			brsmemcpy(ADR(gDriver.CN[i].Par),ADR(gPar.Driver.CN[i]),SIZEOF(gDriver.CN[i].Par));
 		END_IF;
 
 		gDriver.CN[i].MpCncFlex_0.ErrorReset							:= gDriver.CN[i].Cmd[C_CN_ERRORRESET] OR gMain.ErrorReset;
@@ -109,6 +119,9 @@ ACTION OMD_CN:
 		END_IF;
 
 		gDriver.CN[i].MpCncFlex_0(MpLink := gDriver.CN[i].MpLinkADR, Enable := TRUE, Parameters := ADR(gDriver.CN[i].Par.CN));
+		gDriver.CN[i].MC_GroupReadActualPosition_15_0(AxesGroup := gDriver.CN[i].MpLinkADR, Enable := TRUE, CoordSystem := mcJACS);
+		
+		gDriver.CN[i].Status.Position_mcJACS := gDriver.CN[i].MC_GroupReadActualPosition_15_0.Position;
 
 		gDriver.CN[i].Wait[W_CN_NOERROR]								:= BOOL_TO_DINT(NOT gDriver.CN[i].MpCncFlex_0.Error);
 		gDriver.CN[i].Wait[W_CN_COMMANDABORTED]							:= BOOL_TO_DINT(gDriver.CN[i].MpCncFlex_0.CommandAborted);

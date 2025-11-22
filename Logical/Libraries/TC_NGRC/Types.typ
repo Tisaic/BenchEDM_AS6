@@ -1,0 +1,162 @@
+TYPE
+    TC_NGRC_CalcMem_Output_typ : STRUCT
+        MAX_THETA_IDX : UDINT;
+        MAX_P_IDX : UDINT;
+        MAX_HISTORY_IDX : UDINT;
+        MAX_FEATURES_IDX : UDINT;
+        MAX_LAGWORK_IDX : UDINT;
+        MAX_POLYWORK_IDX : UDINT;
+        MAX_WORKSPACE_IDX : UDINT;
+        MAX_TEMPWORK_IDX : UDINT;
+        MAX_SHARED_WORKSPACE_IDX : UDINT;
+        NumFeatures : DINT;
+        MemoryPerModel_Bytes : UDINT;
+        TotalMemory_Bytes : UDINT;
+        TotalMemory_WithReuse_Bytes : UDINT;
+        MemorySavedByReuse_Bytes : UDINT;
+        ConfigValid : BOOL;
+        ErrorCode : DINT;
+    END_STRUCT;
+    TC_NGRC_CalcMem_Internal_typ : STRUCT
+        Output : TC_NGRC_CalcMem_Output_typ;
+        NumVars : DINT;
+        LagOrder : DINT;
+        PolyOrder : DINT;
+        Stride : DINT;
+        UseBias : DINT;
+        EnableReuse : DINT;
+        BaseDim : DINT;
+        NumFeatures : DINT;
+        MaxWorkspace : DINT;
+        ThetaSize : DINT;
+        PSize : DINT;
+        HistorySize : DINT;
+        FeaturesSize : DINT;
+        LagWorkSize : DINT;
+        PolyWorkSize : DINT;
+        WorkspaceSize : DINT;
+        TempWorkSize : DINT;
+        SharedWorkspaceSize : DINT;
+        MemoryPerModel : UDINT;
+        TotalMemory : UDINT;
+        TotalMemoryReuse : UDINT;
+        MemorySaved : UDINT;
+        IsValid : DINT;
+        temp1 : DINT;
+        temp2 : DINT;
+        temp3 : UDINT;
+    END_STRUCT;
+	TC_NGRC_Error_typ : STRUCT
+		ErrorCode : DINT;
+		FunctionName : STRING[40];
+		ErrorMsg : STRING[80];
+	END_STRUCT;
+    TC_NGRC_Internal_typ : STRUCT 
+        sizeArray : UDINT;
+        sizeTotal : UDINT;
+        row1 : DINT;
+        row2 : DINT;
+        row3 : DINT;
+        row4 : DINT;
+        col1 : DINT;
+        col2 : DINT;
+        col3 : DINT;
+        col4 : DINT;
+        i1 : DINT;
+        i2 : DINT;
+        i3 : DINT;
+        i4 : DINT;
+        temp1 : LREAL;
+        temp2 : LREAL;
+        temp3 : LREAL;
+        temp4 : LREAL;
+        temp5 : LREAL;
+        result : LREAL;
+    END_STRUCT;
+	TC_NGRC_Cmd_typ : STRUCT
+		Init : BOOL;
+		Enable : BOOL;
+		Reset : BOOL;
+		PredictOnly : BOOL;
+		LoadHistory : BOOL;
+	END_STRUCT;
+	TC_NGRC_Par_typ : STRUCT
+		NumVariables : DINT;
+		LagOrder : DINT;
+		PolyOrder : DINT;
+		UseBias : BOOL;
+		Stride : DINT;
+		PredictionSteps : DINT;
+		Lambda : LREAL;
+		InitVariance : LREAL;
+		pTheta : UDINT;
+		pP : UDINT;
+		pHistory : UDINT;
+		pFeatures : UDINT;
+		pSharedWorkspace : UDINT;
+		pHistoryData : UDINT;
+		ThetaStride_Bytes : UDINT;
+		PStride_Bytes : UDINT;
+		HistoryStride_Bytes : UDINT;
+	END_STRUCT;
+	TC_NGRC_Ref_typ : STRUCT
+		TargetValues : ARRAY[0..9] OF LREAL;
+	END_STRUCT;
+	TC_NGRC_Signal_typ : STRUCT
+		NewSample : ARRAY[0..9] OF LREAL;
+	END_STRUCT;
+	TC_NGRC_Continuous_In_typ : STRUCT
+		Cmd : TC_NGRC_Cmd_typ;
+		Par : TC_NGRC_Par_typ;
+		Ref : TC_NGRC_Ref_typ;
+		Signal : TC_NGRC_Signal_typ;
+	END_STRUCT;
+	TC_NGRC_Status_typ : STRUCT
+		Ready : BOOL;
+		Busy : BOOL;
+		Error : BOOL;
+		Initialized : BOOL;
+		Training : BOOL;
+		Predicting : BOOL;
+		SampleCount : UDINT;
+		UpdatesFailed : ARRAY[0..9] OF UDINT;
+	END_STRUCT;
+	TC_NGRC_Output_Signal_typ : STRUCT
+		Prediction : ARRAY[0..9, 0..9] OF LREAL;
+		RMSE : ARRAY[0..9] OF LREAL;
+		OverallRMSE : LREAL;
+	END_STRUCT;
+	TC_NGRC_Continuous_Out_typ : STRUCT
+		Status : TC_NGRC_Status_typ;
+		Signal : TC_NGRC_Output_Signal_typ;
+		ErrorInfo : TC_NGRC_Error_typ;
+	END_STRUCT;
+	TC_NGRC_Continuous_Internal_typ : STRUCT
+		State : DINT;
+		StateOld : DINT;
+		CmdInitOld : BOOL;
+		CmdEnableOld : BOOL;
+		CmdResetOld : BOOL;
+		CmdLoadHistoryOld : BOOL;
+		NumVars : DINT;
+		NumFeatures : DINT;
+		LagOrder : DINT;
+		PolyOrder : DINT;
+		UseBias : DINT;
+		Stride : DINT;
+		PredSteps : DINT;
+		i1 : DINT;
+		i2 : DINT;
+		i3 : DINT;
+		step : DINT;
+		temp1 : LREAL;
+		temp2 : LREAL;
+		tempSize : UDINT;
+		RMSESum : ARRAY[0..9] OF LREAL;
+		RMSECount : ARRAY[0..9] OF UDINT;
+		FuncResult : BOOL;
+		ThetaStride : UDINT;
+		PStride : UDINT;
+		HistoryStride : UDINT;
+	END_STRUCT;
+END_TYPE

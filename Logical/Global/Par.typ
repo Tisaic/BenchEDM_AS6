@@ -5,6 +5,7 @@ TYPE
 		System : Par_System_typ; (*Desc 1*) (*Desc 2*) (*Desc 3*)
 		Process : Par_Process_typ;
 		Services : Par_Services_typ;
+		Driver : Par_Driver_typ;
 	END_STRUCT;
 	Par_Services_typ : 	STRUCT 
 		Cert : Par_Services_Cert_typ;
@@ -48,9 +49,10 @@ TYPE
 	Par_System_Debugger_typ : 	STRUCT 
 		HoldProcessInInit : BOOL;
 	END_STRUCT;
+	Par_IO_Stepper_typ : 	STRUCT 
+		TC_IO_DI_HomeSwitch : TC_IO_Digital_Par_typ;
+	END_STRUCT;
 	Par_IO_BX18_typ : 	STRUCT 
-		TC_IO_DI_HMI_STOP : TC_IO_Digital_Par_typ;
-		TC_IO_DI_ESTOP : TC_IO_Digital_Par_typ;
 		TC_IO_DI_ReqSettingsInvalid : TC_IO_Digital_Par_typ;
 		TC_IO_DI_ReqStateInvalid : TC_IO_Digital_Par_typ;
 		TC_IO_DI_EDMOutputActive : TC_IO_Digital_Par_typ;
@@ -84,5 +86,13 @@ TYPE
 		Simulate : BOOL;
 		Safety : Par_IO_Safety_typ;
 		BX18 : Par_IO_BX18_typ;
+		Stepper : Par_IO_Stepper_typ;
+	END_STRUCT;
+	Par_Driver_typ : 	STRUCT 
+		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_Par_typ;
+		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_Par_typ;
+		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_Par_typ;
+		TR : ARRAY[0..MAX_DRIVER_TR_IDX]OF Driver_TR_Par_typ;
+		MR : ARRAY[0..MAX_DRIVER_MR_IDX]OF Driver_MR_Par_typ;
 	END_STRUCT;
 END_TYPE

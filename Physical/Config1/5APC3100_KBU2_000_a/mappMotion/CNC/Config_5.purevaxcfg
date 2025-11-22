@@ -11,9 +11,58 @@
       <Property ID="AxisReference" Value="gAxisVV_0" />
     </Group>
   </Element>
-  <Element ID="PureVAxCfg_RZ0_0" Type="purevaxcfg">
+  <Element ID="PureVAxCfg_RZ_0_0" Type="purevaxcfg">
     <Group ID="PureVAxis">
-      <Property ID="AxisReference" Value="gAxisRZ0_0" />
+      <Property ID="AxisReference" Value="gAxisRZ_0_0" />
+      <Group ID="Homing">
+        <Selector ID="Mode" Value="LimitSwitch">
+          <Property ID="Position" Value="-5" />
+          <Property ID="StartVelocity" Value="20" />
+          <Property ID="HomingVelocity" Value="5" />
+          <Property ID="Acceleration" Value="12000" />
+          <Property ID="SwitchEdge" Value="Negative" />
+        </Selector>
+      </Group>
+      <Selector ID="GeneralPurposeAxisInterface" Value="Used">
+        <Group ID="MovementErrorLimits">
+          <Property ID="PositionError" Value="1000" />
+        </Group>
+        <Group ID="DigitalInputs">
+          <Group ID="NegativeLimitSwitch">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="gIO.Stepper.TC_IO_DI_HomeSwitch.Signal.Filtered" />
+            </Selector>
+          </Group>
+          <Group ID="Trigger1">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.Safety.TC_IO_DI_ESTOP.Signal.Filtered" />
+            </Selector>
+            <Property ID="Level" Value="Low" />
+          </Group>
+          <Group ID="Quickstop">
+            <Selector ID="Input" Value="Trigger1" />
+          </Group>
+        </Group>
+        <Group ID="StatusInputs">
+          <Group ID="PoweredOn">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.Stepper.SwitchedOn" />
+            </Selector>
+          </Group>
+          <Group ID="ReadyForPowerOn">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.Stepper.ENABLED" />
+            </Selector>
+          </Group>
+        </Group>
+        <Group ID="ControlOutputs">
+          <Selector ID="PowerOn" Value="Used">
+            <Selector ID="Destination">
+              <Property ID="PVmapping" Value="::gIO.Stepper.SwitchOn" />
+            </Selector>
+          </Selector>
+        </Group>
+      </Selector>
     </Group>
   </Element>
   <Element ID="PureVAxCfg_VZ_0" Type="purevaxcfg">
@@ -29,6 +78,84 @@
   <Element ID="PureVAxCfg_VX_0" Type="purevaxcfg">
     <Group ID="PureVAxis">
       <Property ID="AxisReference" Value="gAxisVX_0" />
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_RP_1_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisRP_1_0" />
+      <Selector ID="GeneralPurposeAxisInterface" Value="DS402VL">
+        <Group ID="MovementErrorLimits">
+          <Property ID="PositionError" Value="10" />
+        </Group>
+        <Group ID="VelocityActualValue">
+          <Selector ID="Source" Value="Variable">
+            <Property ID="PVMapping" Value="::gIO.VFD[1].RFRD" />
+          </Selector>
+        </Group>
+        <Group ID="StatusInputs">
+          <Group ID="StatusWord">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.VFD[1].ETA" />
+            </Selector>
+          </Group>
+          <Group ID="ErrorCode">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.VFD[1].LFT" />
+            </Selector>
+          </Group>
+        </Group>
+        <Group ID="ControlOutputs">
+          <Selector ID="ControlWord">
+            <Selector ID="Destination">
+              <Property ID="PVMapping" Value="::gIO.VFD[1].CMD" />
+            </Selector>
+          </Selector>
+          <Selector ID="TargetVelocity">
+            <Selector ID="Destination">
+              <Property ID="PVmapping" Value="::gIO.VFD[1].LFRD" />
+            </Selector>
+          </Selector>
+        </Group>
+      </Selector>
+    </Group>
+  </Element>
+  <Element ID="PureVAxCfg_RP_0_0" Type="purevaxcfg">
+    <Group ID="PureVAxis">
+      <Property ID="AxisReference" Value="gAxisRP_0_0" />
+      <Selector ID="GeneralPurposeAxisInterface" Value="DS402VL">
+        <Group ID="MovementErrorLimits">
+          <Property ID="PositionError" Value="10" />
+        </Group>
+        <Group ID="VelocityActualValue">
+          <Selector ID="Source" Value="Variable">
+            <Property ID="PVMapping" Value="::gIO.VFD[0].RFRD" />
+          </Selector>
+        </Group>
+        <Group ID="StatusInputs">
+          <Group ID="StatusWord">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.VFD[0].ETA" />
+            </Selector>
+          </Group>
+          <Group ID="ErrorCode">
+            <Selector ID="Source" Value="InputPV">
+              <Property ID="PVmapping" Value="::gIO.VFD[0].LFT" />
+            </Selector>
+          </Group>
+        </Group>
+        <Group ID="ControlOutputs">
+          <Selector ID="ControlWord">
+            <Selector ID="Destination">
+              <Property ID="PVMapping" Value="::gIO.VFD[0].CMD" />
+            </Selector>
+          </Selector>
+          <Selector ID="TargetVelocity">
+            <Selector ID="Destination">
+              <Property ID="PVmapping" Value="::gIO.VFD[0].LFRD" />
+            </Selector>
+          </Selector>
+        </Group>
+      </Selector>
     </Group>
   </Element>
 </Configuration>

@@ -3,6 +3,7 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="DataObject" Language="Apt">AcpParTabL</Object>
+    <Object Type="DataObject" Language="Simple">MbRTU</Object>
     <Object Type="File">Project.language</Object>
     <Object Type="Library" Language="IEC">TC_General</Object>
     <Object Type="Library" Language="IEC">TC_Version</Object>
@@ -17,9 +18,9 @@
     <Object Type="Library" Language="IEC">TC_Recipe</Object>
     <Object Type="Library" Language="IEC">TC_Sim</Object>
     <Object Type="Library" Language="IEC">TC_AlarmX</Object>
-    <Object Type="Library" Language="IEC">TC_Seq</Object>
     <Object Type="Library" Language="IEC">TC_Str</Object>
     <Object Type="Library" Language="IEC">TC_JSON</Object>
+    <Object Type="Library" Language="IEC">TC_Seq</Object>
     <Object Type="Library" Language="ANSIC">TC_RAND</Object>
     <Object Type="Library" Language="binary" Description="This library contains function interfaces for IEC 61131-3 operator functions. For the most part, these are mathematical and logical functions.">operator</Object>
     <Object Type="Library" Language="binary" Description="This library contains runtime functions for IEC tasks.">runtime</Object>
@@ -59,5 +60,11 @@
     <Object Type="Library" Language="binary" Description="[mapp Motion] Purely virtual axis library">McPureVAx</Object>
     <Object Type="Library" Language="Binary" Description="This library contains functions for reACTION IO modules.">AsIORTI</Object>
     <Object Type="Library" Language="binary" Description="This library contains functionality to execute traces (to sample numeric values periodically for a defined time-span)">CoTrace</Object>
+    <Object Type="Library" Language="binary" Description="The DRV_mbus library provides functions that allow a B&amp;R System to communicate via Modbus communication.">DRV_mbus</Object>
+    <Object Type="Library" Language="binary" Description="The DVFrame library and the frame driver can be used to exchange data with external devices.">dvframe</Object>
+    <Object Type="Library" Language="binary" Description="The DataObj library can be used to dynamically create, dynamically delete and copy data objects, etc. ">DataObj</Object>
+    <Object Type="Library" Language="binary" Description="This library integrates mathematical functions such as angle functions, rounding off, etc. into the program.">AsBrMath</Object>
+    <Object Type="Library" Language="IEC">HA_Matrix</Object>
+    <Object Type="Library" Language="IEC">TC_NGRC</Object>
   </Objects>
 </Package>

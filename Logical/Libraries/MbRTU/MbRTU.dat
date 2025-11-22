@@ -1,0 +1,33 @@
+;--------------------
+; Modbus command file
+;--------------------
+"gIO.VFD[0].EventRead[00]       ", 03, $01, "gIO.VFD[0].DataRead[00]        ", 8603, 0001
+"gIO.VFD[0].EventRead[01]       ", 03, $01, "gIO.VFD[0].DataRead[01]        ", 8604, 0001
+"gIO.VFD[0].EventRead[02]       ", 03, $01, "gIO.VFD[0].DataRead[02]        ", 7121, 0001
+"gIO.VFD[0].EventWrite[00]      ", 06, $01, "gIO.VFD[0].DataWrite[00]       ", 8601, 0001
+"gIO.VFD[0].EventWrite[01]      ", 06, $01, "gIO.VFD[0].DataWrite[01]       ", 8602, 0001
+"gIO.VFD[1].EventRead[00]       ", 03, $02, "gIO.VFD[1].DataRead[00]        ", 8603, 0001
+"gIO.VFD[1].EventRead[01]       ", 03, $02, "gIO.VFD[1].DataRead[01]        ", 8604, 0001
+"gIO.VFD[1].EventRead[02]       ", 03, $02, "gIO.VFD[1].DataRead[02]        ", 7121, 0001
+"gIO.VFD[1].EventWrite[00]      ", 06, $02, "gIO.VFD[1].DataWrite[00]       ", 8601, 0001
+"gIO.VFD[1].EventWrite[01]      ", 06, $02, "gIO.VFD[1].DataWrite[01]       ", 8602, 0001
+
+;"gIO.VFD.EventRead[00]          ", 03, $01, "gIO.VFD.DataRead[00]           ", 0000, 0001
+;"gIO.VFD.EventWrite[00]         ", 06, $01, "gIO.VFD.DataWrite[00]          ", 0000, 0001
+; \_____________________________/	|    |    \_____________________________/    |      |
+;			 	 |					|    |				  	 |				     |      |
+;		   31 Characters		    |    |			   31 Characters  		     |      |_Number of coils or registers
+;			 						|    |				   						 |_Offset of the Modbus Variables
+;									|    |
+;									|    |_Target Address of the slave station
+;			 						|
+;			 						|_ Modbus function
+
+; 01 Read coil status
+; 02 Read input status
+; 03 Read holding register
+; 04 Read input register
+; 05 Force single coil
+; 06 Preset single register
+; 15 Force multiple coils
+; 16 Preset multiple registers

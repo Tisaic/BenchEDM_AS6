@@ -9,14 +9,4 @@ VAR
 	MpAxisBasicPar_R_T : MpAxisBasicParType;
 	MC_BR_TorqueControl_R_T : MC_BR_TorqueControl;
 	EnableTorqueControl : BOOL;
-	RTEnable : BOOL;
-	RTActual : DINT;
-	RTSetpoint : DINT;
-	RTHome : DINT;
-	RTDelayCount : DINT;
-	AMP : REAL;
-	START : BOOL;
-	X : REAL;
-	INCR : REAL;
-	LAST : DINT;
 END_VAR

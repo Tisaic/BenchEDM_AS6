@@ -76,8 +76,6 @@ PROGRAM _CYCLIC
 	Alarms;
 	Recipes;
 	DirMan;
-	Cert;
-	Email;
 	Time;
 	
 END_PROGRAM
