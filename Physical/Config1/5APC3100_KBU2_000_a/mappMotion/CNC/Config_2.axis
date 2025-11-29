@@ -90,10 +90,10 @@
         <Property ID="Velocity" Value="1000" />
       </Selector>
       <Selector ID="Acceleration">
-        <Property ID="Acceleration" Value="100000" />
+        <Property ID="Acceleration" Value="5000" />
       </Selector>
       <Selector ID="Deceleration">
-        <Property ID="Deceleration" Value="100000" />
+        <Property ID="Deceleration" Value="5000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
@@ -111,10 +111,10 @@
         <Property ID="Velocity" Value="1000" />
       </Selector>
       <Selector ID="Acceleration">
-        <Property ID="Acceleration" Value="100000" />
+        <Property ID="Acceleration" Value="5000" />
       </Selector>
       <Selector ID="Deceleration">
-        <Property ID="Deceleration" Value="100000" />
+        <Property ID="Deceleration" Value="5000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
@@ -187,10 +187,10 @@
         <Property ID="Velocity" Value="800" />
       </Selector>
       <Selector ID="Acceleration">
-        <Property ID="Acceleration" Value="80000" />
+        <Property ID="Acceleration" Value="4000" />
       </Selector>
       <Selector ID="Deceleration">
-        <Property ID="Deceleration" Value="80000" />
+        <Property ID="Deceleration" Value="4000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
@@ -208,10 +208,10 @@
         <Property ID="Velocity" Value="800" />
       </Selector>
       <Selector ID="Acceleration">
-        <Property ID="Acceleration" Value="80000" />
+        <Property ID="Acceleration" Value="4000" />
       </Selector>
       <Selector ID="Deceleration">
-        <Property ID="Deceleration" Value="80000" />
+        <Property ID="Deceleration" Value="4000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />

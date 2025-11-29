@@ -7,15 +7,13 @@ VAR_CONFIG
 	Cyclic#1.gIO.BX18.Inputs_EDMservofeedback AT %IW."BX18_Arc_Generator_V1_0".Inputs_EDMservofeedback;
 	Cyclic#1.gIO.BX18.Inputs_power AT %IW."BX18_Arc_Generator_V1_0".Inputs_power;
 	Cyclic#1.gIO.BX18.ModuleOK AT %IX."BX18_Arc_Generator_V1_0".ModuleOk;
-	Cyclic#1.::gIO.Stepper.ModuleOK AT %IX."X20RT8001".ModuleOk;
-	Cyclic#1.::gIO.Stepper.ENABLED AT %IX."X20RT8001".RTEngineRun;
-	Cyclic#1.::gIO.Stepper.ActualPosition AT %ID."X20RT8001".RES01;
-	Cyclic#1.::gIO.Stepper.SetPosition AT %QD."X20RT8001".PAR01;
-	Cyclic#1.::gIO.Stepper.Home AT %QD."X20RT8001".PAR02;
-	Cyclic#1.::gIO.Stepper.ENABLE AT %QX."X20RT8001".RTEnable;
-	Cyclic#1.::gIO.Stepper.DS402_CMD.EnableOperation AT %QX."X20RT8001".PAR02_Bit1;
-	Cyclic#1.::gIO.Stepper.DS402_CMD.EnableOperation AT %IX."X20RT8001".RES02_Bit1;
+	Cyclic#1.::gIO.Motion.ModuleOK AT %IX."X20RT8001".ModuleOk;
+	Cyclic#1.::gIO.Motion.ENABLED AT %IX."X20RT8001".RTEngineRun;
+	Cyclic#1.::gIO.Motion.ActualPosition AT %ID."X20RT8001".RES01;
+	Cyclic#1.::gIO.Motion.SetPosition AT %QD."X20RT8001".PAR01;
+	Cyclic#1.::gIO.Motion.Home AT %QD."X20RT8001".PAR02;
+	Cyclic#1.::gIO.Motion.ENABLE AT %QX."X20RT8001".RTEnable;
 	Cyclic#1.::gIO.Safety.TC_IO_DI_ESTOP.IOMapping AT %IX."X20DI9371".DigitalInput01;
-	Cyclic#1.::gIO.Stepper.StepDelay AT %QD."X20RT8001".PAR03;
-	Cyclic#1.::gIO.Stepper.TC_IO_DI_HomeSwitch.IOMapping AT %IX."X20DI9371".DigitalInput03;
+	Cyclic#1.::gIO.Motion.StepDelay AT %QD."X20RT8001".PAR03;
+	Cyclic#1.::gIO.Motion.TC_IO_DI_HomeSwitchZ.IOMapping AT %IX."X20DI9371".DigitalInput03;
 END_VAR

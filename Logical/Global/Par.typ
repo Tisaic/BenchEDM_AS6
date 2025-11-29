@@ -49,8 +49,10 @@ TYPE
 	Par_System_Debugger_typ : 	STRUCT 
 		HoldProcessInInit : BOOL;
 	END_STRUCT;
-	Par_IO_Stepper_typ : 	STRUCT 
-		TC_IO_DI_HomeSwitch : TC_IO_Digital_Par_typ;
+	Par_IO_Motion_typ : 	STRUCT 
+		TC_IO_DI_HomeSwitchX : TC_IO_Digital_Par_typ;
+		TC_IO_DI_HomeSwitchY : TC_IO_Digital_Par_typ;
+		TC_IO_DI_HomeSwitchZ : TC_IO_Digital_Par_typ;
 	END_STRUCT;
 	Par_IO_BX18_typ : 	STRUCT 
 		TC_IO_DI_ReqSettingsInvalid : TC_IO_Digital_Par_typ;
@@ -86,9 +88,10 @@ TYPE
 		Simulate : BOOL;
 		Safety : Par_IO_Safety_typ;
 		BX18 : Par_IO_BX18_typ;
-		Stepper : Par_IO_Stepper_typ;
+		Motion : Par_IO_Motion_typ;
 	END_STRUCT;
 	Par_Driver_typ : 	STRUCT 
+		AA : ARRAY[0..MAX_DRIVER_AA_IDX]OF Driver_AA_Par_typ;
 		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_Par_typ;
 		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_Par_typ;
 		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_Par_typ;

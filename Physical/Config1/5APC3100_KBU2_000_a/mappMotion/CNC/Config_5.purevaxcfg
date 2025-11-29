@@ -30,7 +30,7 @@
         <Group ID="DigitalInputs">
           <Group ID="NegativeLimitSwitch">
             <Selector ID="Source" Value="InputPV">
-              <Property ID="PVmapping" Value="gIO.Stepper.TC_IO_DI_HomeSwitch.Signal.Filtered" />
+              <Property ID="PVmapping" Value="gIO.Motion.TC_IO_DI_HomeSwitchZ.Signal.Filtered" />
             </Selector>
           </Group>
           <Group ID="Trigger1">
@@ -46,19 +46,19 @@
         <Group ID="StatusInputs">
           <Group ID="PoweredOn">
             <Selector ID="Source" Value="InputPV">
-              <Property ID="PVmapping" Value="::gIO.Stepper.SwitchedOn" />
+              <Property ID="PVmapping" Value="::gIO.Motion.SwitchedOn" />
             </Selector>
           </Group>
           <Group ID="ReadyForPowerOn">
             <Selector ID="Source" Value="InputPV">
-              <Property ID="PVmapping" Value="::gIO.Stepper.ENABLED" />
+              <Property ID="PVmapping" Value="::gIO.Motion.ENABLED" />
             </Selector>
           </Group>
         </Group>
         <Group ID="ControlOutputs">
           <Selector ID="PowerOn" Value="Used">
             <Selector ID="Destination">
-              <Property ID="PVmapping" Value="::gIO.Stepper.SwitchOn" />
+              <Property ID="PVmapping" Value="::gIO.Motion.SwitchOn" />
             </Selector>
           </Selector>
         </Group>

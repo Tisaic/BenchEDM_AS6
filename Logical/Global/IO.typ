@@ -6,7 +6,7 @@ TYPE
 		Safety : IO_Safety_typ;
 		BX18 : IO_BX18_typ;
 		VFD : ARRAY[0..MAX_VFD_IDX]OF IO_VFD_typ;
-		Stepper : IO_Stepper_typ;
+		Motion : IO_Motion_typ;
 	END_STRUCT;
 	IO_Safety_typ : 	STRUCT 
 		TC_IO_DI_HMI_STOP : TC_IO_DI;
@@ -59,7 +59,7 @@ TYPE
 		CMD : UINT;
 		ETA : UINT;
 	END_STRUCT;
-	IO_Stepper_typ : 	STRUCT 
+	IO_Motion_typ : 	STRUCT 
 		ModuleOK : BOOL;
 		ENABLE : BOOL;
 		ENABLED : BOOL;
@@ -69,6 +69,6 @@ TYPE
 		Home : DINT;
 		SwitchOn : BOOL;
 		SwitchedOn : BOOL;
-		TC_IO_DI_HomeSwitch : TC_IO_DI;
+		TC_IO_DI_HomeSwitchZ : TC_IO_DI;
 	END_STRUCT;
 END_TYPE

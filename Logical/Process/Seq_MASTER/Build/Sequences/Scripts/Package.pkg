@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_X.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_Y.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_Z.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_T.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_V.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_MR.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_P.st</Object>
+    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_FirstStart_CNC.st</Object>
+  </Objects>
+</Package>

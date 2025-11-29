@@ -258,7 +258,7 @@ FUNCTION TC_Seq_JsonToElem
 				ELSIF Internal.Datatype = SYSLIB_IEC_TYPE_UINT AND Internal.ParDataType = 'UI' THEN
 					Internal.ParElement[Internal.idx].GenVar.Select 			:= TC_SEQ_PAR_SELECT_UINT;
 					Internal.ParElement[Internal.idx].GenVar.VarUINT 			:= STRING_TO_UINT(Internal.ParValue);
-				ELSIF Internal.Datatype = SYSLIB_IEC_TYPE_DINT AND Internal.ParDataType = 'SD' THEN
+				ELSIF (Internal.Datatype = SYSLIB_IEC_TYPE_DINT OR Internal.Datatype = SYSLIB_IEC_TYPE_USER_DEFINED) AND Internal.ParDataType = 'SD' THEN
 					Internal.ParElement[Internal.idx].GenVar.Select 			:= TC_SEQ_PAR_SELECT_DINT;
 					Internal.ParElement[Internal.idx].GenVar.VarDINT 			:= STRING_TO_DINT(Internal.ParValue);
 				ELSIF Internal.Datatype = SYSLIB_IEC_TYPE_UDINT AND Internal.ParDataType = 'UD' THEN

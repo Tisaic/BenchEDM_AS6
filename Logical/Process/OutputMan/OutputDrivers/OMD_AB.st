@@ -11,6 +11,8 @@ ACTION OMD_AB:
 	gDriver.AB[DRIVER_INST_AB_RZ_0_0].MpLinkADR 												:= ADR(gAxisRZ_0_0);
 	gDriver.AB[DRIVER_INST_AB_RT_0_0].MpLinkADR 												:= ADR(gAxisRT_0_0);
 	gDriver.AB[DRIVER_INST_AB_RV_0_0].MpLinkADR 												:= ADR(gAxisRV_0_0);
+	gDriver.AB[DRIVER_INST_AB_RP_0_0].MpLinkADR 												:= ADR(gAxisRP_0_0);
+	gDriver.AB[DRIVER_INST_AB_RP_1_0].MpLinkADR 												:= ADR(gAxisRP_1_0);
 
 	FOR i := 0 TO MAX_DRIVER_AB_IDX DO
 		IF NOT gDriver.AB[i].FirstScanComplete THEN

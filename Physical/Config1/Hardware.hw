@@ -5,6 +5,9 @@
     <Connection Connector="SL" TargetModule="5APC3100_KBU2_000_a" TargetConnector="SL2" />
     <Connector Name="IF1">
       <Parameter ID="EplNatSubnet" Value="192.168.102.0" />
+      <Group ID="Channel1" />
+      <Parameter ID="ChannelID1" Value="McAcpBroadcast" />
+      <Parameter ID="ChannelType1" Value="OCTET[96]" />
     </Connector>
     <Parameter ID="Supervision" Value="off" />
   </Module>
@@ -118,20 +121,43 @@
     <Connection Connector="MT2" TargetModule="MotorSynchronous_any" TargetConnector="MT" />
     <Parameter ID="PDMConfig" Value="DoubleAxis" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisRX_0_0" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisRY_0_0" />
     <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="20" />
     <Parameter ID="MotorAndPositionEncoder" Location="DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="EncoderX41x" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="500" />
+    <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.5" />
-    <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1" />
+    <Parameter ID="TorquePositive" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/FeedForward" Value="0.2" />
+    <Parameter ID="TorqueNegative" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/FeedForward" Value="0.2" />
+    <Parameter ID="SpeedTorqueFactor" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/FeedForward" Value="0.005" />
+    <Parameter ID="Inertia" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/FeedForward" Value="0.00015" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="BlockTorque" />
+    <Parameter ID="Position" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="-20" />
+    <Parameter ID="StartVelocity" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="20" />
+    <Parameter ID="HomingVelocity" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50" />
+    <Parameter ID="Acceleration" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="1000" />
+    <Parameter ID="StartDirection" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="TorqueLimit" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="1.5" />
+    <Parameter ID="PositionErrorStopLimit" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="4" />
+    <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="5" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
     <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[1]/ChannelFeatures" Value="Feature_AcpParTable" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisRY_0_0" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisRX_0_0" />
     <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="20" />
     <Parameter ID="MotorAndPositionEncoder" Location="DriveConfiguration/Channel[2]/RealAxis/EncoderLink" Value="EncoderX42x" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="500" />
+    <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.5" />
-    <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="BlockTorque" />
+    <Parameter ID="Position" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="-10" />
+    <Parameter ID="StartVelocity" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="20" />
+    <Parameter ID="HomingVelocity" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="50" />
+    <Parameter ID="Acceleration" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="1000" />
+    <Parameter ID="StartDirection" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="TorqueLimit" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="1.5" />
+    <Parameter ID="PositionErrorStopLimit" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="4" />
+    <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="5" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="NotUsed" />
     <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[2]/ChannelFeatures" Value="Feature_AcpParTable" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[3]/RealAxis" Value="" />
@@ -159,7 +185,8 @@
     <Parameter ID="MOTOR_STATOR_INDUCTANCE" Location="M1/MotorParameters" Value="3.8" />
     <Parameter ID="MOTOR_INERTIA" Location="M1/MotorParameters" Value="0.172" />
     <Parameter ID="Angle" Location="M1/MotorParameters/EncoderMounting" Value="Undefined" />
-    <Parameter ID="AutomaticIdentification" Location="M1/MotorParameters/EncoderMounting/Angle" Value="Saturation" />
+    <Parameter ID="AutomaticIdentification" Location="M1/MotorParameters/EncoderMounting/Angle" Value="Dither" />
+    <Parameter ID="PHASING_CURR" Location="M1/MotorParameters/EncoderMounting/Angle/AutomaticIdentification" Value="1.5" Disabled="false" />
     <Parameter ID="TemperatureSensor" Location="M1/MotorParameters" Value="NotUsed" />
     <Parameter ID="TemperatureModel" Location="M1/MotorParameters" Value="NotUsed" />
   </Module>
@@ -182,7 +209,8 @@
     <Parameter ID="MOTOR_STATOR_INDUCTANCE" Location="M1/MotorParameters" Value="3.8" />
     <Parameter ID="MOTOR_INERTIA" Location="M1/MotorParameters" Value="0.172" />
     <Parameter ID="Angle" Location="M1/MotorParameters/EncoderMounting" Value="Undefined" />
-    <Parameter ID="AutomaticIdentification" Location="M1/MotorParameters/EncoderMounting/Angle" Value="Saturation" />
+    <Parameter ID="AutomaticIdentification" Location="M1/MotorParameters/EncoderMounting/Angle" Value="Dither" />
+    <Parameter ID="PHASING_CURR" Location="M1/MotorParameters/EncoderMounting/Angle/AutomaticIdentification" Value="1.5" Disabled="false" />
     <Parameter ID="TemperatureSensor" Location="M1/MotorParameters" Value="NotUsed" />
     <Parameter ID="TemperatureModel" Location="M1/MotorParameters" Value="NotUsed" />
   </Module>

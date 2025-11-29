@@ -10,13 +10,6 @@
     <Object Type="File" TransferedForTargetSourceCompare="true">Seq_MASTER_PAUSE.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">Seq_MASTER_UNPAUSE.st</Object>
     <Object Type="File" TransferedForTargetSourceCompare="true">Seq_MASTER_START.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Q1.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Q2.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Q3.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Q4.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Q5.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_Q6.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_INIT_CNC.st</Object>
-    <Object Type="File" TransferedForTargetSourceCompare="true">Seq_ENABLE_TR.st</Object>
+    <Object Type="Package">Scripts</Object>
   </Objects>
 </Package>

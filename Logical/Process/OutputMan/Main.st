@@ -70,12 +70,12 @@ PROGRAM _CYCLIC
 	gIO.BX18.Outputs_onTime													:= gIO.BX18.TC_IO_AO_OnTime.Signal.IOMapping.VarUINT;
 	gIO.BX18.Outputs_offTime												:= gIO.BX18.TC_IO_AO_OffTime.Signal.IOMapping.VarUINT;
 	gIO.BX18.Outputs_current												:= gIO.BX18.TC_IO_AO_Current.Signal.IOMapping.VarUINT;
-//Stepper Z
-	gIO.Stepper.SetPosition 												:= LREAL_TO_DINT(gDriver.AB[DRIVER_INST_AB_RZ_0_0].Status.Position*200.0); //200.0 is the scaling to get 1mm travel for 1000 dip switch setting on stepper drive
-	gIO.Stepper.StepDelay 													:= STEPDELAY;
-	gIO.Stepper.ENABLE														:= gIO.Stepper.ModuleOK;
-	gIO.Stepper.SwitchedOn													:= gIO.Stepper.ENABLED AND gIO.Stepper.SwitchOn AND gIO.Safety.TC_IO_DI_ESTOP.Signal.Filtered;
-	gIO.Stepper.Home														:= EDGEPOS(gDriver.AB[DRIVER_INST_AB_RZ_0_0].MpAxisBasic_0.IsHomed);
+//Motion
+	gIO.Motion.SetPosition 													:= LREAL_TO_DINT(gDriver.AB[DRIVER_INST_AB_RZ_0_0].Status.Position*200.0); //200.0 is the scaling to get 1mm travel for 1000 dip switch setting on stepper drive
+	gIO.Motion.StepDelay 													:= STEPDELAY;
+	gIO.Motion.ENABLE														:= gIO.Motion.ModuleOK;
+	gIO.Motion.SwitchedOn													:= gIO.Motion.ENABLED AND gIO.Motion.SwitchOn AND gIO.Safety.TC_IO_DI_ESTOP.Signal.Filtered;
+	gIO.Motion.Home															:= EDGEPOS(gDriver.AB[DRIVER_INST_AB_RZ_0_0].MpAxisBasic_0.IsHomed);
 //MbRTU VFDs
 	FOR i := 0 TO MAX_VFD_IDX DO
 		gIO.VFD[i].DataWrite[0] := gIO.VFD[i].CMD;

@@ -3,6 +3,7 @@ TYPE
 	Driver_typ : 	STRUCT 
 		ResetAll : BOOL;
 		IN : ARRAY[0..MAX_DRIVER_IN_IDX]OF Driver_IN_typ;
+		AA : ARRAY[0..MAX_DRIVER_AA_IDX]OF Driver_AA_typ;
 		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_typ;
 		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_typ;
 		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_typ;
@@ -244,6 +245,29 @@ TYPE
 	END_STRUCT;
 	Driver_MR_Status_typ : 	STRUCT 
 		Active : BOOL;
+		Severity : DINT;
+	END_STRUCT;
+	Driver_AA_typ : 	STRUCT 
+		Cmd : ARRAY[0..MAX_DRIVER_AA_CMD_IDX]OF BOOL;
+		Wait : ARRAY[0..MAX_DRIVER_AA_WAIT_IDX]OF DINT;
+		Mon : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF BOOL;
+		Sev : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF DINT;
+		CTON_Mon : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF CTON;
+		Par : Driver_AA_Par_typ;
+		DefaultPar : Driver_AA_Par_typ;
+		Status : Driver_AA_Status_typ;
+		MpAxisBasic_0 : MpAxisBasic;
+		MpLinkADR : UDINT;
+		FirstScanComplete : BOOL;
+		ParametersLoaded : BOOL;
+	END_STRUCT;
+	Driver_AA_Par_typ : 	STRUCT 
+		Mon : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF Driver_Par_Mon_typ;
+		AA : MpAxisBasicParType;
+	END_STRUCT;
+	Driver_AA_Status_typ : 	STRUCT 
+		Position : LREAL;
+		Velocity : LREAL;
 		Severity : DINT;
 	END_STRUCT;
 END_TYPE
