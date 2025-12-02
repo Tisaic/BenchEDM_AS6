@@ -24,6 +24,7 @@
       </Group>
       <Group ID="AxesGroupFeatures">
         <Property ID="FeatureRef[1]" Value="Feature_Programs" />
+        <Property ID="FeatureRef[2]" Value="Feature_ReverseMovement" />
       </Group>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />

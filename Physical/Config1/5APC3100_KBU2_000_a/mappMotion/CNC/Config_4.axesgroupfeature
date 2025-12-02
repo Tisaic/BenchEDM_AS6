@@ -13,4 +13,9 @@
       </Selector>
     </Selector>
   </Element>
+  <Element ID="Feature_ReverseMovement" Type="axesgroupfeature">
+    <Selector ID="Type" Value="ReverseMovement">
+      <Property ID="Distance" Value="5" />
+    </Selector>
+  </Element>
 </Configuration>

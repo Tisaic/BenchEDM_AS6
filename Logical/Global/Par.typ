@@ -91,7 +91,7 @@ TYPE
 		Motion : Par_IO_Motion_typ;
 	END_STRUCT;
 	Par_Driver_typ : 	STRUCT 
-		AA : ARRAY[0..MAX_DRIVER_AA_IDX]OF Driver_AA_Par_typ;
+		BX : ARRAY[0..MAX_DRIVER_BX_IDX]OF Driver_BX_Par_typ;
 		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_Par_typ;
 		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_Par_typ;
 		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_Par_typ;

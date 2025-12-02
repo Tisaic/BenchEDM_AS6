@@ -6,10 +6,10 @@ END_PROGRAM
 PROGRAM _CYCLIC
 
 	OMD_CN;
-	OMD_TR;
 	OMD_AB;
 	OMD_CS;
 	OMD_MR;
+	OMD_BX;
 	gDriver.ResetAll := FALSE;
 
 //BX18

@@ -3,7 +3,7 @@ TYPE
 	Driver_typ : 	STRUCT 
 		ResetAll : BOOL;
 		IN : ARRAY[0..MAX_DRIVER_IN_IDX]OF Driver_IN_typ;
-		AA : ARRAY[0..MAX_DRIVER_AA_IDX]OF Driver_AA_typ;
+		BX : ARRAY[0..MAX_DRIVER_BX_IDX]OF Driver_BX_typ;
 		AB : ARRAY[0..MAX_DRIVER_AB_IDX]OF Driver_AB_typ;
 		CS : ARRAY[0..MAX_DRIVER_CS_IDX]OF Driver_CS_typ;
 		CN : ARRAY[0..MAX_DRIVER_CN_IDX]OF Driver_CN_typ;
@@ -168,6 +168,7 @@ TYPE
 		DefaultPar : Driver_OU_Par_typ;
 		Status : Driver_OU_Status_typ;
 		FirstScanComplete : BOOL;
+		DO_Enable : TC_IO_DO;
 	END_STRUCT;
 	Driver_OU_Par_typ : 	STRUCT 
 		Mon : ARRAY[0..MAX_DRIVER_OU_MON_IDX]OF Driver_Par_Mon_typ;
@@ -247,27 +248,51 @@ TYPE
 		Active : BOOL;
 		Severity : DINT;
 	END_STRUCT;
-	Driver_AA_typ : 	STRUCT 
-		Cmd : ARRAY[0..MAX_DRIVER_AA_CMD_IDX]OF BOOL;
-		Wait : ARRAY[0..MAX_DRIVER_AA_WAIT_IDX]OF DINT;
-		Mon : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF BOOL;
-		Sev : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF DINT;
-		CTON_Mon : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF CTON;
-		Par : Driver_AA_Par_typ;
-		DefaultPar : Driver_AA_Par_typ;
-		Status : Driver_AA_Status_typ;
-		MpAxisBasic_0 : MpAxisBasic;
-		MpLinkADR : UDINT;
+	Driver_BX_typ : 	STRUCT 
+		Cmd : ARRAY[0..MAX_DRIVER_BX_CMD_IDX]OF BOOL;
+		Wait : ARRAY[0..MAX_DRIVER_BX_WAIT_IDX]OF DINT;
+		Mon : ARRAY[0..MAX_DRIVER_BX_MON_IDX]OF BOOL;
+		Sev : ARRAY[0..MAX_DRIVER_BX_MON_IDX]OF DINT;
+		CTON_Mon : ARRAY[0..MAX_DRIVER_BX_MON_IDX]OF CTON;
+		Par : Driver_BX_Par_typ;
+		DefaultPar : Driver_BX_Par_typ;
+		Status : Driver_BX_Status_typ;
 		FirstScanComplete : BOOL;
 		ParametersLoaded : BOOL;
+		MTBasicsPID_0 : MTBasicsPID;
 	END_STRUCT;
-	Driver_AA_Par_typ : 	STRUCT 
-		Mon : ARRAY[0..MAX_DRIVER_AA_MON_IDX]OF Driver_Par_Mon_typ;
-		AA : MpAxisBasicParType;
+	Driver_BX_Par_typ : 	STRUCT 
+		Mon : ARRAY[0..MAX_DRIVER_BX_MON_IDX]OF Driver_Par_Mon_typ;
+		EdgeFindMode : BOOL;
+		ISOPulseMode : BOOL;
+		ElectrodePositiveMode : BOOL;
+		PID : MTPIDParametersType;
+		SetFeedback : REAL;
+		MinOverrideFactor : REAL;
+		MaxOverrideFactor : REAL;
+		Current : REAL;
+		OnTime : REAL;
+		OffTime : REAL;
 	END_STRUCT;
-	Driver_AA_Status_typ : 	STRUCT 
-		Position : LREAL;
-		Velocity : LREAL;
+	Driver_BX_Status_typ : 	STRUCT 
 		Severity : DINT;
+		OverrideFactor : REAL;
+		SetOffTime : REAL;
+		SetOnTime : REAL;
+		SetCurrent : REAL;
+		ActualPower : REAL;
+		SetFeedback : REAL;
+		ActualFeedback : REAL;
+		OutputActive : BOOL;
+		EdgeFindEnabled : BOOL;
+		EdgeFound : BOOL;
+		ISOPulseMode : BOOL;
+		ElectrodePositiveMode : BOOL;
+		StateInvalid : BOOL;
+		SettingsInvalid : BOOL;
+		PowerFault : BOOL;
+		LowVoltageFault : BOOL;
+		HighVoltageFault : BOOL;
+		EstopActive : BOOL;
 	END_STRUCT;
 END_TYPE
