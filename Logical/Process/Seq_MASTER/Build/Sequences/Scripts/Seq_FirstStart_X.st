@@ -12,7 +12,7 @@ ACTION Seq_FirstStart_X:
 	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"C","ident":"HOME","enable":"TRUE","par":{"AB.Homing.Mode":"<SD>140"}}'));
 	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"W","ident":"ISHOMED","time":"60.0"}'));
 	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"C","ident":"HOME","enable":"FALSE"}'));
-	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"C","ident":"MOVEABSOLUTE","enable":"TRUE","par":{"AB.Position":"<LR>0.0","AB.Velocity":"<RR>100.0","AB.Acceleration":"<RR>1000.0","AB.Deceleration":"<RR>1000.0"}}'));
+	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"C","ident":"MOVEABSOLUTE","enable":"TRUE","par":{"AB.Position":"<LR>0.0","AB.Velocity":"<RR>20.0","AB.Acceleration":"<RR>1000.0","AB.Deceleration":"<RR>1000.0"}}'));
 	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"W","ident":"MOVEDONE","time":"30.0"}'));
 	TC_Seq_Add(ADR(gScripts.FirstStart),ADR('{"driver":"AB","inst":"RX_0_0","type":"C","ident":"MOVEABSOLUTE","enable":"FALSE"}'));
 

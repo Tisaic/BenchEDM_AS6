@@ -1,3 +1,4 @@
 VAR
 	i : DINT;
+	Initialized : BOOL;
 END_VAR

@@ -12,7 +12,6 @@
     <Object Type="Program" Language="IEC">Vis</Object>
     <Object Type="Package">AlarmTexts</Object>
     <Object Type="Program" Language="ReAction" TransferedForTargetSourceCompare="true">StepDir</Object>
-    <Object Type="Program" Language="ReAction" TransferedForTargetSourceCompare="true">StepDir1</Object>
     <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">Dev</Object>
     <Object Type="Program" Language="IEC">NGRC</Object>
     <Object Type="Package">mappConnect</Object>

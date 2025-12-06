@@ -10,7 +10,13 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-
+//	IF UdpOpen_0.ident = 0 THEN
+//		UdpOpen_0(enable := TRUE);
+//	END_IF;
+//	UdpRecv_0(enable := TRUE, ident := UdpOpen_0.ident, pData := ADR(Data), datamax := SIZEOF(Data)-1);
+//	
+//
+	TC_FrSky_USB_0();
 //
 //	MpAxisBasic_R_X(MpLink := ADR(gAxis_R_X), Enable := TRUE, ErrorReset := gMain.ErrorReset, Parameters := ADR(MpAxisBasicPar_R_X));
 //	IF MpAxisBasic_R_X.UpdateDone THEN

@@ -9,4 +9,10 @@ VAR
 	MpAxisBasicPar_R_T : MpAxisBasicParType;
 	MC_BR_TorqueControl_R_T : MC_BR_TorqueControl;
 	EnableTorqueControl : BOOL;
+	TC_FrSky_USB_0 : TC_FrSky_USB;
+	FRM_xopen_0 : FRM_xopen;
+	test : BOOL;
+	UdpOpen_0 : UdpOpen;
+	UdpRecv_0 : UdpRecv;
+	Data : STRING[100];
 END_VAR

@@ -65,6 +65,7 @@
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="USER_DEVICE_SIM" />
     <Parameter ID="FileDevicePath2" Value="..\..\..\..\USER_DEVICE\" />
+    <Parameter ID="EthernetDefaultGateway" Value="192.168.0.1" />
     <Parameter ID="ActivateFtpServer" Value="1" />
     <Parameter ID="FTPProtocol" Value="1" />
     <Group ID="FtpUser1" />
@@ -135,7 +136,7 @@
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="BlockTorque" />
     <Parameter ID="Position" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="-20" />
     <Parameter ID="StartVelocity" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="20" />
-    <Parameter ID="HomingVelocity" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50" />
+    <Parameter ID="HomingVelocity" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="20" />
     <Parameter ID="Acceleration" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="1000" />
     <Parameter ID="StartDirection" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
     <Parameter ID="TorqueLimit" Location="DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="1.5" />
@@ -152,7 +153,7 @@
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="BlockTorque" />
     <Parameter ID="Position" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="-10" />
     <Parameter ID="StartVelocity" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="20" />
-    <Parameter ID="HomingVelocity" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="50" />
+    <Parameter ID="HomingVelocity" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="20" />
     <Parameter ID="Acceleration" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="1000" />
     <Parameter ID="StartDirection" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="Negative" />
     <Parameter ID="TorqueLimit" Location="DriveConfiguration/Channel[2]/RealAxis/Homing/Mode" Value="1.5" />

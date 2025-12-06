@@ -1,0 +1,35 @@
+
+TYPE
+	TC_FrSky_USB_Internal_typ : 	STRUCT 
+		UsbNodeListGet_0 : UsbNodeListGet;
+		UsbNodeGet_0 : UsbNodeGet;
+		FRM_xopen_0 : FRM_xopen;
+		FRM_read_0 : FRM_read;
+		FRM_rbuf_0 : FRM_rbuf;
+		FRM_close_0 : FRM_close;
+		CTON_Delay : CTON;
+		NodeList : ARRAY[0..9]OF UDINT;
+		Node : ARRAY[0..9]OF usbNode_typ;
+		ParString : STRING[1000];
+		Ident : UDINT;
+		State : TC_FRSKY_USB_STATE_ENUM;
+		Data : STRING[1000];
+	END_STRUCT;
+	TC_FRSKY_USB_STATE_ENUM : 
+		(
+		FRSKY_USB_RESET,
+		FRSKY_USB_IDLE,
+		FRSKY_USB_GET_LIST_CMD,
+		FRSKY_USB_GET_LIST_WAIT,
+		FRSKY_USB_GET_NODE_CMD,
+		FRSKY_USB_GET_NODE_WAIT,
+		FRSKY_USB_XOPEN_CMD,
+		FRSKY_USB_XOPEN_WAIT,
+		FRSKY_USB_READ,
+		FRSKY_USB_CLOSE_CMD,
+		FRSKY_USB_CLOSE_WAIT,
+		FRSKY_USB_DELAY,
+		FRSKY_USB_DONE,
+		FRSKY_USB_ERROR
+		);
+END_TYPE

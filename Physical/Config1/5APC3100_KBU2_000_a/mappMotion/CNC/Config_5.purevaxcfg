@@ -98,11 +98,6 @@
               <Property ID="PVmapping" Value="::gIO.VFD[1].ETA" />
             </Selector>
           </Group>
-          <Group ID="ErrorCode">
-            <Selector ID="Source" Value="InputPV">
-              <Property ID="PVmapping" Value="::gIO.VFD[1].LFT" />
-            </Selector>
-          </Group>
         </Group>
         <Group ID="ControlOutputs">
           <Selector ID="ControlWord">
@@ -135,11 +130,6 @@
           <Group ID="StatusWord">
             <Selector ID="Source" Value="InputPV">
               <Property ID="PVmapping" Value="::gIO.VFD[0].ETA" />
-            </Selector>
-          </Group>
-          <Group ID="ErrorCode">
-            <Selector ID="Source" Value="InputPV">
-              <Property ID="PVmapping" Value="::gIO.VFD[0].LFT" />
             </Selector>
           </Group>
         </Group>

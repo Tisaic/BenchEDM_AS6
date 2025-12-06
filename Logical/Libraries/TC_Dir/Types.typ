@@ -1,18 +1,5 @@
 
 TYPE
-	TC_FileList_typ : 	STRUCT 
-		Path : STRING[260];
-		DateUDINT : UDINT;
-		Size : UDINT;
-		IsDir : BOOL;
-		DirIdx : INT;
-		Internal : USINT; (*0=unread, 1=delete, 2=parentDirDelete, 3=remove*)
-	END_STRUCT;
-	TC_DirDef_typ : 	STRUCT 
-		Valid : BOOL;
-		DirPath : STRING[260];
-		Sanitize : TC_DirDef_Sanitize_typ;
-	END_STRUCT;
 	TC_DirDef_Sanitize_typ : 	STRUCT 
 		AllowUndefinedDir : BOOL;
 		SanitizeFilesByExt : BOOL;
@@ -21,6 +8,11 @@ TYPE
 		FileRoot : STRING[260];
 		MaxSize : UDINT;
 		MaxFiles : UDINT;
+	END_STRUCT;
+	TC_DirDef_typ : 	STRUCT 
+		Valid : BOOL;
+		DirPath : STRING[260];
+		Sanitize : TC_DirDef_Sanitize_typ;
 	END_STRUCT;
 	TC_DirMake_Internal_typ : 	STRUCT 
 		State : TC_DIRMAKE_STATE_ENUM;
@@ -36,6 +28,31 @@ TYPE
 		DIRMAKE_CREATE_WAIT,
 		DIRMAKE_DONE,
 		DIRMAKE_ERROR
+		);
+	TC_DirReadAll_Internal_typ : 	STRUCT 
+		State : TC_DIRREADALL_STATE_ENUM;
+		DirOpen_0 : DirOpen;
+		DirReadEx_0 : DirReadEx;
+		DirClose_0 : DirClose;
+		i : INT;
+		FileListIdx : INT;
+		DirIdent : UDINT;
+		DirData : fiDIR_READ_EX_DATA;
+		FileListItem : TC_FileList_typ;
+		CurrentDirPath : STRING[260];
+	END_STRUCT;
+	TC_DIRREADALL_STATE_ENUM : 
+		(
+		DIRREADALL_RESET,
+		DIRREADALL_IDLE,
+		DIRREADALL_OPEN_CMD,
+		DIRREADALL_OPEN_WAIT,
+		DIRREADALL_READ_CMD,
+		DIRREADALL_READ_WAIT,
+		DIRREADALL_CLOSE_WAIT,
+		DIRREADALL_EVALUATE,
+		DIRREADALL_DONE,
+		DIRREADALL_ERROR
 		);
 	TC_DirSanitize_Internal_typ : 	STRUCT 
 		State : TC_DIRSANITIZE_STATE_ENUM;
@@ -70,37 +87,6 @@ TYPE
 		DIRSANITIZE_DELETE_FILE_WAIT,
 		DIRSANITIZE_DONE,
 		DIRSANITIZE_ERROR
-		);
-	TC_Dir_USB_Connect_Internal_typ : 	STRUCT 
-		UsbNodeListGet_0 : UsbNodeListGet;
-		UsbNodeGet_0 : UsbNodeGet;
-		DevLink_0 : DevLink;
-		UsbMsDeviceReady_0 : UsbMsDeviceReady;
-		DevUnlink_0 : DevUnlink;
-		CTON_Delay : CTON;
-		NodeList : UDINT;
-		Node : usbNode_typ;
-		ParString : STRING[1000];
-		Handle : UDINT;
-		State : TC_USB_CONNECT_STATE_ENUM;
-	END_STRUCT;
-	TC_USB_CONNECT_STATE_ENUM : 
-		(
-		USB_CONNECT_RESET,
-		USB_CONNECT_IDLE,
-		USB_CONNECT_GET_LIST_CMD,
-		USB_CONNECT_GET_LIST_WAIT,
-		USB_CONNECT_GET_NODE_CMD,
-		USB_CONNECT_GET_NODE_WAIT,
-		USB_CONNECT_DEVLINK_CMD,
-		USB_CONNECT_DEVLINK_WAIT,
-		USB_CONNECT_CHECK_CONNECTED,
-		USB_CONNECT_CONNECTED,
-		USB_CONNECT_DEVUNLINK_CMD,
-		USB_CONNECT_DEVUNLINK_WAIT,
-		USB_CONNECT_DELAY,
-		USB_CONNECT_DONE,
-		USB_CONNECT_ERROR
 		);
 	TC_Dir_Transfer_Internal_typ : 	STRUCT 
 		State : TC_DIR_TRANSFER_STATE_ENUM;
@@ -142,29 +128,43 @@ TYPE
 		TRANSFER_DONE,
 		TRANSFER_ERROR
 		);
-	TC_DirReadAll_Internal_typ : 	STRUCT 
-		State : TC_DIRREADALL_STATE_ENUM;
-		DirOpen_0 : DirOpen;
-		DirReadEx_0 : DirReadEx;
-		DirClose_0 : DirClose;
-		i : INT;
-		FileListIdx : INT;
-		DirIdent : UDINT;
-		DirData : fiDIR_READ_EX_DATA;
-		FileListItem : TC_FileList_typ;
-		CurrentDirPath : STRING[260];
+	TC_Dir_USB_Connect_Internal_typ : 	STRUCT 
+		UsbNodeListGet_0 : UsbNodeListGet;
+		UsbNodeGet_0 : UsbNodeGet;
+		DevLink_0 : DevLink;
+		UsbMsDeviceReady_0 : UsbMsDeviceReady;
+		DevUnlink_0 : DevUnlink;
+		CTON_Delay : CTON;
+		NodeList : UDINT;
+		Node : usbNode_typ;
+		ParString : STRING[1000];
+		Handle : UDINT;
+		State : TC_USB_CONNECT_STATE_ENUM;
 	END_STRUCT;
-	TC_DIRREADALL_STATE_ENUM : 
+	TC_FileList_typ : 	STRUCT 
+		Path : STRING[260];
+		DateUDINT : UDINT;
+		Size : UDINT;
+		IsDir : BOOL;
+		DirIdx : INT;
+		Internal : USINT; (*0=unread, 1=delete, 2=parentDirDelete, 3=remove*)
+	END_STRUCT;
+	TC_USB_CONNECT_STATE_ENUM : 
 		(
-		DIRREADALL_RESET,
-		DIRREADALL_IDLE,
-		DIRREADALL_OPEN_CMD,
-		DIRREADALL_OPEN_WAIT,
-		DIRREADALL_READ_CMD,
-		DIRREADALL_READ_WAIT,
-		DIRREADALL_CLOSE_WAIT,
-		DIRREADALL_EVALUATE,
-		DIRREADALL_DONE,
-		DIRREADALL_ERROR
+		USB_CONNECT_RESET,
+		USB_CONNECT_IDLE,
+		USB_CONNECT_GET_LIST_CMD,
+		USB_CONNECT_GET_LIST_WAIT,
+		USB_CONNECT_GET_NODE_CMD,
+		USB_CONNECT_GET_NODE_WAIT,
+		USB_CONNECT_DEVLINK_CMD,
+		USB_CONNECT_DEVLINK_WAIT,
+		USB_CONNECT_CHECK_CONNECTED,
+		USB_CONNECT_CONNECTED,
+		USB_CONNECT_DEVUNLINK_CMD,
+		USB_CONNECT_DEVUNLINK_WAIT,
+		USB_CONNECT_DELAY,
+		USB_CONNECT_DONE,
+		USB_CONNECT_ERROR
 		);
 END_TYPE

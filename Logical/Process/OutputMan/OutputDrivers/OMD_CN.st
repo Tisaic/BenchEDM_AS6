@@ -3,6 +3,7 @@ ACTION OMD_CN:
 
 	gDriver.CN[DRIVER_INST_CN_0].MpLinkADR 																:= ADR(gCNC);
 	gDriver.CN[DRIVER_INST_CN_0].OverrideSetpoint[0]													:= 100.0;
+	gDriver.CN[DRIVER_INST_CN_0].OverrideSetpoint[1]													:= gDriver.BX[DRIVER_INST_BX_0].Status.OverrideFactor;
 	gDriver.CN[DRIVER_INST_CN_0].RapidOverrideSetpoint[0]												:= 100.0;
 	gDriver.CN[DRIVER_INST_CN_0].FeedrateOverrideSetpoint[0]											:= 100.0;
 	

@@ -7,12 +7,12 @@ ACTION OMD_BX:
 			gDriver.BX[i].DefaultPar.EdgeFindMode			:= FALSE; 	//BO
 			gDriver.BX[i].DefaultPar.ISOPulseMode			:= FALSE; 	//BO
 			gDriver.BX[i].DefaultPar.ElectrodePositiveMode	:= FALSE; 	//BO
-			gDriver.BX[i].DefaultPar.Current				:= 0.0; 	//RR
-			gDriver.BX[i].DefaultPar.OnTime					:= 0.0; 	//RR
-			gDriver.BX[i].DefaultPar.OffTime				:= 0.0; 	//RR
-			gDriver.BX[i].DefaultPar.SetFeedback			:= 0.0; 	//RR
-			gDriver.BX[i].DefaultPar.MinOverrideFactor		:= -1.0; 	//RR
-			gDriver.BX[i].DefaultPar.MaxOverrideFactor		:= 1.0; 	//RR
+			gDriver.BX[i].DefaultPar.Current				:= 15.0; 	//RR
+			gDriver.BX[i].DefaultPar.OnTime					:= 3.0; 	//RR
+			gDriver.BX[i].DefaultPar.OffTime				:= 27.0; 	//RR
+			gDriver.BX[i].DefaultPar.SetFeedback			:= 75.0; 	//RR
+			gDriver.BX[i].DefaultPar.MinOverrideFactor		:= -200.0; 	//RR
+			gDriver.BX[i].DefaultPar.MaxOverrideFactor		:= 200.0; 	//RR
 			gDriver.BX[i].DefaultPar.PID.Gain				:= 0.1; 	//RR
 			gDriver.BX[i].DefaultPar.PID.IntegrationTime	:= 0.0; 	//RR
 			gDriver.BX[i].DefaultPar.PID.DerivativeTime		:= 0.0; 	//RR
@@ -99,11 +99,11 @@ ACTION OMD_BX:
 		gDriver.BX[i].Status.EstopActive					:= gIO.BX18.TC_IO_DI_EstopActive.Signal.Filtered;
 		gDriver.BX[i].Status.ISOPulseMode					:= gIO.BX18.TC_IO_DI_ISOPulseMode.Signal.Filtered;
 		gDriver.BX[i].Status.ElectrodePositiveMode			:= gIO.BX18.TC_IO_DI_ElectrodePositiveMode.Signal.Filtered;
-				
+
 		IF gDriver.BX[i].MTBasicsPID_0.PIDParameters.Gain <> gDriver.BX[i].Par.PID.Gain OR gDriver.BX[i].MTBasicsPID_0.PIDParameters.IntegrationTime <> gDriver.BX[i].Par.PID.IntegrationTime OR gDriver.BX[i].MTBasicsPID_0.PIDParameters.DerivativeTime <> gDriver.BX[i].Par.PID.DerivativeTime OR gDriver.BX[i].MTBasicsPID_0.PIDParameters.FilterTime <> gDriver.BX[i].Par.PID.FilterTime OR gDriver.BX[i].MTBasicsPID_0.MinOut <> gDriver.BX[i].Par.MinOverrideFactor OR gDriver.BX[i].MTBasicsPID_0.MaxOut <> gDriver.BX[i].Par.MaxOverrideFactor THEN
 			gDriver.BX[i].MTBasicsPID_0.Update 				:= TRUE;
 		END_IF;
-		gDriver.BX[i].MTBasicsPID_0(Enable := gDriver.BX[i].Cmd[C_BX_ENABLE] AND gDriver.BX[i].Wait[W_BX_NOERROR] = 1, PIDParameters := gDriver.BX[i].Par.PID, MinOut := gDriver.BX[i].Par.MinOverrideFactor, MaxOut := gDriver.BX[i].Par.MaxOverrideFactor, SetValue := gDriver.BX[i].Par.SetFeedback, ActValue := gDriver.BX[i].Status.ActualFeedback);
+		gDriver.BX[i].MTBasicsPID_0(Enable := gDriver.BX[i].Cmd[C_BX_ENABLE] AND gDriver.BX[i].Wait[W_BX_NOERROR] = 1, PIDParameters := gDriver.BX[i].Par.PID, MinOut := gDriver.BX[i].Par.MinOverrideFactor, MaxOut := gDriver.BX[i].Par.MaxOverrideFactor, SetValue := gDriver.BX[i].Par.SetFeedback, ActValue := gDriver.BX[i].Status.ActualFeedback, Invert := TRUE);
 		gDriver.BX[i].MTBasicsPID_0.Update 					:= FALSE;			   
 
 		gDriver.BX[i].Status.OverrideFactor					:= gDriver.BX[i].MTBasicsPID_0.Out;

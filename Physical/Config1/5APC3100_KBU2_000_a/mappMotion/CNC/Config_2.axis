@@ -84,7 +84,7 @@
     <Selector ID="MovementLimits">
       <Group ID="Position">
         <Property ID="LowerLimit" Value="0" />
-        <Property ID="UpperLimit" Value="430" />
+        <Property ID="UpperLimit" Value="250" />
       </Group>
       <Selector ID="Velocity">
         <Property ID="Velocity" Value="1000" />
@@ -105,7 +105,7 @@
     <Selector ID="MovementLimits">
       <Group ID="Position">
         <Property ID="LowerLimit" Value="0" />
-        <Property ID="UpperLimit" Value="700" />
+        <Property ID="UpperLimit" Value="550" />
       </Group>
       <Selector ID="Velocity">
         <Property ID="Velocity" Value="1000" />
@@ -181,7 +181,7 @@
     <Selector ID="MovementLimits">
       <Group ID="Position">
         <Property ID="LowerLimit" Value="0" />
-        <Property ID="UpperLimit" Value="430" />
+        <Property ID="UpperLimit" Value="250" />
       </Group>
       <Selector ID="Velocity">
         <Property ID="Velocity" Value="800" />
@@ -202,7 +202,7 @@
     <Selector ID="MovementLimits">
       <Group ID="Position">
         <Property ID="LowerLimit" Value="0" />
-        <Property ID="UpperLimit" Value="700" />
+        <Property ID="UpperLimit" Value="550" />
       </Group>
       <Selector ID="Velocity">
         <Property ID="Velocity" Value="800" />

@@ -7,7 +7,6 @@
     <Task Name="Monitor" Source="Process.Monitor.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Seq_MASTER" Source="Process.Seq_MASTER.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="OutputMan" Source="Process.OutputMan.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Dev" Source="Dev.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
@@ -19,6 +18,7 @@
     <Task Name="BuildVer" Source="BuildVersion.BuildVer.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <Task Name="Services" Source="Services.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Vis" Source="Vis.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Dev" Source="Dev.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <DataObjects>
     <DataObject Name="MbRTU" Source="Libraries.MbRTU.dob" Memory="UserROM" Language="Simple" />
@@ -71,7 +71,6 @@
   </Binaries>
   <ReActionTechnologyObjects>
     <ReActionTechnologyObject Name="StepDir" Source="StepDir.prg" Memory="UserROM" Language="ReAction" />
-    <ReActionTechnologyObject Name="StepDir1" Source="StepDir1.prg" Memory="UserROM" Language="ReAction" />
   </ReActionTechnologyObjects>
   <Libraries>
     <LibraryObject Name="TC_General" Source="Libraries.TC_General.lby" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -132,6 +131,11 @@
     <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="HA_Matrix" Source="Libraries.HA_Matrix.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="TC_NGRC" Source="Libraries.TC_NGRC.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="TC_Seq" Source="Libraries.TC_Seq.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="TC_JSON" Source="Libraries.TC_JSON.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="AsBrMath" Source="Libraries.AsBrMath.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="TC_FrSky" Source="Libraries.TC_FrSky.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="AsUDP" Source="Libraries.AsUDP.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="UaCoal" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="UaCoalPrv" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -144,8 +148,5 @@
     <LibraryObject Name="MpSfDomMgr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="SfDomVis" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsArProf" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="TC_Seq" Source="Libraries.TC_Seq.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="TC_JSON" Source="Libraries.TC_JSON.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="AsBrMath" Source="Libraries.AsBrMath.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>
